@@ -1,73 +1,147 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
+# Nest Boilerplate 🚀
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+This repository serves as a boilerplate setup for developing web applications using the Nest.js framework. It provides a solid foundation with a well-organized folder structure, pre-configured dependencies, and common configurations to kick-start your Nest.js projects. Save time and dive into development with confidence! 💪
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+## Technologies Used 🛠️
 
-## Description
+The backend of the Nest.js Boilerplate project is built using the following technologies:
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+- **Nest.js**: A powerful and scalable Node.js framework used for building the backend code. 🦅🔧
+- **TypeScript**: A strongly typed superset of JavaScript used for writing the backend code. 🆎👨‍💻
+- **PostgreSQL**: An open-source relational database management system used for storing and retrieving data. 🐘🗄️
+- **TypeORM**: A TypeScript-based ORM (Object-Relational Mapping) used for database communication and management. 🗃️🔍
+- **Docker**: A containerization platform used for deploying the backend services. 🐳🚀
+- **Redis**: An in-memory data structure store used as a database, cache, and message broker. 🔄🗃️📦
+- **Cron**: A time-based job scheduler used for scheduling recurring jobs or tasks. ⏰📆
 
-## Installation
+## Getting Started 🚀
+
+Follow the instructions below to get started with the Nest Boilerplate.
+
+### Prerequisites 📋
+
+Make sure you have the following prerequisites installed on your machine:
+
+- Node.js (version 14 or higher)
+- npm (version 6 or higher)
+- Nest CLI (version 7 or higher)
+- PostgreSQL (version 10 or higher)
+- Docker (v20 or higher)
+
+### Installation ⚙️
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/MuhammadZeeshanAshraf/nest-boilerplate.git
+   ```
+
+2. Install the dependencies:
+
+   ```bash
+   cd nest-boilerplate
+   npm install
+   ```
+
+### Environment Variables 🌍
+
+The Dastgyr Growth backend code requires certain environment variables to be set in order to run correctly. These variables are defined in a `.env` file, which should be located in the root of the project directory. 
+
+You can create a `.env` file by copying the `.env.example` file and updating the values as necessary:
 
 ```bash
-$ npm install
+cp .env.example .env
 ```
 
-## Running the app
+environment variables file should contain the following 
+```
+💻 #Environment
+NODE_ENV=
+PORT=
+
+💾 #Database
+DB_NAME=
+DB_USERNAME=
+DB_PASSWORD=
+DB_HOST=
+DB_PORT=
+DB_SCHEMA=
+DB_CONNECTION_NAME=
+```
+
+Update the values in the `.env` file as needed for your environment.
+
+### Running the Server ▶️
+
+Run the application in development mode by running the following command in the project directory:
 
 ```bash
-# development
-$ npm run start
-
-# watch mode
-$ npm run start:dev
-
-# production mode
-$ npm run start:prod
+npm run start:dev
 ```
 
-## Test
+This will start the server in development mode, with hot reloading enabled for any changes you make to the code. Once the server is running, you can access it by navigating to `http://localhost:<port>` in your web browser.
+
+Alternatively, you can start the server in production mode using the following command:
 
 ```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
+npm run start:prod
 ```
 
-## Support
+This will start the server in production mode, which is optimized for performance.
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+To add new environment variables, you can simply add them to the `.env` file in the project directory. You can then access these variables in your code using the `process.env` object.
 
-## Stay in touch
+For example, if you add a new variable `MY_VARIABLE` to your `.env` file like so:
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+```
+MY_VARIABLE=my_value
+```
 
-## License
+You can access this variable in your code like so:
 
-Nest is [MIT licensed](LICENSE).
+```ts
+const myVariable = process.env.MY_VARIABLE;
+```
+
+Note that you will need to restart the application for the changes to take effect.
+
+### Swagger UI 📚
+
+With the project set up, you can check if the server is running properly by visiting the Swagger UI at the specified URL and port in your environment file.
+
+```
+http://localhost:<port>/api#/
+```
+
+That's it! You should now be able to run the Trade Assurance backend project locally on your machine.
+
+## Contribution 🤝
+
+We welcome contributions to the Nest Boilerplate! Please follow the guidelines below when contributing.
+
+### Branching Strategy 🌿
+
+When contributing, create a new branch with a descriptive name that reflects the nature of your changes. For example:
+
+```bash
+git checkout -b feature/new-feature
+```
+
+Once you have completed your changes, submit a pull request to the `main` branch for review.
+
+### Git Best Practices ✨
+
+- Commit messages should be descriptive and follow best practices. See [here](https://www.freecodecamp.org/news/how-to-use-git-best-practices-for-beginners/#:~:text=To%20get%20the%20most%20out,pull%20requests%20for%20code%20reviews.) for Git commit message guidelines.
+- Make sure to update your local branch with the latest changes from the `main` branch before pushing your changes.
+- Always perform code reviews and address any comments or feedback promptly.
+
+## Roadmap 🗺️
+
+Here are some upcoming features and improvements planned for the Nest Boilerplate:
+
+- [ ] Swagger Integration
+- [ ] TypeORM Integration
+
+Feel free to contribute ideas or suggestions to the project roadmap. We look forward to collaborating with you!
+
+Happy coding! 💻✨
