@@ -1,13 +1,16 @@
-import { Module, NestModule, MiddlewareConsumer } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
-import { ThrottlerGuard, ThrottlerModule } from '@nestjs/throttler';
+import { MiddlewareConsumer, Module, NestModule } from '@nestjs/common';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { APP_GUARD } from '@nestjs/core';
+import { ScheduleModule } from '@nestjs/schedule';
+import { ThrottlerGuard, ThrottlerModule } from '@nestjs/throttler';
+import { AppController } from './app.controller';
+import { AppService } from './app.service';
 import { LoggerMiddleware } from './middlewares/logger.middleware';
+import { ServerMonitorCronModule } from './crons/server-monitor/server-monitor-cron.module';
 
 @Module({
   imports: [
+    ScheduleModule.forRoot(),
     ConfigModule.forRoot({
       isGlobal: true,
     }),
@@ -19,6 +22,8 @@ import { LoggerMiddleware } from './middlewares/logger.middleware';
         limit: config.get('THROTTLE_LIMIT'),
       }),
     }),
+    /*Cron Modules*/
+    ServerMonitorCronModule
   ],
   controllers: [AppController],
   providers: [

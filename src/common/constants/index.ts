@@ -15,3 +15,7 @@ export const THROTTLE = {
         MAX: 100,
     }
 }
+
+export const CRON_JOB_NAME = {
+    CHECK_SERVER_HEALTH: 'CHECK_SERVER_HEALTH',
+}
