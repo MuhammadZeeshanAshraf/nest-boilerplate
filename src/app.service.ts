@@ -1,8 +1,9 @@
 import { Injectable } from '@nestjs/common';
+import { PROJECT_NAME } from './common/constants';
 
 @Injectable()
 export class AppService {
-  getHello(): string {
-    return 'Hello World!';
-  }
+  checkServer(): string {
+    return `The ${PROJECT_NAME} Up and Running.`;
+}
 }
