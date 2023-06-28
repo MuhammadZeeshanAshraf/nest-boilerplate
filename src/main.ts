@@ -3,6 +3,7 @@ import { NestFactory } from '@nestjs/core';
 import { NestExpressApplication } from '@nestjs/platform-express';
 import { AppModule } from './app.module';
 import { getSwaggerConfiguration } from './swagger';
+import { ValidationPipe } from '@nestjs/common';
 
 async function bootstrap() {
   const app = await NestFactory.create<NestExpressApplication>(AppModule, {
@@ -10,6 +11,12 @@ async function bootstrap() {
   });
 
   const configService: ConfigService = app.get(ConfigService);
+  app.useGlobalPipes(
+    new ValidationPipe({
+      whitelist: true,
+      transform: true,
+    }),
+  );
   await getSwaggerConfiguration(app);
   await app.listen(configService.get<number>('PORT'));
 }
