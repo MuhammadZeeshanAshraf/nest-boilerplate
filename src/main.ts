@@ -4,6 +4,7 @@ import { NestExpressApplication } from '@nestjs/platform-express';
 import { AppModule } from './app.module';
 import { getSwaggerConfiguration } from './swagger';
 import { ValidationPipe } from '@nestjs/common';
+import { exceptionFilters } from './common/web/filters/index.filter';
 
 async function bootstrap() {
   const app = await NestFactory.create<NestExpressApplication>(AppModule, {
@@ -17,6 +18,7 @@ async function bootstrap() {
       transform: true,
     }),
   );
+  app.useGlobalFilters(...exceptionFilters);
   await getSwaggerConfiguration(app);
   await app.listen(configService.get<number>('PORT'));
 }
