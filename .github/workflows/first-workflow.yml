@@ -5,5 +5,11 @@ jobs:
   first_job:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
       - name: Hello world action step
         run: echo "Hello world"
+
+      - name: List files
+        run: ls -al
