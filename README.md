@@ -11,11 +11,6 @@ This folder houses all external service integrations. Each integration is modula
 - **Example Services**: Mailgun, AWS S3, Twilio.
 - **Goal**: Provide a clean interface for external APIs while abstracting the complexity of their SDKs.
 
-### 🔄 [Repetitive Workflows]
-Commonly occurring business processes that follow a predictable pattern across different modules or projects.
-- **Primary Focus**: Authentication flows (Email/Password, Apple, Google, Facebook), onboarding sequences, and multi-step form handling.
-- **Goal**: Minimize boilerplate and ensure security practices are consistent throughout the auth stack.
-
 ### 📏 [Code Style]
 The source of truth for all coding standards and quality enforcement.
 - **Contents**: Module examples, naming conventions, and architectural restrictions.
