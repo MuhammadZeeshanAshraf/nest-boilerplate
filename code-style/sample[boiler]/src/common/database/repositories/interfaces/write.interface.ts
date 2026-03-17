@@ -65,7 +65,7 @@ export interface IWrite<T> {
   ): Promise<UpdateResult>;
   bulkUpdate(
     items: (QueryDeepPartialEntity<T> & { id: number })[],
-    by: any,
+    by: string,
   ): Promise<void>;
   bulkUpdateWithTransactionMultiBy(
     manager: EntityManager,
@@ -76,11 +76,11 @@ export interface IWrite<T> {
   bulkUpdateWithTransaction(
     manager: EntityManager,
     items: QueryDeepPartialEntity<T>[],
-    by: any,
+    by: string,
     batchSize?: number,
   ): Promise<void>;
   updateWithOr(
-    conditions: Record<string, any>,
+    conditions: Record<string, unknown>,
     updates: QueryDeepPartialEntity<T>,
   ): Promise<UpdateResult>;
 }

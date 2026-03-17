@@ -47,6 +47,7 @@ module.exports = {
     "@typescript-eslint/no-explicit-any":"warn",
     "no-restricted-syntax":"off",
     "no-continue":'off',
+    "no-nested-ternary":"off",
     'no-console': [
       'error',
       {

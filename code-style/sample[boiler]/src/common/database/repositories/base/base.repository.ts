@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { BadRequestException } from '@nestjs/common';
 import { PaginationDto } from 'src/common/dtos/request/pagination.dto';
 import { PagedList } from 'src/common/types/paged-list';
@@ -17,11 +18,9 @@ import {
   UpdateResult,
 } from 'typeorm';
 import { QueryDeepPartialEntity } from 'typeorm/query-builder/QueryPartialEntity';
-import { StringToStringMap } from '../../../types/common-types';
 import { FindOptions } from '../../builder-pattern/find-options.builder';
 import { IRead } from '../interfaces/read.interface';
 import { IWrite } from '../interfaces/write.interface';
-import { BulkUpdateQueryColumnMap } from '../types';
 
 export abstract class BaseRepository<T> implements IWrite<T>, IRead<T> {
   public readonly tableName: string;
@@ -201,7 +200,7 @@ export abstract class BaseRepository<T> implements IWrite<T>, IRead<T> {
     if (items.length === 0) return;
     try {
       const itemLength = items.length;
-      const columnMap: StringToStringMap = new Map();
+      const columnMap = new Map<string, string>();
 
       this.repository.metadata.columns.forEach((col) => {
         columnMap.set(col.propertyName, col.databaseName);
@@ -210,7 +209,10 @@ export abstract class BaseRepository<T> implements IWrite<T>, IRead<T> {
       if (!referenceBy) {
         throw new BadRequestException(`Invalid reference for bulk update${by}`);
       }
-      const queryColumnMap: BulkUpdateQueryColumnMap = new Map();
+      const queryColumnMap: Map<
+        string,
+        Array<{ identity: any; val: any }>
+      > = new Map();
       const identities: Set<string | boolean> = new Set();
       for (let i = 0; i < itemLength; i += batchSize) {
         const batch = items.slice(i, i + batchSize);
@@ -259,13 +261,13 @@ export abstract class BaseRepository<T> implements IWrite<T>, IRead<T> {
   async bulkUpdateWithTransaction(
     manager: EntityManager,
     items: QueryDeepPartialEntity<T>[],
-    by: any,
+    by: string,
     batchSize = 20,
   ): Promise<void> {
     if (items.length === 0) return;
     try {
       const itemLength = items.length;
-      const columnMap: StringToStringMap = new Map();
+      const columnMap = new Map<string, string>();
       this.repository.metadata.columns.forEach((col) => {
         columnMap.set(col.propertyName, col.databaseName);
       });
@@ -275,7 +277,10 @@ export abstract class BaseRepository<T> implements IWrite<T>, IRead<T> {
           `Invalid reference for bulk update ${by}`,
         );
 
-      const queryColumnMap: BulkUpdateQueryColumnMap = new Map();
+      const queryColumnMap: Map<
+        string,
+        Array<{ identity: any; val: any }>
+      > = new Map();
       const identities = [];
 
       for (let i = 0; i < itemLength; i += batchSize) {
@@ -323,7 +328,7 @@ export abstract class BaseRepository<T> implements IWrite<T>, IRead<T> {
 
     try {
       const itemLength = items.length;
-      const columnMap: StringToStringMap = new Map();
+      const columnMap = new Map<string, string>();
       this.repository.metadata.columns.forEach((col) => {
         columnMap.set(col.propertyName, col.databaseName);
       });
@@ -335,7 +340,10 @@ export abstract class BaseRepository<T> implements IWrite<T>, IRead<T> {
           `Invalid reference for bulk update ${by}`,
         );
 
-      const queryColumnMap: BulkUpdateQueryColumnMap = new Map();
+      const queryColumnMap: Map<
+        string,
+        Array<{ identity: any; val: any }>
+      > = new Map();
       const identities = [];
 
       for (let i = 0; i < itemLength; i += batchSize) {
@@ -460,7 +468,7 @@ export abstract class BaseRepository<T> implements IWrite<T>, IRead<T> {
   }
 
   async updateWithOr(
-    conditions: Record<string, any>,
+    conditions: Record<string, unknown>,
     updates: QueryDeepPartialEntity<T>,
   ): Promise<UpdateResult> {
     const queryBuilder = this.repository

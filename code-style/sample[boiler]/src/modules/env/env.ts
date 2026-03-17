@@ -10,10 +10,9 @@ export const envSchema = z.object({
   PORT: z.coerce.number({
     required_error: SYSTEM_ERROR_MESSAGES.REQUIRED_AND_MUST_BE_A_NUMBER('PORT'),
   }),
-  BASE_FRONT_END_URLS: z.string({
-    required_error: SYSTEM_ERROR_MESSAGES.REQUIRED_AND_MUST_BE_A_STRING(
-      'BASE_FRONT_END_URLS',
-    ),
+  BASE_FRONTEND_URLS: z.string({
+    required_error:
+      SYSTEM_ERROR_MESSAGES.REQUIRED_AND_MUST_BE_A_STRING('BASE_FRONTEND_URLS'),
   }),
   DB_USERNAME: z.string({
     required_error:
@@ -72,61 +71,10 @@ export const envSchema = z.object({
     required_error:
       SYSTEM_ERROR_MESSAGES.REQUIRED_AND_MUST_BE_A_STRING('SWAGGER_PASSWORD'),
   }),
-  FROM_EMAIL: z.string({
-    required_error:
-      SYSTEM_ERROR_MESSAGES.REQUIRED_AND_MUST_BE_A_STRING('FROM_EMAIL'),
-  }),
-  MAILGUN_API_KEY: z.string({
-    required_error:
-      SYSTEM_ERROR_MESSAGES.REQUIRED_AND_MUST_BE_A_STRING('MAILGUN_API_KEY'),
-  }),
-  DOMAIN: z.string({
-    required_error:
-      SYSTEM_ERROR_MESSAGES.REQUIRED_AND_MUST_BE_A_STRING('DOMAIN'),
-  }),
-  OTP_VERIFICATION_EXPIRATION_MINUTES: z.string({
-    required_error: SYSTEM_ERROR_MESSAGES.REQUIRED_AND_MUST_BE_A_STRING(
-      'OTP_VERIFICATION_EXPIRATION_MINUTES',
-    ),
-  }),
   JWT_REFRESH_TOKEN_EXPIRES_IN: z.string({
     required_error: SYSTEM_ERROR_MESSAGES.REQUIRED_AND_MUST_BE_A_STRING(
       'JWT_REFRESH_TOKEN_EXPIRES_IN',
     ),
-  }),
-  SENTRY_DSN: z.string({
-    required_error:
-      SYSTEM_ERROR_MESSAGES.REQUIRED_AND_MUST_BE_A_STRING('SENTRY_DSN'),
-  }),
-  SENTRY_AUTH_TOKEN: z.string({
-    required_error:
-      SYSTEM_ERROR_MESSAGES.REQUIRED_AND_MUST_BE_A_STRING('SENTRY_AUTH_TOKEN'),
-  }),
-  SALT_EDGE_BANK_API_URL: z.string({
-    required_error: SYSTEM_ERROR_MESSAGES.REQUIRED_AND_MUST_BE_A_STRING(
-      'SALT_EDGE_BANK_API_URL',
-    ),
-  }),
-  SALT_EDGE_APP_ID: z.string({
-    required_error:
-      SYSTEM_ERROR_MESSAGES.REQUIRED_AND_MUST_BE_A_STRING('SALT_EDGE_APP_ID'),
-  }),
-  SALT_EDGE_API_SECRET: z.string({
-    required_error: SYSTEM_ERROR_MESSAGES.REQUIRED_AND_MUST_BE_A_STRING(
-      'SALT_EDGE_API_SECRET',
-    ),
-  }),
-  MAGIC_BUDGET_URL: z.string({
-    required_error:
-      SYSTEM_ERROR_MESSAGES.REQUIRED_AND_MUST_BE_A_STRING('MAGIC_BUDGET_URL'),
-  }),
-  APPLE_CLIENT_ID: z.string({
-    required_error:
-      SYSTEM_ERROR_MESSAGES.REQUIRED_AND_MUST_BE_A_STRING('APPLE_CLIENT_ID'),
-  }),
-  AMPLITUDE_API_KEY: z.string({
-    required_error:
-      SYSTEM_ERROR_MESSAGES.REQUIRED_AND_MUST_BE_A_STRING('AMPLITUDE_API_KEY'),
   }),
 });
 export type Env = z.infer<typeof envSchema>;

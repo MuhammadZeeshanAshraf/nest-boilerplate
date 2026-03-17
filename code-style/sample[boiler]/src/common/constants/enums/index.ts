@@ -6,3 +6,7 @@ export enum ENVIRONMENTS {
   TEST = 'test',
   LOCAL = 'local',
 }
+export enum TOGGLE_ON_OFF {
+  ON = 'on',
+  OFF = 'off',
+}

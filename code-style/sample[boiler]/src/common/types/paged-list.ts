@@ -25,6 +25,4 @@ export class PagedList<T> {
     this.remainingPages = Math.ceil((totalCount - take * currentPage) / take);
     this.remainingPages = this.remainingPages < 0 ? 0 : this.remainingPages;
   }
-
-  s;
 }

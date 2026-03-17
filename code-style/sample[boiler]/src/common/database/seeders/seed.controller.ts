@@ -45,9 +45,4 @@ export class SeedController {
   async toggleSeeds(@Body() toggleDto: SeedToggle) {
     return this.seedService.toggleSeed(toggleDto);
   }
-
-  @Post('verify')
-  async verifySeedData(@Body() seed: RunSeedDto) {
-    return this.seedService.verifySeedData(seed);
-  }
 }

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import {
   BadRequestException,
   CallHandler,
@@ -13,8 +14,6 @@ import { QueryFailedError } from 'typeorm';
 
 @Injectable()
 export class TypeORMErrorInterceptor implements NestInterceptor {
-  constructor() {}
-
   intercept(context: ExecutionContext, next: CallHandler): Observable<any> {
     return next.handle().pipe(
       catchError((error) => {

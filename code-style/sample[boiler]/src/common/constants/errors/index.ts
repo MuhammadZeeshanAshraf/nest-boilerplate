@@ -30,4 +30,10 @@ export const APP_ERROR_MESSAGES = {
     `${entity} is not required to complete this action.`,
   UNSUPPORTED: (entity: string) =>
     `${entity} is unsupported at this moment. Please try again later or contact support for more information.`,
+  NO_TOKEN_PROVIDED: 'Authorization token is required.',
+  MALFORMED_TOKEN: 'Authorization token is malformed.',
+  TOKEN_EXPIRED: 'Authorization token has expired.',
+  INVALID_TOKEN: 'Authorization token is invalid.',
+  API_KEY_IS_MISSING: 'API key is missing.',
+  INVALID_API_KEY: 'Invalid API key.',
 };

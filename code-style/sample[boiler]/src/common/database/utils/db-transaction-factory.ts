@@ -1,13 +1,11 @@
 import { Injectable } from '@nestjs/common';
 import { DataSource, EntityManager, QueryRunner } from 'typeorm';
 import { IsolationLevel } from 'typeorm/driver/types/IsolationLevel';
-import { AppLog } from '../../../modules/app-log/entities/app-log.entity';
-import dataSource from '../dbConfig';
 
 const DEFAULT_ISOLATION_LEVEL: IsolationLevel = 'READ COMMITTED';
 const DEFAULT_TIMEOUT_MS = 60000 * 5;
 export interface ITransactionRunner {
-  start(info: any, isolationLevel?: IsolationLevel): Promise<void>;
+  start(isolationLevel?: IsolationLevel): Promise<void>;
   end(): Promise<void>;
 }
 
@@ -17,26 +15,13 @@ export class TransactionRunner implements ITransactionRunner {
   constructor(private readonly queryRunner: QueryRunner) {}
 
   public async start(
-    info: any,
     isolationLevel: IsolationLevel = DEFAULT_ISOLATION_LEVEL,
   ): Promise<void> {
     if (this.queryRunner.isTransactionActive) return;
-    // const repo = dataSource.getRepository(AppLog);
-    // await repo.save({
-    //   logType: 'transaction-start',
-    //   logData: info,
-    //   logId: null,
-    // });
     await this.queryRunner.startTransaction(isolationLevel);
     this.timeoutHandle = setTimeout(async () => {
       if (this.queryRunner.isTransactionActive) {
         await this.rollbackTransaction();
-        const repo = dataSource.getRepository(AppLog);
-        await repo.save({
-          logType: 'transaction-timeout',
-          logData: info,
-          logId: null,
-        });
       }
     }, DEFAULT_TIMEOUT_MS);
   }
@@ -83,7 +68,7 @@ export class TransactionRunner implements ITransactionRunner {
 export class DbTransactionFactory {
   constructor(private readonly dataSource: DataSource) {}
 
-  async transactionRunner(info: any): Promise<TransactionRunner> {
+  async transactionRunner(): Promise<TransactionRunner> {
     const queryRunner = this.dataSource.createQueryRunner();
     await queryRunner.connect();
     const transactionRunner = new TransactionRunner(queryRunner);

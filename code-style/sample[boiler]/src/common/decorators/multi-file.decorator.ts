@@ -1,6 +1,7 @@
 import { applyDecorators } from '@nestjs/common';
 import { ApiBody, ApiConsumes } from '@nestjs/swagger';
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export function MultiFile(fields: Record<string, any>, files: any) {
   const properties = {
     ...Object.keys(fields).reduce((acc, key) => {

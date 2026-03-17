@@ -1,5 +1,4 @@
 import {
-  BadRequestException,
   CanActivate,
   ExecutionContext,
   ForbiddenException,
@@ -10,9 +9,8 @@ import { Reflector } from '@nestjs/core';
 import * as jwt from 'jsonwebtoken';
 import { Observable } from 'rxjs';
 import { APP_ERROR_MESSAGES } from '../constants/errors';
-import { DISABLE_AUTH_GUARD_KEY } from '../decorators/disable-auth-guard.decorator';
-import { AppContext } from '../interfaces/context';
-import { JwtPayload } from '../interfaces/jwt-payload';
+import { AppContext } from '../interfaces/context.interface';
+import { JwtPayload } from '../interfaces/jwt-payload.interface';
 
 @Injectable()
 export class AuthGuard implements CanActivate {
@@ -26,12 +24,6 @@ export class AuthGuard implements CanActivate {
   canActivate(
     context: ExecutionContext,
   ): boolean | Promise<boolean> | Observable<boolean> {
-    const disable = this.reflector.get<boolean>(
-      DISABLE_AUTH_GUARD_KEY,
-      context.getHandler(),
-    );
-
-    if (disable) return true;
     const isPublic = this.reflector.get<boolean>(
       'isPublic',
       context.getHandler(),
@@ -39,23 +31,12 @@ export class AuthGuard implements CanActivate {
     if (isPublic) {
       return true;
     }
-    const allowedForOnboard = this.reflector.get<boolean>(
-      'allowedForOnboard',
-      context.getHandler(),
-    );
-    const allowedUnverified = this.reflector.get<boolean>(
-      'allowedUnverified',
-      context.getHandler(),
-    );
     const request = context.switchToHttp().getRequest();
-    return this.verifyJwt(request, allowedForOnboard, allowedUnverified);
+    return this.verifyJwt(request);
   }
 
-  async verifyJwt(
-    req: any,
-    allowedForOnboard: boolean,
-    allowedUnverified: boolean,
-  ) {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  async verifyJwt(req: any) {
     const authorizationToken = req.headers.authorization;
     if (
       !authorizationToken ||
@@ -68,51 +49,18 @@ export class AuthGuard implements CanActivate {
       throw new ForbiddenException(APP_ERROR_MESSAGES.MALFORMED_TOKEN);
     }
     const decoded = await this.verifyToken(token);
-    // if (!decoded.onboarded && !allowedForOnboard) {
-    //   throw new BadRequestException({
-    //     message: 'User still needs to complete onboarding steps',
-    //     errorCode: ERROR_CODES.INCOMPLETE_ONBOARDING,
-    //     data: [],
-    //   });
-    // }
-    if (!decoded.verified && !allowedUnverified) {
-      throw new BadRequestException(APP_ERROR_MESSAGES.VERIFY_EMAIL);
-    }
     req[AuthGuard.CONTEXT] = new AppContext(decoded);
     req.user = decoded;
     return true;
   }
 
   async verifyToken(token: string): Promise<JwtPayload> {
-    await new Promise((resolve) => {
-      jwt.verify(
-        token,
-        this.configService.getOrThrow('JWT_ACCESS_SECRET'),
-        {
-          ignoreExpiration: true,
-        },
-        (error, decoded) => {
-          if (error) {
-            resolve(error);
-          } else {
-            resolve(decoded as JwtPayload);
-          }
-        },
-      );
-    });
     const payload = await new Promise((resolve) => {
       jwt.verify(
         token,
         this.configService.getOrThrow('JWT_ACCESS_SECRET'),
         (error, decoded: JwtPayload) => {
           if (error) {
-            if (error instanceof jwt.TokenExpiredError) {
-              const decodeTest = jwt.decode(token) as any;
-              // if (decodeTest?.email && TestEmails.includes(decodeTest?.email)) {
-              resolve(decodeTest);
-            }
-            // }
-
             resolve(error);
           } else {
             resolve(decoded);
@@ -121,9 +69,9 @@ export class AuthGuard implements CanActivate {
       );
     });
     if (payload instanceof Error) {
-      // if (payload instanceof jwt.TokenExpiredError) {
-      //   throw new ExpiredTokenException();
-      // }
+      if (payload instanceof jwt.TokenExpiredError) {
+        throw new ForbiddenException(APP_ERROR_MESSAGES.TOKEN_EXPIRED);
+      }
       throw new ForbiddenException(APP_ERROR_MESSAGES.INVALID_TOKEN);
     }
 

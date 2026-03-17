@@ -26,7 +26,7 @@ export class CreateSeedDto {
     type: SeedDto,
     example: [
       {
-        name: 'TestSeed',
+        name: 'DummySeed',
         seed: true,
       },
     ],

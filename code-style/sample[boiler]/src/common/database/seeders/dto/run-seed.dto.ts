@@ -4,7 +4,7 @@ import { IsArray, IsNotEmpty, IsString } from 'class-validator';
 export class RunSeedDto {
   @ApiProperty({
     isArray: true,
-    example: ['TestSeed'],
+    example: ['DummySeed'],
   })
   @IsArray()
   @IsString({ each: true })

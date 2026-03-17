@@ -18,18 +18,14 @@
     "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": false,
     "resolveJsonModule": true,
-    "types": ["jest", "node", "express", "multer"],
+    "types": ["node", "express", "multer"],
     "esModuleInterop": true,
-
     "paths": {
       "src/*": ["src/*"]
     },
 
     "inlineSources": true,
 
-    // Set `sourceRoot` to  "/" to strip the build path prefix
-    // from generated source code references.
-    // This improves issue grouping in Sentry.
     "sourceRoot": "/"
   },
   "include": ["src/**/*.ts"],

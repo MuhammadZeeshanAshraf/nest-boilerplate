@@ -1,75 +1,116 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import {
   ArgumentsHost,
   Catch,
   ExceptionFilter,
   HttpException,
   HttpStatus,
+  Logger,
 } from '@nestjs/common';
-import * as Sentry from '@sentry/nestjs';
 import { Request, Response } from 'express';
+
+interface ErrorResponsePayload {
+  status: false;
+  statusCode: number;
+  path: string;
+  message: string;
+  errorCode?: string;
+  data?: any;
+  timestamp: string;
+}
 
 @Catch()
 export class GlobalExceptionFilter implements ExceptionFilter {
+  private readonly logger = new Logger(GlobalExceptionFilter.name);
+
   catch(exception: unknown, host: ArgumentsHost): void {
-    if (!exception) return;
-    if (exception && exception['handled']) return;
     const ctx = host.switchToHttp();
     const response = ctx.getResponse<Response>();
     const request = ctx.getRequest<Request>();
-    Sentry.captureException(exception, {
-      extra: {
-        user: request?.user,
-        url: request?.url,
-        body: request?.body,
-        params: request?.params,
-        query: request?.query,
-      },
-    });
-    let status = HttpStatus.INTERNAL_SERVER_ERROR;
-    let message = 'Internal server error';
-    let errorResponse = {};
-
-    if (exception instanceof HttpException) {
-      status = exception.getStatus();
-      const exceptionResponse = exception.getResponse();
-      if (typeof exceptionResponse === 'string') {
-        message = exceptionResponse;
-      } else if (typeof exceptionResponse === 'object') {
-        message = exceptionResponse['message'] || message;
-        errorResponse = exceptionResponse;
-      }
-    } else if (exception instanceof Error) {
-      message = exception.message;
-      errorResponse = { name: exception.name, stack: exception.stack };
-    } else {
-      message = 'Unexpected error occurred';
-      errorResponse = { exception };
-    }
-
-    // this.logger.error(
-    //   `Error occurred: ${message}`,
-    //   JSON.stringify({
-    //     path: request.url,
-    //     method: request.method,
-    //     body: request.body,
-    //     query: request.query,
-    //     params: request.params,
-    //     error: errorResponse,
-    //   }),
-    // );
+    console.error(exception);
 
     if (response.headersSent) {
-      // this.logger.warn(
-      //   'Headers already sent, cannot send error response again.',
-      // );
       return;
     }
+    this.logger.log(`Exception: ${JSON.stringify(exception)}`);
 
-    response.status(status).json({
-      statusCode: status,
+    const errorInfo = this.extractErrorInfo(exception);
+
+    const { message } = errorInfo;
+
+    const errorResponse: ErrorResponsePayload = {
+      status: false,
+      statusCode: errorInfo.statusCode,
+      path: request.url,
       message,
       timestamp: new Date().toISOString(),
-      path: request.url,
-    });
+    };
+
+    if (errorInfo.errorCode) {
+      errorResponse.errorCode = errorInfo.errorCode;
+    }
+
+    if (errorInfo.data !== undefined && errorInfo.data !== null) {
+      errorResponse.data = errorInfo.data;
+    }
+
+    response.status(errorInfo.statusCode).json(errorResponse);
+  }
+
+  private extractErrorInfo(exception: unknown): {
+    statusCode: number;
+    message: string;
+    errorCode?: string;
+    data?: any;
+    messageKey?: string;
+    entity?: string;
+  } {
+    if (exception instanceof HttpException) {
+      const status = exception.getStatus();
+      const exceptionResponse = exception.getResponse();
+
+      if (typeof exceptionResponse === 'string') {
+        return {
+          statusCode: status,
+          message: exceptionResponse,
+        };
+      }
+
+      if (typeof exceptionResponse === 'object' && exceptionResponse !== null) {
+        const resp = exceptionResponse as Record<string, any>;
+
+        let { message } = resp;
+        if (Array.isArray(message)) {
+          message = message.join(', ');
+        }
+        message = message || exception.message || 'An error occurred';
+
+        return {
+          statusCode: status,
+          message,
+          errorCode: resp.errorCode || resp.error,
+          data: resp.data,
+          messageKey: resp.messageKey,
+          entity: resp.entity,
+        };
+      }
+
+      return {
+        statusCode: status,
+        message: exception.message,
+      };
+    }
+
+    if (exception instanceof Error) {
+      return {
+        statusCode: HttpStatus.INTERNAL_SERVER_ERROR,
+        message: exception.message || 'Internal server error',
+      };
+    }
+
+    return {
+      statusCode: HttpStatus.INTERNAL_SERVER_ERROR,
+      message: 'Unexpected error occurred',
+    };
   }
 }
