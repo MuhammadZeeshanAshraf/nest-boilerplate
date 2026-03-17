@@ -1,0 +1,2002 @@
+[
+  {
+    "alpha2Code": "IN",
+    "alpha3Code": "IND",
+    "name": "India",
+    "nationality": "Indian",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_in-flag.gif",
+    "slug": "india"
+  },
+  {
+    "alpha2Code": "PK",
+    "alpha3Code": "PAK",
+    "name": "Pakistan",
+    "nationality": "Pakistani",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_pk-flag.gif",
+    "slug": "pakistan"
+  },
+  {
+    "alpha2Code": "ZA",
+    "alpha3Code": "ZAF",
+    "name": "South Africa",
+    "nationality": "South African",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_sf-flag.gif",
+    "slug": "south-africa"
+  },
+  {
+    "alpha2Code": "TR",
+    "alpha3Code": "TUR",
+    "name": "Turkiye",
+    "nationality": "Turkish",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_tu-flag.gif",
+    "slug": "turkiye"
+  },
+  {
+    "alpha2Code": "DK",
+    "alpha3Code": "DNK",
+    "name": "Denmark",
+    "nationality": "Danish",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_da-flag.gif",
+    "slug": "denmark"
+  },
+  {
+    "alpha2Code": "RS",
+    "alpha3Code": "SRB",
+    "name": "Serbia",
+    "nationality": "Serbian",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_ri-flag.gif",
+    "slug": "serbia"
+  },
+  {
+    "alpha2Code": "SC",
+    "alpha3Code": "SYC",
+    "name": "Seychelles",
+    "nationality": "Citizen of Seychelles",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_se-flag.gif",
+    "slug": "seychelles"
+  },
+  {
+    "alpha2Code": "SL",
+    "alpha3Code": "SLE",
+    "name": "Sierra Leone",
+    "nationality": "Sierra Leonean",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_sl-flag.gif",
+    "slug": "sierra-leone"
+  },
+  {
+    "alpha2Code": "SG",
+    "alpha3Code": "SGP",
+    "name": "Singapore",
+    "nationality": "Singaporean",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_sn-flag.gif",
+    "slug": "singapore"
+  },
+  {
+    "alpha2Code": "SX",
+    "alpha3Code": "SXM",
+    "name": "Sint Maarten (Dutch part)",
+    "nationality": "Sint Maarten (Dutch)",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_sk-flag.gif",
+    "slug": "sint-maarten"
+  },
+  {
+    "alpha2Code": "SK",
+    "alpha3Code": "SVK",
+    "name": "Slovakia",
+    "nationality": "Slovak",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_lo-flag.gif",
+    "slug": "slovakia"
+  },
+  {
+    "alpha2Code": "SI",
+    "alpha3Code": "SVN",
+    "name": "Slovenia",
+    "nationality": "Slovenian",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_si-flag.gif",
+    "slug": "slovenia"
+  },
+  {
+    "alpha2Code": "SB",
+    "alpha3Code": "SLB",
+    "name": "Solomon Islands",
+    "nationality": "Solomon Islander",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_bp-flag.gif",
+    "slug": "solomon-islands"
+  },
+  {
+    "alpha2Code": "SO",
+    "alpha3Code": "SOM",
+    "name": "Somalia",
+    "nationality": "Somali",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_so-flag.gif",
+    "slug": "somalia"
+  },
+  {
+    "alpha2Code": "GS",
+    "alpha3Code": "SGS",
+    "name": "South Georgia and the South Sandwich Islands",
+    "nationality": "South Georgia and the South Sandwich Islands",
+    "icon": "https://upload.wikimedia.org/wikipedia/commons/e/ed/Flag_of_South_Georgia_and_the_South_Sandwich_Islands.svg",
+    "slug": "south-georgia-and-the-south-sandwich-islands"
+  },
+  {
+    "alpha2Code": "SS",
+    "alpha3Code": "SSD",
+    "name": "South Sudan",
+    "nationality": "South Sudanese",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_od-flag.gif",
+    "slug": "south-sudan"
+  },
+  {
+    "alpha2Code": "ES",
+    "alpha3Code": "ESP",
+    "name": "Spain",
+    "nationality": "Spanish",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_sp-flag.gif",
+    "slug": "spain"
+  },
+  {
+    "alpha2Code": "LK",
+    "alpha3Code": "LKA",
+    "name": "Sri Lanka",
+    "nationality": "Sri Lankan",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_ce-flag.gif",
+    "slug": "sri-lanka"
+  },
+  {
+    "alpha2Code": "SD",
+    "alpha3Code": "SDN",
+    "name": "Sudan",
+    "nationality": "Sudanese",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_su-flag.gif",
+    "slug": "sudan"
+  },
+  {
+    "alpha2Code": "SR",
+    "alpha3Code": "SUR",
+    "name": "Suriname",
+    "nationality": "Surinamese",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_ns-flag.gif",
+    "slug": "suriname"
+  },
+  {
+    "alpha2Code": "SJ",
+    "alpha3Code": "SJM",
+    "name": "Svalbard and Jan Mayen",
+    "nationality": "Svalbard and Jan Mayen",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_no-flag.gif",
+    "slug": "svalbard-and-jan-mayen"
+  },
+  {
+    "alpha2Code": "SE",
+    "alpha3Code": "SWE",
+    "name": "Sweden",
+    "nationality": "Swedish",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_sw-flag.gif",
+    "slug": "sweden"
+  },
+  {
+    "alpha2Code": "CH",
+    "alpha3Code": "CHE",
+    "name": "Switzerland",
+    "nationality": "Swiss",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_sz-flag.gif",
+    "slug": "switzerland"
+  },
+  {
+    "alpha2Code": "SY",
+    "alpha3Code": "SYR",
+    "name": "Syrian Arab Republic",
+    "nationality": "Syrian",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_sy-flag.gif",
+    "slug": "syrian-arab-republic"
+  },
+  {
+    "alpha2Code": "TW",
+    "alpha3Code": "TWN",
+    "name": "Taiwan, Province of China",
+    "nationality": "Taiwanese",
+    "icon": "https://upload.wikimedia.org/wikipedia/commons/7/72/Flag_of_the_Republic_of_China.svg",
+    "slug": "taiwan"
+  },
+  {
+    "alpha2Code": "TJ",
+    "alpha3Code": "TJK",
+    "name": "Tajikistan",
+    "nationality": "Tajik",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_ti-flag.gif",
+    "slug": "tajikistan"
+  },
+  {
+    "alpha2Code": "TZ",
+    "alpha3Code": "TZA",
+    "name": "Tanzania, United Republic of",
+    "nationality": "Tanzanian",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_tz-flag.gif",
+    "slug": "tanzania"
+  },
+  {
+    "alpha2Code": "TH",
+    "alpha3Code": "THA",
+    "name": "Thailand",
+    "nationality": "Thai",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_th-flag.gif",
+    "slug": "thailand"
+  },
+  {
+    "alpha2Code": "TL",
+    "alpha3Code": "TLS",
+    "name": "Timor-Leste (East Timor)",
+    "nationality": "Timorese",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_tt-flag.gif",
+    "slug": "timor-leste"
+  },
+  {
+    "alpha2Code": "TK",
+    "alpha3Code": "TKL",
+    "name": "Tokelau",
+    "nationality": "Tokelauan",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_tl-flag.gif",
+    "slug": "tokelau"
+  },
+  {
+    "alpha2Code": "TO",
+    "alpha3Code": "TON",
+    "name": "Tonga",
+    "nationality": "Tongan",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_tn-flag.gif",
+    "slug": "tonga"
+  },
+  {
+    "alpha2Code": "TT",
+    "alpha3Code": "TTO",
+    "name": "Trinidad and Tobago",
+    "nationality": "Trinidadian",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_td-flag.gif",
+    "slug": "trinidad-and-tobago"
+  },
+  {
+    "alpha2Code": "TN",
+    "alpha3Code": "TUN",
+    "name": "Tunisia",
+    "nationality": "Tunisian",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_ts-flag.gif",
+    "slug": "tunisia"
+  },
+  {
+    "alpha2Code": "TM",
+    "alpha3Code": "TKM",
+    "name": "Turkmenistan",
+    "nationality": "Turkmen",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_tx-flag.gif",
+    "slug": "turkmenistan"
+  },
+  {
+    "alpha2Code": "TC",
+    "alpha3Code": "TCA",
+    "name": "Turks and Caicos Islands",
+    "nationality": "Turks and Caicos Islander",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_tk-flag.gif",
+    "slug": "turks-and-caicos-islands"
+  },
+  {
+    "alpha2Code": "TV",
+    "alpha3Code": "TUV",
+    "name": "Tuvalu",
+    "nationality": "Tuvaluan",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_tv-flag.gif",
+    "slug": "tuvalu"
+  },
+  {
+    "alpha2Code": "UG",
+    "alpha3Code": "UGA",
+    "name": "Uganda",
+    "nationality": "Ugandan",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_ug-flag.gif",
+    "slug": "uganda"
+  },
+  {
+    "alpha2Code": "UA",
+    "alpha3Code": "UKR",
+    "name": "Ukraine",
+    "nationality": "Ukrainian",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_up-flag.gif",
+    "slug": "ukraine"
+  },
+  {
+    "alpha2Code": "AZ",
+    "alpha3Code": "AZE",
+    "name": "Azerbaijan",
+    "nationality": "Azerbaijani",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_aj-flag.gif",
+    "slug": "azerbaijan"
+  },
+  {
+    "alpha2Code": "BS",
+    "alpha3Code": "BHS",
+    "name": "Bahamas",
+    "nationality": "Bahamian",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_bf-flag.gif",
+    "slug": "bahamas"
+  },
+  {
+    "alpha2Code": "BH",
+    "alpha3Code": "BHR",
+    "name": "Bahrain",
+    "nationality": "Bahraini",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_ba-flag.gif",
+    "slug": "bahrain"
+  },
+  {
+    "alpha2Code": "BD",
+    "alpha3Code": "BGD",
+    "name": "Bangladesh",
+    "nationality": "Bangladeshi",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_bg-flag.gif",
+    "slug": "bangladesh"
+  },
+  {
+    "alpha2Code": "BB",
+    "alpha3Code": "BRB",
+    "name": "Barbados",
+    "nationality": "Barbadian",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_bb-flag.gif",
+    "slug": "barbados"
+  },
+  {
+    "alpha2Code": "BY",
+    "alpha3Code": "BLR",
+    "name": "Belarus",
+    "nationality": "Belarusian",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_bo-flag.gif",
+    "slug": "belarus"
+  },
+  {
+    "alpha2Code": "BE",
+    "alpha3Code": "BEL",
+    "name": "Belgium",
+    "nationality": "Belgian",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_be-flag.gif",
+    "slug": "belgium"
+  },
+  {
+    "alpha2Code": "BZ",
+    "alpha3Code": "BLZ",
+    "name": "Belize",
+    "nationality": "Belizean",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_bh-flag.gif",
+    "slug": "belize"
+  },
+  {
+    "alpha2Code": "BJ",
+    "alpha3Code": "BEN",
+    "name": "Benin",
+    "nationality": "Beninese",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_bn-flag.gif",
+    "slug": "benin"
+  },
+  {
+    "alpha2Code": "BM",
+    "alpha3Code": "BMU",
+    "name": "Bermuda",
+    "nationality": "Bermudian",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_bd-flag.gif",
+    "slug": "bermuda"
+  },
+  {
+    "alpha2Code": "BT",
+    "alpha3Code": "BTN",
+    "name": "Bhutan",
+    "nationality": "Bhutanese",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_bt-flag.gif",
+    "slug": "bhutan"
+  },
+  {
+    "alpha2Code": "BO",
+    "alpha3Code": "BOL",
+    "name": "Bolivia",
+    "nationality": "Bolivian",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_bl-flag.gif",
+    "slug": "bolivia"
+  },
+  {
+    "alpha2Code": "BQ",
+    "alpha3Code": "BES",
+    "name": "Bonaire, Sint Eustatius and Saba",
+    "nationality": "Bonaire, Sint Eustatius and Saba",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_nl-flag.gif",
+    "slug": "bonaire-sint-eustatius-and-saba"
+  },
+  {
+    "alpha2Code": "BA",
+    "alpha3Code": "BIH",
+    "name": "Bosnia and Herzegovina",
+    "nationality": "Bosnian",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_bk-flag.gif",
+    "slug": "bosnia-and-herzegovina"
+  },
+  {
+    "alpha2Code": "BW",
+    "alpha3Code": "BWA",
+    "name": "Botswana",
+    "nationality": "Botswanan",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_bc-flag.gif",
+    "slug": "botswana"
+  },
+  {
+    "alpha2Code": "BV",
+    "alpha3Code": "BVT",
+    "name": "Bouvet Island",
+    "nationality": "Bouvet Islander",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_no-flag.gif",
+    "slug": "bouvet-island"
+  },
+  {
+    "alpha2Code": "BR",
+    "alpha3Code": "BRA",
+    "name": "Brazil",
+    "nationality": "Brazilian",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_br-flag.gif",
+    "slug": "brazil"
+  },
+  {
+    "alpha2Code": "IO",
+    "alpha3Code": "IOT",
+    "name": "British Indian Ocean Territory",
+    "nationality": "British Indian Ocean Territory",
+    "icon": "https://upload.wikimedia.org/wikipedia/commons/6/65/Flag_of_the_Commissioner_of_the_British_Indian_Ocean_Territory.svg",
+    "slug": "british-indian-ocean-territory"
+  },
+  {
+    "alpha2Code": "BN",
+    "alpha3Code": "BRN",
+    "name": "Brunei Darussalam",
+    "nationality": "Bruneian",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_bx-flag.gif",
+    "slug": "brunei-darussalam"
+  },
+  {
+    "alpha2Code": "BG",
+    "alpha3Code": "BGR",
+    "name": "Bulgaria",
+    "nationality": "Bulgarian",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_bu-flag.gif",
+    "slug": "bulgaria"
+  },
+  {
+    "alpha2Code": "BF",
+    "alpha3Code": "BFA",
+    "name": "Burkina Faso",
+    "nationality": "Burkinan",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_uv-flag.gif",
+    "slug": "burkina-faso"
+  },
+  {
+    "alpha2Code": "BI",
+    "alpha3Code": "BDI",
+    "name": "Burundi",
+    "nationality": "Burundian",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_by-flag.gif",
+    "slug": "burundi"
+  },
+  {
+    "alpha2Code": "KH",
+    "alpha3Code": "KHM",
+    "name": "Cambodia",
+    "nationality": "Cambodian",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_cb-flag.gif",
+    "slug": "cambodia"
+  },
+  {
+    "alpha2Code": "CM",
+    "alpha3Code": "CMR",
+    "name": "Cameroon",
+    "nationality": "Cameroonian",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_cm-flag.gif",
+    "slug": "cameroon"
+  },
+  {
+    "alpha2Code": "CA",
+    "alpha3Code": "CAN",
+    "name": "Canada",
+    "nationality": "Canadian",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_ca-flag.gif",
+    "slug": "canada"
+  },
+  {
+    "alpha2Code": "CV",
+    "alpha3Code": "CPV",
+    "name": "Cape Verde",
+    "nationality": "Cape Verdean",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_cv-flag.gif",
+    "slug": "cape-verde"
+  },
+  {
+    "alpha2Code": "KY",
+    "alpha3Code": "CYM",
+    "name": "Cayman Islands",
+    "nationality": "Cayman Islander",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_cj-flag.gif",
+    "slug": "cayman-islands"
+  },
+  {
+    "alpha2Code": "CF",
+    "alpha3Code": "CAF",
+    "name": "Central African Republic",
+    "nationality": "Central African",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_ct-flag.gif",
+    "slug": "central-african-republic"
+  },
+  {
+    "alpha2Code": "TD",
+    "alpha3Code": "TCD",
+    "name": "Chad",
+    "nationality": "Chadian",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_cd-flag.gif",
+    "slug": "chad"
+  },
+  {
+    "alpha2Code": "CL",
+    "alpha3Code": "CHL",
+    "name": "Chile",
+    "nationality": "Chilean",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_ci-flag.gif",
+    "slug": "chile"
+  },
+  {
+    "alpha2Code": "CN",
+    "alpha3Code": "CHN",
+    "name": "China",
+    "nationality": "Chinese",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_ch-flag.gif",
+    "slug": "china"
+  },
+  {
+    "alpha2Code": "CX",
+    "alpha3Code": "CXR",
+    "name": "Christmas Island",
+    "nationality": "Christmas Islander",
+    "icon": "https://upload.wikimedia.org/wikipedia/commons/6/67/Flag_of_Christmas_Island.svg",
+    "slug": "christmas-island"
+  },
+  {
+    "alpha2Code": "CC",
+    "alpha3Code": "CCK",
+    "name": "Cocos (Keeling) Islands",
+    "nationality": "Cocos Islander",
+    "icon": "https://upload.wikimedia.org/wikipedia/commons/7/74/Flag_of_the_Cocos_%28Keeling%29_Islands.svg",
+    "slug": "cocos-islands"
+  },
+  {
+    "alpha2Code": "CO",
+    "alpha3Code": "COL",
+    "name": "Colombia",
+    "nationality": "Colombian",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_co-flag.gif",
+    "slug": "colombia"
+  },
+  {
+    "alpha2Code": "KM",
+    "alpha3Code": "COM",
+    "name": "Comoros",
+    "nationality": "Comoran",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_cn-flag.gif",
+    "slug": "comoros"
+  },
+  {
+    "alpha2Code": "CK",
+    "alpha3Code": "COK",
+    "name": "Cook Islands",
+    "nationality": "Cook Islander",
+    "icon": "https://upload.wikimedia.org/wikipedia/commons/3/35/Flag_of_the_Cook_Islands.svg",
+    "slug": "cook-islands"
+  },
+  {
+    "alpha2Code": "CR",
+    "alpha3Code": "CRI",
+    "name": "Costa Rica",
+    "nationality": "Costa Rican",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_cs-flag.gif",
+    "slug": "costa-rica"
+  },
+  {
+    "alpha2Code": "CI",
+    "alpha3Code": "CIV",
+    "name": "Cote D'Ivoire",
+    "nationality": "Ivorian",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_iv-flag.gif",
+    "slug": "cote-divoire"
+  },
+  {
+    "alpha2Code": "HR",
+    "alpha3Code": "HRV",
+    "name": "Croatia",
+    "nationality": "Croatian",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_hr-flag.gif",
+    "slug": "croatia"
+  },
+  {
+    "alpha2Code": "CU",
+    "alpha3Code": "CUB",
+    "name": "Cuba",
+    "nationality": "Cuban",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_cu-flag.gif",
+    "slug": "cuba"
+  },
+  {
+    "alpha2Code": "CW",
+    "alpha3Code": "CUW",
+    "name": "Curacao",
+    "nationality": "Curacaoans",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_cc-flag.gif",
+    "slug": "curacao"
+  },
+  {
+    "alpha2Code": "CY",
+    "alpha3Code": "CYP",
+    "name": "Cyprus",
+    "nationality": "Cypriot",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_cy-flag.gif",
+    "slug": "cyprus"
+  },
+  {
+    "alpha2Code": "CZ",
+    "alpha3Code": "CZE",
+    "name": "Czech Republic",
+    "nationality": "Czech",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_ez-flag.gif",
+    "slug": "czech-republic"
+  },
+  {
+    "alpha2Code": "CD",
+    "alpha3Code": "COD",
+    "name": "Democratic Republic of the Congo",
+    "nationality": "Congolese (DRC)",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_congo-flag.gif",
+    "slug": "democratic-republic-of-the-congo"
+  },
+  {
+    "alpha2Code": "DJ",
+    "alpha3Code": "DJI",
+    "name": "Djibouti",
+    "nationality": "Djiboutian",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_dj-flag.gif",
+    "slug": "djibouti"
+  },
+  {
+    "alpha2Code": "DM",
+    "alpha3Code": "DMA",
+    "name": "Dominica",
+    "nationality": "Dominican",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_do-flag.gif",
+    "slug": "dominica"
+  },
+  {
+    "alpha2Code": "DO",
+    "alpha3Code": "DOM",
+    "name": "Dominican Republic",
+    "nationality": "Citizen of the Dominican Republic",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_dr-flag.gif",
+    "slug": "dominican-republic"
+  },
+  {
+    "alpha2Code": "EC",
+    "alpha3Code": "ECU",
+    "name": "Ecuador",
+    "nationality": "Ecuadorean",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_ec-flag.gif",
+    "slug": "ecuador"
+  },
+  {
+    "alpha2Code": "EG",
+    "alpha3Code": "EGY",
+    "name": "Egypt",
+    "nationality": "Egyptian",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_eg-flag.gif",
+    "slug": "egypt"
+  },
+  {
+    "alpha2Code": "SV",
+    "alpha3Code": "SLV",
+    "name": "El Salvador",
+    "nationality": "Salvadorean",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_es-flag.gif",
+    "slug": "el-salvador"
+  },
+  {
+    "alpha2Code": "GQ",
+    "alpha3Code": "GNQ",
+    "name": "Equatorial Guinea",
+    "nationality": "Equatorial Guinean",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_ek-flag.gif",
+    "slug": "equatorial-guinea"
+  },
+  {
+    "alpha2Code": "ER",
+    "alpha3Code": "ERI",
+    "name": "Eritrea",
+    "nationality": "Eritrean",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_er-flag.gif",
+    "slug": "eritrea"
+  },
+  {
+    "alpha2Code": "EE",
+    "alpha3Code": "EST",
+    "name": "Estonia",
+    "nationality": "Estonian",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_en-flag.gif",
+    "slug": "estonia"
+  },
+  {
+    "alpha2Code": "SZ",
+    "alpha3Code": "SWZ",
+    "name": "Eswatini",
+    "nationality": "Swazi",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_wz-flag.gif",
+    "slug": "eswatini"
+  },
+  {
+    "alpha2Code": "ET",
+    "alpha3Code": "ETH",
+    "name": "Ethiopia",
+    "nationality": "Ethiopian",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_et-flag.gif",
+    "slug": "ethiopia"
+  },
+  {
+    "alpha2Code": "FK",
+    "alpha3Code": "FLK",
+    "name": "Falkland Islands (Malvinas)",
+    "nationality": "Falkland Islander",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_fk-flag.gif",
+    "slug": "falkland-islands"
+  },
+  {
+    "alpha2Code": "FO",
+    "alpha3Code": "FRO",
+    "name": "Faroe Islands",
+    "nationality": "Faroese",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_fo-flag.gif",
+    "slug": "faroe-islands"
+  },
+  {
+    "alpha2Code": "FJ",
+    "alpha3Code": "FJI",
+    "name": "Fiji",
+    "nationality": "Fijian",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_fj-flag.gif",
+    "slug": "fiji"
+  },
+  {
+    "alpha2Code": "FR",
+    "alpha3Code": "FRA",
+    "name": "France",
+    "nationality": "French",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_fr-flag.gif",
+    "slug": "france"
+  },
+  {
+    "alpha2Code": "GF",
+    "alpha3Code": "GUF",
+    "name": "French Guiana",
+    "nationality": "French Guianese",
+    "icon": "https://flagsworld.org/img/cflags/france-guiana-flag.png",
+    "slug": "french-guiana"
+  },
+  {
+    "alpha2Code": "PF",
+    "alpha3Code": "PYF",
+    "name": "French Polynesia",
+    "nationality": "French Polynesians",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_fp-flag.gif",
+    "slug": "french-polynesia"
+  },
+  {
+    "alpha2Code": "TF",
+    "alpha3Code": "ATF",
+    "name": "French Southern Territories",
+    "nationality": "French Southern Territories",
+    "icon": "https://upload.wikimedia.org/wikipedia/commons/a/a7/Flag_of_the_French_Southern_and_Antarctic_Lands.svg",
+    "slug": "french-southern-territories"
+  },
+  {
+    "alpha2Code": "GM",
+    "alpha3Code": "GMB",
+    "name": "Gambia, Republic of",
+    "nationality": "Gambian",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_ga-flag.gif",
+    "slug": "gambia"
+  },
+  {
+    "alpha2Code": "GE",
+    "alpha3Code": "GEO",
+    "name": "Georgia",
+    "nationality": "Georgian",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_gg-flag.gif",
+    "slug": "georgia"
+  },
+  {
+    "alpha2Code": "DE",
+    "alpha3Code": "DEU",
+    "name": "Germany",
+    "nationality": "German",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_gm-flag.gif",
+    "slug": "germany"
+  },
+  {
+    "alpha2Code": "GI",
+    "alpha3Code": "GIB",
+    "name": "Gibraltar",
+    "nationality": "Gibraltarian",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_gi-flag.gif",
+    "slug": "gibraltar"
+  },
+  {
+    "alpha2Code": "GR",
+    "alpha3Code": "GRC",
+    "name": "Greece",
+    "nationality": "Greek",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_gr-flag.gif",
+    "slug": "greece"
+  },
+  {
+    "alpha2Code": "GL",
+    "alpha3Code": "GRL",
+    "name": "Greenland",
+    "nationality": "Greenlandic",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_gl-flag.gif",
+    "slug": "greenland"
+  },
+  {
+    "alpha2Code": "GD",
+    "alpha3Code": "GRD",
+    "name": "Grenada",
+    "nationality": "Grenadian",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_gj-flag.gif",
+    "slug": "grenada"
+  },
+  {
+    "alpha2Code": "GP",
+    "alpha3Code": "GLP",
+    "name": "Guadeloupe",
+    "nationality": "Guadeloupean",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_fr-flag.gif",
+    "slug": "guadeloupe"
+  },
+  {
+    "alpha2Code": "GU",
+    "alpha3Code": "GUM",
+    "name": "Guam",
+    "nationality": "Guamanian",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_gq-flag.gif",
+    "slug": "guam"
+  },
+  {
+    "alpha2Code": "GT",
+    "alpha3Code": "GTM",
+    "name": "Guatemala",
+    "nationality": "Guatemalan",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_gt-flag.gif",
+    "slug": "guatemala"
+  },
+  {
+    "alpha2Code": "GG",
+    "alpha3Code": "GGY",
+    "name": "Guernsey",
+    "nationality": "Citizen of Guernsey",
+    "icon": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Flag_of_Guernsey.svg",
+    "slug": "guernsey"
+  },
+  {
+    "alpha2Code": "GN",
+    "alpha3Code": "GIN",
+    "name": "Guinea",
+    "nationality": "Guinean",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_gv-flag.gif",
+    "slug": "guinea"
+  },
+  {
+    "alpha2Code": "GW",
+    "alpha3Code": "GNB",
+    "name": "Guinea-Bissau",
+    "nationality": "Citizen of Guinea-Bissau",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_pu-flag.gif",
+    "slug": "guinea-bissau"
+  },
+  {
+    "alpha2Code": "GY",
+    "alpha3Code": "GUY",
+    "name": "Guyana",
+    "nationality": "Guyanese",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_gy-flag.gif",
+    "slug": "guyana"
+  },
+  {
+    "alpha2Code": "HT",
+    "alpha3Code": "HTI",
+    "name": "Haiti",
+    "nationality": "Haitian",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_ha-flag.gif",
+    "slug": "haiti"
+  },
+  {
+    "alpha2Code": "HM",
+    "alpha3Code": "HMD",
+    "name": "Heard Island and McDonald Islands",
+    "nationality": "Heard Island and McDonald Islands",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_as-flag.gif",
+    "slug": "heard-island-and-mcdonald-islands"
+  },
+  {
+    "alpha2Code": "VA",
+    "alpha3Code": "VAT",
+    "name": "Holy See (Vatican City State)",
+    "nationality": "Vaticans",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_vt-flag.gif",
+    "slug": "vatican-city-state"
+  },
+  {
+    "alpha2Code": "HN",
+    "alpha3Code": "HND",
+    "name": "Honduras",
+    "nationality": "Honduran",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_ho-flag.gif",
+    "slug": "honduras"
+  },
+  {
+    "alpha2Code": "HK",
+    "alpha3Code": "HKG",
+    "name": "Hong Kong",
+    "nationality": "Hong Konger",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_hk-flag.gif",
+    "slug": "hong-kong"
+  },
+  {
+    "alpha2Code": "HU",
+    "alpha3Code": "HUN",
+    "name": "Hungary",
+    "nationality": "Hungarian",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_hu-flag.gif",
+    "slug": "hungary"
+  },
+  {
+    "alpha2Code": "IS",
+    "alpha3Code": "ISL",
+    "name": "Iceland",
+    "nationality": "Icelandic",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_ic-flag.gif",
+    "slug": "iceland"
+  },
+  {
+    "alpha2Code": "ID",
+    "alpha3Code": "IDN",
+    "name": "Indonesia",
+    "nationality": "Indonesian",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_id-flag.gif",
+    "slug": "indonesia"
+  },
+  {
+    "alpha2Code": "IQ",
+    "alpha3Code": "IRQ",
+    "name": "Iraq",
+    "nationality": "Iraqi",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_iz-flag.gif",
+    "slug": "iraq"
+  },
+  {
+    "alpha2Code": "IE",
+    "alpha3Code": "IRL",
+    "name": "Ireland",
+    "nationality": "Irish",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_ei-flag.gif",
+    "slug": "ireland"
+  },
+  {
+    "alpha2Code": "IR",
+    "alpha3Code": "IRN",
+    "name": "Islamic Republic of Iran",
+    "nationality": "Iranian",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_ir-flag.gif",
+    "slug": "iran"
+  },
+  {
+    "alpha2Code": "IM",
+    "alpha3Code": "IMN",
+    "name": "Isle of Man",
+    "nationality": "Manx",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_im-flag.gif",
+    "slug": "isle-of-man"
+  },
+  {
+    "alpha2Code": "IL",
+    "alpha3Code": "ISR",
+    "name": "Israel",
+    "nationality": "Israeli",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_is-flag.gif",
+    "slug": "israel"
+  },
+  {
+    "alpha2Code": "IT",
+    "alpha3Code": "ITA",
+    "name": "Italy",
+    "nationality": "Italian",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_it-flag.gif",
+    "slug": "italy"
+  },
+  {
+    "alpha2Code": "JM",
+    "alpha3Code": "JAM",
+    "name": "Jamaica",
+    "nationality": "Jamaican",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_jm-flag.gif",
+    "slug": "jamaica"
+  },
+  {
+    "alpha2Code": "JP",
+    "alpha3Code": "JPN",
+    "name": "Japan",
+    "nationality": "Japanese",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_ja-flag.gif",
+    "slug": "japan"
+  },
+  {
+    "alpha2Code": "JE",
+    "alpha3Code": "JEY",
+    "name": "Jersey",
+    "nationality": "Jersey",
+    "icon": "https://upload.wikimedia.org/wikipedia/commons/1/1c/Flag_of_Jersey.svg",
+    "slug": "jersey"
+  },
+  {
+    "alpha2Code": "JO",
+    "alpha3Code": "JOR",
+    "name": "Jordan",
+    "nationality": "Jordanian",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_jo-flag.gif",
+    "slug": "jordan"
+  },
+  {
+    "alpha2Code": "KZ",
+    "alpha3Code": "KAZ",
+    "name": "Kazakhstan",
+    "nationality": "Kazakh",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_kz-flag.gif",
+    "slug": "kazakhstan"
+  },
+  {
+    "alpha2Code": "KE",
+    "alpha3Code": "KEN",
+    "name": "Kenya",
+    "nationality": "Kenyan",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_ke-flag.gif",
+    "slug": "kenya"
+  },
+  {
+    "alpha2Code": "KI",
+    "alpha3Code": "KIR",
+    "name": "Kiribati",
+    "nationality": "Citizen of Kiribati",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_kr-flag.gif",
+    "slug": "kiribati"
+  },
+  {
+    "alpha2Code": "XK",
+    "alpha3Code": "XKX",
+    "name": "Kosovo",
+    "nationality": "Kosovan",
+    "icon": "https://upload.wikimedia.org/wikipedia/commons/1/1f/Flag_of_Kosovo.svg",
+    "slug": "kosovo"
+  },
+  {
+    "alpha2Code": "KW",
+    "alpha3Code": "KWT",
+    "name": "Kuwait",
+    "nationality": "Kuwaiti",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_ku-flag.gif",
+    "slug": "kuwait"
+  },
+  {
+    "alpha2Code": "GH",
+    "alpha3Code": "GHA",
+    "name": "Ghana",
+    "nationality": "Ghanaian",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_gh-flag.gif",
+    "slug": "ghana"
+  },
+  {
+    "alpha2Code": "KG",
+    "alpha3Code": "KGZ",
+    "name": "Kyrgyzstan",
+    "nationality": "Kyrgyz",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_kg-flag.gif",
+    "slug": "kyrgyzstan"
+  },
+  {
+    "alpha2Code": "LA",
+    "alpha3Code": "LAO",
+    "name": "Laos",
+    "nationality": "Lao",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_la-flag.gif",
+    "slug": "laos"
+  },
+  {
+    "alpha2Code": "LV",
+    "alpha3Code": "LVA",
+    "name": "Latvia",
+    "nationality": "Latvian",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_lg-flag.gif",
+    "slug": "latvia"
+  },
+  {
+    "alpha2Code": "LB",
+    "alpha3Code": "LBN",
+    "name": "Lebanon",
+    "nationality": "Lebanese",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_le-flag.gif",
+    "slug": "lebanon"
+  },
+  {
+    "alpha2Code": "LS",
+    "alpha3Code": "LSO",
+    "name": "Lesotho",
+    "nationality": "Citizens of Lesotho",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_lt-flag.gif",
+    "slug": "lesotho"
+  },
+  {
+    "alpha2Code": "LR",
+    "alpha3Code": "LBR",
+    "name": "Liberia",
+    "nationality": "Liberian",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_li-flag.gif",
+    "slug": "liberia"
+  },
+  {
+    "alpha2Code": "LY",
+    "alpha3Code": "LBY",
+    "name": "Libya",
+    "nationality": "Libyan",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_ly-flag.gif",
+    "slug": "libya"
+  },
+  {
+    "alpha2Code": "LI",
+    "alpha3Code": "LIE",
+    "name": "Liechtenstein",
+    "nationality": "Liechtenstein citizen",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_ls-flag.gif",
+    "slug": "liechtenstein"
+  },
+  {
+    "alpha2Code": "LT",
+    "alpha3Code": "LTU",
+    "name": "Lithuania",
+    "nationality": "Lithuanian",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_lh-flag.gif",
+    "slug": "lithuania"
+  },
+  {
+    "alpha2Code": "LU",
+    "alpha3Code": "LUX",
+    "name": "Luxembourg",
+    "nationality": "Luxembourger",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_lu-flag.gif",
+    "slug": "luxembourg"
+  },
+  {
+    "alpha2Code": "MO",
+    "alpha3Code": "MAC",
+    "name": "Macau (Macao)",
+    "nationality": "Macanese",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_mc-flag.gif",
+    "slug": "macau"
+  },
+  {
+    "alpha2Code": "MG",
+    "alpha3Code": "MDG",
+    "name": "Madagascar",
+    "nationality": "Malagasy",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_ma-flag.gif",
+    "slug": "madagascar"
+  },
+  {
+    "alpha2Code": "MW",
+    "alpha3Code": "MWI",
+    "name": "Malawi",
+    "nationality": "Malawian",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_mi-flag.gif",
+    "slug": "malawi"
+  },
+  {
+    "alpha2Code": "MY",
+    "alpha3Code": "MYS",
+    "name": "Malaysia",
+    "nationality": "Malaysian",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_my-flag.gif",
+    "slug": "malaysia"
+  },
+  {
+    "alpha2Code": "MV",
+    "alpha3Code": "MDV",
+    "name": "Maldives",
+    "nationality": "Maldivian",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_mv-flag.gif",
+    "slug": "maldives"
+  },
+  {
+    "alpha2Code": "ML",
+    "alpha3Code": "MLI",
+    "name": "Mali",
+    "nationality": "Malian",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_ml-flag.gif",
+    "slug": "mali"
+  },
+  {
+    "alpha2Code": "MT",
+    "alpha3Code": "MLT",
+    "name": "Malta",
+    "nationality": "Maltese",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_mt-flag.gif",
+    "slug": "malta"
+  },
+  {
+    "alpha2Code": "MH",
+    "alpha3Code": "MHL",
+    "name": "Marshall Islands",
+    "nationality": "Marshallese",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_rm-flag.gif",
+    "slug": "marshall-islands"
+  },
+  {
+    "alpha2Code": "MQ",
+    "alpha3Code": "MTQ",
+    "name": "Martinique",
+    "nationality": "Martiniquais",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_fr-flag.gif",
+    "slug": "martinique"
+  },
+  {
+    "alpha2Code": "MR",
+    "alpha3Code": "MRT",
+    "name": "Mauritania",
+    "nationality": "Mauritanian",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_mr-flag.gif",
+    "slug": "mauritania"
+  },
+  {
+    "alpha2Code": "MU",
+    "alpha3Code": "MUS",
+    "name": "Mauritius",
+    "nationality": "Mauritian",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_mp-flag.gif",
+    "slug": "mauritius"
+  },
+  {
+    "alpha2Code": "YT",
+    "alpha3Code": "MYT",
+    "name": "Mayotte",
+    "nationality": "Mayotte",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_fr-flag.gif",
+    "slug": "mayotte"
+  },
+  {
+    "alpha2Code": "MX",
+    "alpha3Code": "MEX",
+    "name": "Mexico",
+    "nationality": "Mexican",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_mx-flag.gif",
+    "slug": "mexico"
+  },
+  {
+    "alpha2Code": "FM",
+    "alpha3Code": "FSM",
+    "name": "Micronesia, Federated States of",
+    "nationality": "Micronesian",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_fm-flag.gif",
+    "slug": "micronesia"
+  },
+  {
+    "alpha2Code": "MD",
+    "alpha3Code": "MDA",
+    "name": "Moldova, Republic of",
+    "nationality": "Moldovan",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_md-flag.gif",
+    "slug": "moldova"
+  },
+  {
+    "alpha2Code": "MC",
+    "alpha3Code": "MCO",
+    "name": "Monaco",
+    "nationality": "Monegasque",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_mn-flag.gif",
+    "slug": "monaco"
+  },
+  {
+    "alpha2Code": "MN",
+    "alpha3Code": "MNG",
+    "name": "Mongolia",
+    "nationality": "Mongolian",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_mg-flag.gif",
+    "slug": "mongolia"
+  },
+  {
+    "alpha2Code": "ME",
+    "alpha3Code": "MNE",
+    "name": "Montenegro",
+    "nationality": "Montenegrin",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_mj-flag.gif",
+    "slug": "montenegro"
+  },
+  {
+    "alpha2Code": "MS",
+    "alpha3Code": "MSR",
+    "name": "Montserrat",
+    "nationality": "Montserratian",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_mh-flag.gif",
+    "slug": "montserrat"
+  },
+  {
+    "alpha2Code": "MA",
+    "alpha3Code": "MAR",
+    "name": "Morocco",
+    "nationality": "Moroccan",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_mo-flag.gif",
+    "slug": "morocco"
+  },
+  {
+    "alpha2Code": "MZ",
+    "alpha3Code": "MOZ",
+    "name": "Mozambique",
+    "nationality": "Mozambican",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_mz-flag.gif",
+    "slug": "mozambique"
+  },
+  {
+    "alpha2Code": "MM",
+    "alpha3Code": "MMR",
+    "name": "Myanmar",
+    "nationality": "Burmese",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_bm-flag.gif",
+    "slug": "myanmar"
+  },
+  {
+    "alpha2Code": "NA",
+    "alpha3Code": "NAM",
+    "name": "Namibia",
+    "nationality": "Namibian",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_wa-flag.gif",
+    "slug": "namibia"
+  },
+  {
+    "alpha2Code": "NR",
+    "alpha3Code": "NRU",
+    "name": "Nauru",
+    "nationality": "Nauruan",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_nr-flag.gif",
+    "slug": "nauru"
+  },
+  {
+    "alpha2Code": "NP",
+    "alpha3Code": "NPL",
+    "name": "Nepal",
+    "nationality": "Nepalese",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_np-flag.gif",
+    "slug": "nepal"
+  },
+  {
+    "alpha2Code": "NL",
+    "alpha3Code": "NLD",
+    "name": "Netherlands",
+    "nationality": "Dutch",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_nl-flag.gif",
+    "slug": "netherlands"
+  },
+  {
+    "alpha2Code": "AN",
+    "alpha3Code": "ANT",
+    "name": "Netherlands Antilles",
+    "nationality": "Dutch Antillean",
+    "icon": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Flag_of_the_Netherlands_Antilles_%281959%E2%80%931986%29.svg",
+    "slug": "netherlands-antilles"
+  },
+  {
+    "alpha2Code": "NC",
+    "alpha3Code": "NCL",
+    "name": "New Caledonia",
+    "nationality": "Caledonian (Kanak)",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_nc-flag.gif",
+    "slug": "new-caledonia"
+  },
+  {
+    "alpha2Code": "NZ",
+    "alpha3Code": "NZL",
+    "name": "New Zealand",
+    "nationality": "New Zealander",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_nz-flag.gif",
+    "slug": "new-zealand"
+  },
+  {
+    "alpha2Code": "NI",
+    "alpha3Code": "NIC",
+    "name": "Nicaragua",
+    "nationality": "Nicaraguan",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_nu-flag.gif",
+    "slug": "nicaragua"
+  },
+  {
+    "alpha2Code": "NE",
+    "alpha3Code": "NER",
+    "name": "Niger",
+    "nationality": "Nigerien",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_ng-flag.gif",
+    "slug": "niger"
+  },
+  {
+    "alpha2Code": "NU",
+    "alpha3Code": "NIU",
+    "name": "Niue",
+    "nationality": "Niuean",
+    "icon": "https://upload.wikimedia.org/wikipedia/commons/0/01/Flag_of_Niue.svg",
+    "slug": "niue"
+  },
+  {
+    "alpha2Code": "NF",
+    "alpha3Code": "NFK",
+    "name": "Norfolk Island",
+    "nationality": "Norfolk Islander",
+    "icon": "https://upload.wikimedia.org/wikipedia/commons/4/48/Flag_of_Norfolk_Island.svg",
+    "slug": "norfolk-island"
+  },
+  {
+    "alpha2Code": "MP",
+    "alpha3Code": "MNP",
+    "name": "Northern Mariana Islands",
+    "nationality": "Northern Mariana Islands",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_cq-flag.gif",
+    "slug": "northern-mariana-islands"
+  },
+  {
+    "alpha2Code": "NO",
+    "alpha3Code": "NOR",
+    "name": "Norway",
+    "nationality": "Norwegian",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_no-flag.gif",
+    "slug": "norway"
+  },
+  {
+    "alpha2Code": "PW",
+    "alpha3Code": "PLW",
+    "name": "Palau",
+    "nationality": "Palauan",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_ps-flag.gif",
+    "slug": "palau"
+  },
+  {
+    "alpha2Code": "PS",
+    "alpha3Code": "PSE",
+    "name": "Palestine, State of",
+    "nationality": "Palestinian",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_palestine-flag.gif",
+    "slug": "palestine"
+  },
+  {
+    "alpha2Code": "PA",
+    "alpha3Code": "PAN",
+    "name": "Panama",
+    "nationality": "Panamanian",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_pm-flag.gif",
+    "slug": "panama"
+  },
+  {
+    "alpha2Code": "PG",
+    "alpha3Code": "PNG",
+    "name": "Papua New Guinea",
+    "nationality": "Papua New Guinean",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_pp-flag.gif",
+    "slug": "papua-new-guinea"
+  },
+  {
+    "alpha2Code": "PY",
+    "alpha3Code": "PRY",
+    "name": "Paraguay",
+    "nationality": "Paraguayan",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_pa-flag.gif",
+    "slug": "paraguay"
+  },
+  {
+    "alpha2Code": "PE",
+    "alpha3Code": "PER",
+    "name": "Peru",
+    "nationality": "Peruvian",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_pe-flag.gif",
+    "slug": "peru"
+  },
+  {
+    "alpha2Code": "PH",
+    "alpha3Code": "PHL",
+    "name": "Philippines",
+    "nationality": "Filipino",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_rp-flag.gif",
+    "slug": "philippines"
+  },
+  {
+    "alpha2Code": "PN",
+    "alpha3Code": "PCN",
+    "name": "Pitcairn",
+    "nationality": "Pitcairn Islander",
+    "icon": "https://upload.wikimedia.org/wikipedia/commons/8/88/Flag_of_the_Pitcairn_Islands.svg",
+    "slug": "pitcairn"
+  },
+  {
+    "alpha2Code": "PL",
+    "alpha3Code": "POL",
+    "name": "Poland",
+    "nationality": "Polish",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_pl-flag.gif",
+    "slug": "poland"
+  },
+  {
+    "alpha2Code": "PT",
+    "alpha3Code": "PRT",
+    "name": "Portugal",
+    "nationality": "Portuguese",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_po-flag.gif",
+    "slug": "portugal"
+  },
+  {
+    "alpha2Code": "PR",
+    "alpha3Code": "PRI",
+    "name": "Puerto Rico",
+    "nationality": "Puerto Rican",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_rq-flag.gif",
+    "slug": "puerto-rico"
+  },
+  {
+    "alpha2Code": "QA",
+    "alpha3Code": "QAT",
+    "name": "Qatar",
+    "nationality": "Qatari",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_qa-flag.gif",
+    "slug": "qatar"
+  },
+  {
+    "alpha2Code": "MK",
+    "alpha3Code": "MKD",
+    "name": "Republic of North Macedonia",
+    "nationality": "Macedonian",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_mk-flag.gif",
+    "slug": "republic-of-north-macedonia"
+  },
+  {
+    "alpha2Code": "CG",
+    "alpha3Code": "COG",
+    "name": "Republic of the Congo",
+    "nationality": "Congolese (Congo)",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_cg-flag.gif",
+    "slug": "republic-of-the-congo"
+  },
+  {
+    "alpha2Code": "RE",
+    "alpha3Code": "REU",
+    "name": "Reunion",
+    "nationality": "Reunionese",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_fr-flag.gif",
+    "slug": "reunion"
+  },
+  {
+    "alpha2Code": "RO",
+    "alpha3Code": "ROU",
+    "name": "Romania",
+    "nationality": "Romanian",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_ro-flag.gif",
+    "slug": "romania"
+  },
+  {
+    "alpha2Code": "RU",
+    "alpha3Code": "RUS",
+    "name": "Russian Federation",
+    "nationality": "Russian",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_rs-flag.gif",
+    "slug": "russian-federation"
+  },
+  {
+    "alpha2Code": "RW",
+    "alpha3Code": "RWA",
+    "name": "Rwanda",
+    "nationality": "Rwandan",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_rw-flag.gif",
+    "slug": "rwanda"
+  },
+  {
+    "alpha2Code": "BL",
+    "alpha3Code": "BLM",
+    "name": "Saint Barthelemy",
+    "nationality": "Saint Barthelemy",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_fr-flag.gif",
+    "slug": "saint-barthelemy"
+  },
+  {
+    "alpha2Code": "SH",
+    "alpha3Code": "SHN",
+    "name": "Saint Helena",
+    "nationality": "St Helenian",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_sh-flag.gif",
+    "slug": "saint-helena"
+  },
+  {
+    "alpha2Code": "KN",
+    "alpha3Code": "KNA",
+    "name": "Saint Kitts and Nevis",
+    "nationality": "Kittitian",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_sc-flag.gif",
+    "slug": "saint-kitts-and-nevis"
+  },
+  {
+    "alpha2Code": "LC",
+    "alpha3Code": "LCA",
+    "name": "Saint Lucia",
+    "nationality": "St Lucian",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_st-flag.gif",
+    "slug": "saint-lucia"
+  },
+  {
+    "alpha2Code": "MF",
+    "alpha3Code": "MAF",
+    "name": "Saint Martin (French part)",
+    "nationality": "Saint Martin (French)",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_fr-flag.gif",
+    "slug": "saint-martin"
+  },
+  {
+    "alpha2Code": "PM",
+    "alpha3Code": "SPM",
+    "name": "Saint Pierre and Miquelon",
+    "nationality": "Saint Pierre and Miquelon",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_sb-flag.gif",
+    "slug": "saint-pierre-and-miquelon"
+  },
+  {
+    "alpha2Code": "VC",
+    "alpha3Code": "VCT",
+    "name": "Saint Vincent and the Grenadines",
+    "nationality": "Vincentian",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_vc-flag.gif",
+    "slug": "saint-vincent-and-the-grenadines"
+  },
+  {
+    "alpha2Code": "WS",
+    "alpha3Code": "WSM",
+    "name": "Samoa",
+    "nationality": "Samoan",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_ws-flag.gif",
+    "slug": "samoa"
+  },
+  {
+    "alpha2Code": "SM",
+    "alpha3Code": "SMR",
+    "name": "San Marino",
+    "nationality": "Sammarinese",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_sm-flag.gif",
+    "slug": "san-marino"
+  },
+  {
+    "alpha2Code": "ST",
+    "alpha3Code": "STP",
+    "name": "Sao Tome and Principe",
+    "nationality": "Sao Tomean",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_tp-flag.gif",
+    "slug": "sao-tome-and-principe"
+  },
+  {
+    "alpha2Code": "SN",
+    "alpha3Code": "SEN",
+    "name": "Senegal",
+    "nationality": "Senegalese",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_sg-flag.gif",
+    "slug": "senegal"
+  },
+  {
+    "alpha2Code": "AF",
+    "alpha3Code": "AFG",
+    "name": "Afghanistan",
+    "nationality": "Afghan",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_af-flag.gif",
+    "slug": "afghanistan"
+  },
+  {
+    "alpha2Code": "AX",
+    "alpha3Code": "ALA",
+    "name": "Aland Islands",
+    "nationality": "Aland Islander",
+    "icon": "https://flagsworld.org/img/cflags/aland-islands-flag.png",
+    "slug": "aland-islands"
+  },
+  {
+    "alpha2Code": "AL",
+    "alpha3Code": "ALB",
+    "name": "Albania",
+    "nationality": "Albanian",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_al-flag.gif",
+    "slug": "albania"
+  },
+  {
+    "alpha2Code": "DZ",
+    "alpha3Code": "DZA",
+    "name": "Algeria",
+    "nationality": "Algerian",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_ag-flag.gif",
+    "slug": "algeria"
+  },
+  {
+    "alpha2Code": "AS",
+    "alpha3Code": "ASM",
+    "name": "American Samoa",
+    "nationality": "Samoans",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_aq-flag.gif",
+    "slug": "american-samoa"
+  },
+  {
+    "alpha2Code": "AD",
+    "alpha3Code": "AND",
+    "name": "Andorra",
+    "nationality": "Andorran",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_an-flag.gif",
+    "slug": "andorra"
+  },
+  {
+    "alpha2Code": "AO",
+    "alpha3Code": "AGO",
+    "name": "Angola",
+    "nationality": "Angolan",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_ao-flag.gif",
+    "slug": "angola"
+  },
+  {
+    "alpha2Code": "AI",
+    "alpha3Code": "AIA",
+    "name": "Anguilla",
+    "nationality": "Anguillan",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_av-flag.gif",
+    "slug": "anguilla"
+  },
+  {
+    "alpha2Code": "AQ",
+    "alpha3Code": "ATA",
+    "name": "Antarctica",
+    "nationality": "Antarcticans",
+    "icon": "https://upload.wikimedia.org/wikipedia/commons/f/f8/True_South_Antarctic_Flag.svg",
+    "slug": "antarctica"
+  },
+  {
+    "alpha2Code": "AG",
+    "alpha3Code": "ATG",
+    "name": "Antigua and Barbuda",
+    "nationality": "Antiguan and Barbudan",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_ac-flag.gif",
+    "slug": "antigua-and-barbuda"
+  },
+  {
+    "alpha2Code": "AR",
+    "alpha3Code": "ARG",
+    "name": "Argentina",
+    "nationality": "Argentine",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_ar-flag.gif",
+    "slug": "argentina"
+  },
+  {
+    "alpha2Code": "AM",
+    "alpha3Code": "ARM",
+    "name": "Armenia",
+    "nationality": "Armenian",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_am-flag.gif",
+    "slug": "armenia"
+  },
+  {
+    "alpha2Code": "AW",
+    "alpha3Code": "ABW",
+    "name": "Aruba",
+    "nationality": "Aruban",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_aa-flag.gif",
+    "slug": "aruba"
+  },
+  {
+    "alpha2Code": "AU",
+    "alpha3Code": "AUS",
+    "name": "Australia",
+    "nationality": "Australian",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_as-flag.gif",
+    "slug": "australia"
+  },
+  {
+    "alpha2Code": "AT",
+    "alpha3Code": "AUT",
+    "name": "Austria",
+    "nationality": "Austrian",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_au-flag.gif",
+    "slug": "austria"
+  },
+  {
+    "alpha2Code": "FI",
+    "alpha3Code": "FIN",
+    "name": "Finland",
+    "nationality": "Finnish",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_fi-flag.gif",
+    "slug": "finland"
+  },
+  {
+    "alpha2Code": "KP",
+    "alpha3Code": "PRK",
+    "name": "North Korea",
+    "nationality": "North Korean",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_kn-flag.gif",
+    "slug": "north-korea"
+  },
+  {
+    "alpha2Code": "OM",
+    "alpha3Code": "OMN",
+    "name": "Oman",
+    "nationality": "Omani",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_mu-flag.gif",
+    "slug": "oman"
+  },
+  {
+    "alpha2Code": "KR",
+    "alpha3Code": "KOR",
+    "name": "South Korea",
+    "nationality": "South Korean",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_ks-flag.gif",
+    "slug": "south-korea"
+  },
+  {
+    "alpha2Code": "US",
+    "alpha3Code": "USA",
+    "name": "United States of America",
+    "nationality": "American",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_us-flag.gif",
+    "slug": "united-states-of-america"
+  },
+  {
+    "alpha2Code": "UY",
+    "alpha3Code": "URY",
+    "name": "Uruguay",
+    "nationality": "Uruguayan",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_uy-flag.gif",
+    "slug": "uruguay"
+  },
+  {
+    "alpha2Code": "UZ",
+    "alpha3Code": "UZB",
+    "name": "Uzbekistan",
+    "nationality": "Uzbek",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_uz-flag.gif",
+    "slug": "uzbekistan"
+  },
+  {
+    "alpha2Code": "VU",
+    "alpha3Code": "VUT",
+    "name": "Vanuatu",
+    "nationality": "Citizen of Vanuatu",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_nh-flag.gif",
+    "slug": "vanuatu"
+  },
+  {
+    "alpha2Code": "VE",
+    "alpha3Code": "VEN",
+    "name": "Venezuela",
+    "nationality": "Venezuelan",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_ve-flag.gif",
+    "slug": "venezuela"
+  },
+  {
+    "alpha2Code": "VN",
+    "alpha3Code": "VNM",
+    "name": "Vietnam",
+    "nationality": "Vietnamese",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_vm-flag.gif",
+    "slug": "vietnam"
+  },
+  {
+    "alpha2Code": "VG",
+    "alpha3Code": "VGB",
+    "name": "Virgin Islands, British",
+    "nationality": "Virgin Islands, British",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_vi-flag.gif",
+    "slug": "virgin-islands-british"
+  },
+  {
+    "alpha2Code": "VI",
+    "alpha3Code": "VIR",
+    "name": "Virgin Islands, U.S.",
+    "nationality": "Virgin Islands, U.S.",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_vq-flag.gif",
+    "slug": "virgin-islands-us"
+  },
+  {
+    "alpha2Code": "WF",
+    "alpha3Code": "WLF",
+    "name": "Wallis and Futuna",
+    "nationality": "Wallisian",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_wf-flag.gif",
+    "slug": "wallis-and-futuna"
+  },
+  {
+    "alpha2Code": "EH",
+    "alpha3Code": "ESH",
+    "name": "Western Sahara",
+    "nationality": "Sahrawis",
+    "icon": "https://upload.wikimedia.org/wikipedia/commons/2/26/Flag_of_the_Sahrawi_Arab_Democratic_Republic.svg",
+    "slug": "western-sahara"
+  },
+  {
+    "alpha2Code": "YE",
+    "alpha3Code": "YEM",
+    "name": "Yemen",
+    "nationality": "Yemeni",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_ym-flag.gif",
+    "slug": "yemen"
+  },
+  {
+    "alpha2Code": "ZM",
+    "alpha3Code": "ZMB",
+    "name": "Zambia",
+    "nationality": "Zambian",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_za-flag.gif",
+    "slug": "zambia"
+  },
+  {
+    "alpha2Code": "ZW",
+    "alpha3Code": "ZWE",
+    "name": "Zimbabwe",
+    "nationality": "Zimbabwean",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_zi-flag.gif",
+    "slug": "zimbabwe"
+  },
+  {
+    "alpha2Code": "GB",
+    "alpha3Code": "GBR",
+    "name": "United Kingdom",
+    "nationality": "British",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_uk-flag.gif",
+    "slug": "united-kingdom"
+  },
+  {
+    "alpha2Code": "GA",
+    "alpha3Code": "GAB",
+    "name": "Gabon",
+    "nationality": "Gabonese",
+    "icon": "https://cdn.britannica.com/85/7185-050-2DEB57E7/Flag-Gabon.jpg",
+    "slug": "gabon"
+  },
+  {
+    "alpha2Code": "TG",
+    "alpha3Code": "TGO",
+    "name": "Togo",
+    "nationality": "Togolese",
+    "icon": "https://cdn.britannica.com/74/5074-050-4BE7B9CB/Flag-Togo.jpg",
+    "slug": "togo"
+  },
+  {
+    "alpha2Code": "AE",
+    "alpha3Code": "ARE",
+    "name": "United Arab Emirates",
+    "nationality": "Emirati",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_ae-flag.gif",
+    "slug": "united-arab-emirates"
+  },
+  {
+    "alpha2Code": "SA",
+    "alpha3Code": "SAU",
+    "name": "Saudi Arabia",
+    "nationality": "Saudi Arabian",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_sa-flag.gif",
+    "slug": "saudi-arabia"
+  },
+  {
+    "alpha2Code": "NG",
+    "alpha3Code": "NGA",
+    "name": "Nigeria",
+    "nationality": "Nigerian",
+    "icon": "https://www.worldometers.info/img/flags/small/tn_ni-flag.gif",
+    "slug": "nigeria"
+  }
+]

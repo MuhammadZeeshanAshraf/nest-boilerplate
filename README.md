@@ -29,7 +29,7 @@ Shared utilities, infrastructure code, and framework extensions used globally.
 
 Maintaining code integrity is paramount. Every project must strictly follow the defined **Milestone Workflow**.
 
-### [Milestone Workflow](file:///media/sufian/New%20Volume2/Projects/MAIN-main/hardline/milestone-workflow/)
+### [Milestone Workflow]
 The mandatory lifecycle that every feature, fix, or enhancement must traverse.
 - **Commit/Push Requirements**: Code must pass through local validation, linting, and formatting checks before submission.
 - **Verification**: It is mandatory to hard-verify that every commit or milestone has successfully passed through the specified workflow steps.
@@ -40,6 +40,6 @@ The mandatory lifecycle that every feature, fix, or enhancement must traverse.
 
 ## 🚀 Getting Started
 
-1.  **Review the Commons**: Familiarize yourself with the [database setup](file:///media/sufian/New%20Volume2/Projects/MAIN-main/hardline/commons/orms/typeorm/typeorm.md) and available [utilities](file:///media/sufian/New%20Volume2/Projects/MAIN-main/hardline/commons/dtos/dtos.md).
-2.  **Follow the Code Style**: Check the [examples](file:///media/sufian/New%20Volume2/Projects/MAIN-main/hardline/code-style/) before building new modules.
+1.  **Review the Commons**: Familiarize yourself with the database setup and available utilities.
+2.  **Follow the Code Style**: Check the examples before building new modules.
 3.  **Respect the Workflow**: Ensure your milestones are properly validated before pushing.

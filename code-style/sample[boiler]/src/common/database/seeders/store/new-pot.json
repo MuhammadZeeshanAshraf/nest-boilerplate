@@ -1,0 +1,2651 @@
+{
+  "red": [
+    {
+      "Taxes": {
+        "priority": 15,
+        "potCategory": "Flexible Essential",
+        "blue": [
+          {
+            "Local Taxes": {
+              "priority": 1,
+              "mccp": [
+                {
+                  "code": "9311",
+                  "description": "Tax Payments",
+                  "priority": 1
+                }
+              ]
+            }
+          },
+          {
+            "VAT": {
+              "priority": 5,
+              "mccp": [
+                {
+                  "code": "8931",
+                  "description": "Accounting, Auditing, and Bookkeeping Services",
+                  "priority": 2
+                }
+              ]
+            }
+          },
+          {
+            "Tax Advice": {
+              "priority": 3,
+              "mccp": [
+                {
+                  "code": "7276",
+                  "description": "Tax Preparation Service",
+                  "priority": 1
+                }
+              ]
+            }
+          },
+          {
+            "Income taxes": {
+              "priority": 2
+            }
+          }
+        ]
+      }
+    },
+    {
+      "Investments & Savings": {
+        "priority": 16,
+        "potCategory": "Savings & Investments",
+        "blue": [
+          {
+            "Stocks & Bonds": {
+              "priority": 1,
+              "mccp": [
+                {
+                  "code": "6211",
+                  "description": "Security Brokers/Dealers",
+                  "priority": 1
+                }
+              ]
+            }
+          },
+          {
+            "General savings": {
+              "priority": 2
+            }
+          },
+          {
+            "Retirement savings": {
+              "priority": 4
+            }
+          },
+          {
+            "College fund savings": {
+              "priority": 5
+            }
+          },
+          {
+            "Crypto": {
+              "priority": 6
+            }
+          }
+        ]
+      }
+    },
+    {
+      "Household": {
+        "priority": 3,
+        "potCategory": "Flexible Essential",
+        "blue": []
+      }
+    },
+    {
+      "Debt & Loans": {
+        "priority": 17,
+        "potCategory": "Loans",
+        "blue": [
+          {
+            "Loans": {
+              "priority": 1
+            }
+          }
+        ]
+      }
+    },
+    {
+      "Education": {
+        "priority": 19,
+        "potCategory": "Flexible Essential",
+        "blue": [
+          {
+            "School/College/University": {
+              "priority": 1,
+              "mccp": [
+                {
+                  "code": "8244",
+                  "description": "Business and Secretarial Schools",
+                  "priority": 1
+                },
+                {
+                  "code": "8220",
+                  "description": "Colleges, Junior Colleges, Universities, and ProfessionalSchools",
+                  "priority": 2
+                },
+                {
+                  "code": "8211",
+                  "description": "Elementary and Secondary Schools",
+                  "priority": 3
+                },
+                {
+                  "code": "8249",
+                  "description": "Vocational Schools and Trade Schools",
+                  "priority": 4
+                },
+                {
+                  "code": "8299",
+                  "description": "Tutoring, prep schools, enrichment classes, other non-traditional education",
+                  "priority": 5
+                }
+              ]
+            }
+          },
+          {
+            "Online Learning": {
+              "priority": 2,
+              "mccp": [
+                {
+                  "code": "5734",
+                  "description": "Computer Software Stores",
+                  "priority": 2
+                }
+              ]
+            }
+          },
+          {
+            "Study books": {
+              "priority": 3,
+              "mccp": [
+                {
+                  "code": "5942",
+                  "description": "Book Stores",
+                  "priority": 2
+                }
+              ]
+            }
+          },
+          {
+            "Personal Development": {
+              "priority": 4,
+              "mccp": [
+                {
+                  "code": "5942",
+                  "description": "Book Stores",
+                  "priority": 3
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "Charity & Donations": {
+        "priority": 20,
+        "potCategory": "Flexible Essential",
+        "blue": [
+          {
+            "Donations": {
+              "priority": 1,
+              "mccp": [
+                {
+                  "code": "8651",
+                  "description": "Political Organizations",
+                  "priority": 1
+                },
+                {
+                  "code": "8398",
+                  "description": "Charitable and Social Service Organizations",
+                  "priority": 2
+                }
+              ]
+            }
+          },
+          {
+            "Religion": {
+              "priority": 4,
+              "mccp": [
+                {
+                  "code": "8661",
+                  "description": "Religious Organizations",
+                  "priority": 1
+                },
+                {
+                  "code": "5973",
+                  "description": "Religious Goods Stores",
+                  "priority": 2
+                }
+              ]
+            }
+          },
+          {
+            "Charity": {
+              "priority": 2,
+              "mccp": [
+                {
+                  "code": "8398",
+                  "description": "Charitable and Social Service Organizations",
+                  "priority": 1
+                }
+              ]
+            }
+          },
+          {
+            "Social Contributions": {
+              "priority": 3,
+              "mccp": [
+                {
+                  "code": "8641",
+                  "description": "Civic, Fraternal, and Social Associations",
+                  "priority": 1
+                },
+                {
+                  "code": "8651",
+                  "description": "Political Organizations",
+                  "priority": 2
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "Work & Business Expenses": {
+        "priority": 22,
+        "potCategory": "Flexible Essential",
+        "blue": [
+          {
+            "Business Expenses": {
+              "priority": 1,
+              "mccp": [
+                {
+                  "code": "7332",
+                  "description": "Blueprinting and Photocopying Services",
+                  "priority": 1
+                },
+                {
+                  "code": "5045",
+                  "description": "Computers, Computer Peripheral Equipment, Software",
+                  "priority": 2
+                },
+                {
+                  "code": "5021",
+                  "description": "Office and Commercial Furniture",
+                  "priority": 3
+                },
+                {
+                  "code": "5943",
+                  "description": "Stationery Stores, Office and School Supply Stores",
+                  "priority": 4
+                },
+                {
+                  "code": "5111",
+                  "description": "Stationery, Office Supplies, Printing, and Writing Paper",
+                  "priority": 5
+                },
+                {
+                  "code": "8931",
+                  "description": "Accounting, Auditing, and Bookkeeping Services",
+                  "priority": 6
+                },
+                {
+                  "code": "4215",
+                  "description": "Courier Services Air or Ground, Freight forwarders",
+                  "priority": 7
+                },
+                {
+                  "code": "9402",
+                  "description": "Postal Services",
+                  "priority": 8
+                }
+              ]
+            }
+          },
+          {
+            "Work-from-Home Expenses": {
+              "priority": 2,
+              "mccp": [
+                {
+                  "code": "5045",
+                  "description": "Computers, Computer Peripheral Equipment, Software",
+                  "priority": 1
+                },
+                {
+                  "code": "5021",
+                  "description": "Office and Commercial Furniture",
+                  "priority": 2
+                },
+                {
+                  "code": "5943",
+                  "description": "Stationery Stores, Office and School Supply Stores",
+                  "priority": 3
+                },
+                {
+                  "code": "5111",
+                  "description": "Stationery, Office Supplies, Printing, and Writing Paper",
+                  "priority": 4
+                },
+                {
+                  "code": "4215",
+                  "description": "Courier Services Air or Ground, Freight forwarders",
+                  "priority": 6
+                }
+              ]
+            }
+          },
+          {
+            "Software subscriptions": {
+              "priority": 3,
+              "mccp": [
+                {
+                  "code": "5734",
+                  "description": "Computer Software Stores",
+                  "priority": 1
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "Clothing,shoes & Acessories": {
+        "potCategory": "Flexible Essential",
+        "priority": 24,
+        "blue": [
+          {
+            "Clothing": {
+              "priority": 1,
+              "mccp": [
+                {
+                  "code": "5651",
+                  "description": "Clothing Stores",
+                  "priority": 1
+                },
+                {
+                  "code": "5699",
+                  "description": "Miscellaneous Apparel and Accessory Shops",
+                  "priority": 2
+                },
+                {
+                  "code": "5948",
+                  "description": "Leather Goods Stores",
+                  "priority": 3
+                },
+                {
+                  "code": "5661",
+                  "description": "Shoe Stores",
+                  "priority": 4
+                },
+                {
+                  "code": "7251",
+                  "description": "Shoe Repair Shops and Shoe Shine Parlors, and Hat Cleaning Shops",
+                  "priority": 5
+                },
+                {
+                  "code": "5941",
+                  "description": "Sporting Goods Stores",
+                  "priority": 6
+                },
+                {
+                  "code": "5655",
+                  "description": "Sports Apparel, Riding Apparel Stores",
+                  "priority": 7
+                },
+                {
+                  "code": "5697",
+                  "description": "Tailors, Seamstress, Mending, and Alterations",
+                  "priority": 8
+                }
+              ]
+            }
+          },
+          {
+            "Shoes": {
+              "priority": 2,
+              "mccp": [
+                {
+                  "code": "5661",
+                  "description": "Shoe Stores",
+                  "priority": 1
+                },
+                {
+                  "code": "7251",
+                  "description": "Shoe Repair Shops and Shoe Shine Parlors, and Hat Cleaning Shops",
+                  "priority": 2
+                }
+              ]
+            }
+          },
+          {
+            "Accessories": {
+              "priority": 3,
+              "mccp": [
+                {
+                  "code": "5699",
+                  "description": "Miscellaneous Apparel and Accessory Shops",
+                  "priority": 1
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "Miscellaneous / Other": {
+        "priority": 24,
+        "potCategory": "Flexible Essential",
+        "blue": []
+      }
+    },
+
+    {
+      "Unexpected Expenses": {
+        "priority": 24,
+        "potCategory": "Flexible Essential",
+        "blue": [
+          {
+            "Bad luck": {
+              "priority": 1,
+
+              "mccp": [
+                {
+                  "code": "9223",
+                  "description": "Bail and Bond Payments",
+                  "priority": 1
+                },
+                {
+                  "code": "7261",
+                  "description": "Funeral Service and Crematories",
+                  "priority": 3
+                },
+                {
+                  "code": "9222",
+                  "description": "Fines",
+                  "priority": 2
+                },
+                {
+                  "code": "8111",
+                  "description": "Attorneys, Legal Services",
+                  "priority": 4
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "Real Estate, Renovation & Residential": {
+        "priority": 26,
+        "potCategory": "Renovations",
+        "blue": [
+          {
+            "Floors": {
+              "priority": 1,
+              "mccp": [
+                {
+                  "code": "1750",
+                  "description": "Carpentry Contractors",
+                  "priority": 1
+                },
+                {
+                  "code": "7217",
+                  "description": "Carpet and Upholstery Cleaning",
+                  "priority": 2
+                },
+                {
+                  "code": "5713",
+                  "description": "Floor Covering Stores",
+                  "priority": 3
+                }
+              ]
+            }
+          },
+          {
+            "Windows & walls (inside)": {
+              "priority": 2,
+              "mccp": [
+                {
+                  "code": "5714",
+                  "description": "Drapery, Window Covering and Upholstery Stores",
+                  "priority": 1
+                },
+                {
+                  "code": "5231",
+                  "description": "Glass, Paint, and Wallpaper Stores",
+                  "priority": 2
+                },
+                {
+                  "code": "5198",
+                  "description": "Paints, Varnishes, and Supplies",
+                  "priority": 3
+                }
+              ]
+            }
+          },
+          {
+            "Bathrooms & Plumbing": {
+              "priority": 3
+            }
+          },
+          {
+            "Heating & Cooling": {
+              "priority": 4,
+              "mccp": [
+                {
+                  "code": "1711",
+                  "description": "Air Conditioning Contractors – Sales and Installation, Heating Contractors – Sales, Service, Installation",
+                  "priority": 1
+                },
+                {
+                  "code": "5074",
+                  "description": "Plumbing and Heating Equipment and Supplies",
+                  "priority": 3
+                },
+                {
+                  "code": "5200",
+                  "description": "Home Supply Warehouse Stores",
+                  "priority": 7
+                }
+              ]
+            }
+          },
+          {
+            "Walls (outside & Insulations)": {
+              "priority": 5,
+              "mccp": [
+                {
+                  "code": "5211",
+                  "description": "Lumber and Building Materials Stores",
+                  "priority": 1
+                },
+                {
+                  "code": "1740",
+                  "description": "Insulation – Contractors, Masonry, Stonework, Tile Settings",
+                  "priority": 2
+                }
+              ]
+            }
+          },
+          {
+            "Fireplace": {
+              "priority": 6,
+              "mccp": [
+                {
+                  "code": "5718",
+                  "description": "Fireplace, Screens, and Accessories Stores",
+                  "priority": 1
+                }
+              ]
+            }
+          },
+          {
+            "Planning, design & structural services": {
+              "priority": 7,
+              "mccp": [
+                {
+                  "code": "8911",
+                  "description": "Architectural, Engineering and Surveying Services",
+                  "priority": 1
+                },
+                {
+                  "code": "9399",
+                  "description": "Government Services (Misc.)",
+                  "priority": 2
+                }
+              ]
+            }
+          },
+          {
+            "Renovations (other)": {
+              "priority": 8,
+              "mccp": [
+                {
+                  "code": "5039",
+                  "description": "Construction Materials, Not Elsewhere Classified",
+                  "priority": 1
+                },
+                {
+                  "code": "1771",
+                  "description": "Contractors and Concrete Work",
+                  "priority": 2
+                },
+                {
+                  "code": "7394",
+                  "description": "Tool, Furniture, Appliance Rental Services",
+                  "priority": 3
+                },
+                {
+                  "code": "1520",
+                  "description": "General Contractors-Residential and Commercial",
+                  "priority": 4
+                },
+                {
+                  "code": "5251",
+                  "description": "Hardware Stores",
+                  "priority": 5
+                },
+                {
+                  "code": "5200",
+                  "description": "Home Supply Warehouse Stores",
+                  "priority": 6
+                }
+              ]
+            }
+          },
+          {
+            "Electricity & Lights": {
+              "priority": 9,
+              "mccp": [
+                {
+                  "code": "1731",
+                  "description": "Electrical Contractors",
+                  "priority": 1
+                },
+                {
+                  "code": "5065",
+                  "description": "Electrical Parts and Equipment",
+                  "priority": 2
+                }
+              ]
+            }
+          },
+          {
+            "Mobile Homes": {
+              "priority": 10,
+              "mccp": [
+                {
+                  "code": "5271",
+                  "description": "Mobile Home Dealers",
+                  "priority": 1
+                },
+                {
+                  "code": "6513",
+                  "description": "Real Estate Agents and Managers - Rentals",
+                  "priority": 2
+                }
+              ]
+            }
+          },
+          {
+            "Storage & Moving services": {
+              "priority": 11,
+              "mccp": [
+                {
+                  "code": "4225",
+                  "description": "Public Warehousing, Storage",
+                  "priority": 1
+                }
+              ]
+            }
+          },
+          {
+            "Garden Renovation": {
+              "priority": 12,
+              "mccp": [
+                {
+                  "code": "0780",
+                  "description": "Landscaping and Horticultural Services",
+                  "priority": 1
+                },
+                {
+                  "code": "5996",
+                  "description": "Swimming Pool Sales",
+                  "priority": 2
+                }
+              ]
+            }
+          },
+          {
+            "Moving & Storage": {
+              "priority": 13,
+              "mccp": [
+                {
+                  "code": "4211",
+                  "description": "Freight, Trucking, Moving and Storage",
+                  "priority": 1
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "Insurance": {
+        "priority": 11,
+        "potCategory": "Fixed Essential",
+        "blue": [
+          {
+            "Home insurance": {
+              "priority": 1,
+              "mccp": [
+                {
+                  "code": "6300",
+                  "description": "Insurance Services",
+                  "priority": 1
+                }
+              ]
+            }
+          },
+          {
+            "All-risk insurance": {
+              "priority": 2,
+              "mccp": [
+                {
+                  "code": "6300",
+                  "description": "Insurance Services",
+                  "priority": 5
+                }
+              ]
+            }
+          },
+          {
+            "Legal Insurance": {
+              "priority": 3,
+              "mccp": [
+                {
+                  "code": "6300",
+                  "description": "Insurance Services",
+                  "priority": 4
+                }
+              ]
+            }
+          },
+          {
+            "Life Insurance": {
+              "priority": 5,
+              "mccp": [
+                {
+                  "code": "6300",
+                  "description": "Insurance Services",
+                  "priority": 3
+                }
+              ]
+            }
+          },
+          {
+            "Insurance (Other)": {
+              "priority": 6,
+              "mccp": [
+                {
+                  "code": "6300",
+                  "description": "Insurance Services",
+                  "priority": 2
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "Holidays & Travel": {
+        "priority": 12,
+        "potCategory": "Flexible Other",
+        "blue": [
+          {
+            "Holiday": {
+              "priority": 1,
+              "mccp": [
+                {
+                  "code": "3683",
+                  "description": "Hotels/Motels/Inns/Resorts",
+                  "priority": 1
+                },
+                {
+                  "code": "4411",
+                  "description": "Cruise and Steamship Lines",
+                  "priority": 2
+                },
+                {
+                  "code": "7519",
+                  "description": "Motor Home and Recreational Vehicle Rentals",
+                  "priority": 3
+                },
+                {
+                  "code": "3363",
+                  "description": "Car Rental",
+                  "priority": 4
+                },
+                {
+                  "code": "5998",
+                  "description": "Tent and Awning Shops",
+                  "priority": 5
+                },
+                {
+                  "code": "7012",
+                  "description": "Timeshares",
+                  "priority": 6
+                },
+                {
+                  "code": "7033",
+                  "description": "Trailer Parks and Camp Grounds",
+                  "priority": 7
+                },
+                {
+                  "code": "4722",
+                  "description": "Travel Agencies and Tour Operations",
+                  "priority": 8
+                },
+                {
+                  "code": "7011",
+                  "description": "Lodging–Hotels, Motels, Resorts–not elsewhere classified",
+                  "priority": 9
+                },
+                {
+                  "code": "7512",
+                  "description": "Automobile Rental Agency–Not Elsewhere Classified",
+                  "priority": 11
+                }
+              ]
+            }
+          },
+          {
+            "Travel & Experiences": {
+              "priority": 2,
+              "mccp": [
+                {
+                  "code": "4411",
+                  "description": "Cruise and Steamship Lines",
+                  "priority": 1
+                },
+                {
+                  "code": "3064",
+                  "description": "Airlines",
+                  "priority": 2
+                },
+                {
+                  "code": "7996",
+                  "description": "Amusement Parks, Carnivals, Circuses, Fortune Tellers",
+                  "priority": 3
+                },
+                {
+                  "code": "4411",
+                  "description": "Cruise and Steamship Lines",
+                  "priority": 4
+                },
+                {
+                  "code": "7519",
+                  "description": "Motor Home and Recreational Vehicle Rentals",
+                  "priority": 5
+                },
+                {
+                  "code": "7991",
+                  "description": "Tourist Attractions and Exhibits",
+                  "priority": 6
+                },
+                {
+                  "code": "5998",
+                  "description": "Tent and Awning Shops",
+                  "priority": 7
+                },
+                {
+                  "code": "7012",
+                  "description": "Timeshares",
+                  "priority": 8
+                },
+                {
+                  "code": "7033",
+                  "description": "Trailer Parks and Camp Grounds",
+                  "priority": 9
+                },
+                {
+                  "code": "4722",
+                  "description": "Travel Agencies and Tour Operations",
+                  "priority": 10
+                },
+                {
+                  "code": "7011",
+                  "description": "Lodging–Hotels, Motels, Resorts–not elsewhere classified",
+                  "priority": 11
+                },
+                {
+                  "code": "7512",
+                  "description": "Automobile Rental Agency–Not Elsewhere Classified",
+                  "priority": 12
+                }
+              ]
+            }
+          },
+          {
+            "Travel": {
+              "priority": 4,
+              "mccp": [
+                {
+                  "code": "3064",
+                  "description": "Airlines",
+                  "priority": 1
+                },
+                {
+                  "code": "4582",
+                  "description": "Airports, Airport Terminals, Flying Fields",
+                  "priority": 2
+                },
+                {
+                  "code": "3363",
+                  "description": "Car Rental",
+                  "priority": 3
+                },
+                {
+                  "code": "7519",
+                  "description": "Motor Home and Recreational Vehicle Rentals",
+                  "priority": 4
+                },
+                {
+                  "code": "7011",
+                  "description": "Lodging–Hotels, Motels, Resorts–not elsewhere classified",
+                  "priority": 5
+                },
+                {
+                  "code": "5998",
+                  "description": "Tent and Awning Shops",
+                  "priority": 6
+                },
+                {
+                  "code": "7012",
+                  "description": "Timeshares",
+                  "priority": 7
+                },
+                {
+                  "code": "7033",
+                  "description": "Trailer Parks and Camp Grounds",
+                  "priority": 8
+                },
+                {
+                  "code": "4722",
+                  "description": "Travel Agencies and Tour Operations",
+                  "priority": 9
+                },
+                {
+                  "code": "7512",
+                  "description": "Automobile Rental Agency–Not Elsewhere Classified",
+                  "priority": 13
+                }
+              ]
+            }
+          },
+          {
+            "Holiday insurance": {
+              "priority": 3,
+              "mccp": [
+                {
+                  "code": "6300",
+                  "description": "Insurance Services",
+                  "priority": 5
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "Celebrations & Events": {
+        "priority": 13,
+        "potCategory": "Flexible Essential",
+        "blue": [
+          {
+            "Birthdays": {
+              "priority": 2,
+              "mccp": [
+                {
+                  "code": "5992",
+                  "description": "Florists",
+                  "priority": 2
+                },
+                {
+                  "code": "5947",
+                  "description": "Card Shops, Gift, Novelty, and Souvenir Shops",
+                  "priority": 3
+                },
+                {
+                  "code": "5969",
+                  "description": "E-commerce",
+                  "priority": 5
+                }
+              ]
+            }
+          },
+          {
+            "Gifts": {
+              "priority": 3,
+              "mccp": [
+                {
+                  "code": "5947",
+                  "description": "Card Shops, Gift, Novelty, and Souvenir Shops",
+                  "priority": 1
+                },
+                {
+                  "code": "5944",
+                  "description": "Watch, Clock, Jewelry, and Silverware Stores",
+                  "priority": 2
+                },
+                {
+                  "code": "5945",
+                  "description": "Hobby, Toy, and Game Shops",
+                  "priority": 3
+                },
+                {
+                  "code": "5969",
+                  "description": "E-commerce",
+                  "priority": 4
+                },
+                {
+                  "code": "5399",
+                  "description": "Miscellaneous General Merchandise Stores",
+                  "priority": 7
+                },
+                {
+                  "code": "5331",
+                  "description": "Variety Stores",
+                  "priority": 11
+                }
+              ]
+            }
+          },
+          {
+            "Events": {
+              "priority": 4,
+              "mccp": [
+                {
+                  "code": "5811",
+                  "description": "Caterers",
+                  "priority": 1
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "Transport": {
+        "priority": 9,
+        "potCategory": "Flexible Essential",
+        "blue": [
+          {
+            "Car Insurance": {
+              "priority": 1,
+              "mccp": [
+                {
+                  "code": "6300",
+                  "description": "Insurance Services",
+                  "priority": 4
+                }
+              ]
+            }
+          },
+          {
+            "Car Rental": {
+              "priority": 11,
+              "mccp": [
+                {
+                  "code": "3363",
+                  "description": "Car Rental",
+                  "priority": 1
+                },
+                {
+                  "code": "7512",
+                  "description": "Automobile Rental Agency–Not Elsewhere Classified",
+                  "priority": 2
+                }
+              ]
+            }
+          },
+          {
+            "Car Lease / Loan": {
+              "priority": 2
+            }
+          },
+          {
+            "Car Maintenance": {
+              "priority": 3,
+              "mccp": [
+                {
+                  "code": "7538",
+                  "description": "Automotive Service Shops",
+                  "priority": 1
+                },
+                {
+                  "code": "7542",
+                  "description": "Car Washes",
+                  "priority": 2
+                },
+                {
+                  "code": "7549",
+                  "description": "Towing Services",
+                  "priority": 3
+                }
+              ]
+            }
+          },
+          {
+            "Car": {
+              "priority": 4,
+              "mccp": [
+                {
+                  "code": "8675",
+                  "description": "Automobile Associations",
+                  "priority": 1
+                },
+                {
+                  "code": "7523",
+                  "description": "Automobile Parking Lots and Garages",
+                  "priority": 2
+                },
+                {
+                  "code": "7538",
+                  "description": "Automotive Service Shops",
+                  "priority": 3
+                },
+                {
+                  "code": "7542",
+                  "description": "Car Washes",
+                  "priority": 4
+                },
+                {
+                  "code": "5511",
+                  "description": "Car and Truck Dealers (New and Used) Sales, Service, Repairs, Parts, and Leasing",
+                  "priority": 5
+                },
+                {
+                  "code": "4784",
+                  "description": "Toll and Bridge Fees",
+                  "priority": 6
+                },
+                {
+                  "code": "7549",
+                  "description": "Towing Services",
+                  "priority": 7
+                }
+              ]
+            }
+          },
+          {
+            "Taxis": {
+              "priority": 10,
+              "mccp": [
+                {
+                  "code": "4121",
+                  "description": "Taxis",
+                  "priority": 1
+                }
+              ]
+            }
+          },
+          {
+            "Fuel": {
+              "priority": 5,
+              "mccp": [
+                {
+                  "code": "5541",
+                  "description": "Gas Stations",
+                  "priority": 1
+                }
+              ]
+            }
+          },
+          {
+            "Bicycle": {
+              "priority": 6,
+              "mccp": [
+                {
+                  "code": "5940",
+                  "description": "Bicycle Shops and Sales and Service",
+                  "priority": 1
+                }
+              ]
+            }
+          },
+          {
+            "Motorcycle": {
+              "priority": 9,
+              "mccp": [
+                {
+                  "code": "5571",
+                  "description": "Motorcycle Dealers",
+                  "priority": 1
+                },
+                {
+                  "code": "4784",
+                  "description": "Toll and Bridge Fees",
+                  "priority": 7
+                }
+              ]
+            }
+          },
+          {
+            "Public Transport": {
+              "priority": 7,
+              "mccp": [
+                {
+                  "code": "4131",
+                  "description": "Bus Lines, Including Charters, Tour Buses",
+                  "priority": 1
+                },
+                {
+                  "code": "4111",
+                  "description": "Local/Suburban Commuter Passenger Transportation and Railroads, Ferries, Local Water Transportation",
+                  "priority": 2
+                },
+                {
+                  "code": "4112",
+                  "description": "Passenger Railways",
+                  "priority": 3
+                }
+              ]
+            }
+          },
+          {
+            "Car Replacement": {
+              "priority": 8,
+              "mccp": [
+                {
+                  "code": "5511",
+                  "description": "Car and Truck Dealers (New and Used) Sales, Service, Repairs, Parts, and Leasing",
+                  "priority": 1
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "Family & Children": {
+        "priority": 7,
+        "potCategory": "Flexible Essential",
+        "blue": [
+          {
+            "Kids": {
+              "priority": 1,
+              "mccp": [
+                {
+                  "code": "5945",
+                  "description": "Hobby, Toy, and Game Shops",
+                  "priority": 1
+                },
+                {
+                  "code": "7032",
+                  "description": "Sporting and Recreational Camps",
+                  "priority": 2
+                },
+                {
+                  "code": "8351",
+                  "description": "Child Care Services",
+                  "priority": 3
+                },
+                {
+                  "code": "8299",
+                  "description": "Tutoring, prep schools, enrichment classes, other non-traditional education",
+                  "priority": 5
+                }
+              ]
+            }
+          },
+          {
+            "Childcare": {
+              "priority": 3,
+              "mccp": [
+                {
+                  "code": "8351",
+                  "description": "Child Care Services",
+                  "priority": 3
+                }
+              ]
+            }
+          },
+          {
+            "Babysitting / Nanny Services": {
+              "priority": 4,
+              "mccp": [
+                {
+                  "code": "8351",
+                  "description": "Child Care Services",
+                  "priority": 2
+                }
+              ]
+            }
+          },
+          {
+            "Nursery": {
+              "priority": 5,
+              "mccp": [
+                {
+                  "code": "8351",
+                  "description": "Child Care Services",
+                  "priority": 1
+                }
+              ]
+            }
+          },
+          {
+            "Elderly Care": {
+              "priority": 6,
+              "mccp": [
+                {
+                  "code": "8050",
+                  "description": "Nursing and Personal Care Facilities",
+                  "priority": 1
+                }
+              ]
+            }
+          },
+          {
+            "Alimony / Child Support": {
+              "priority": 7,
+              "mccp": [
+                {
+                  "code": "9211",
+                  "description": "Court Costs, including Alimony and Child Support",
+                  "priority": 1
+                }
+              ]
+            }
+          },
+          {
+            "Pets / Pet Care": {
+              "priority": 8,
+              "mccp": [
+                {
+                  "code": "5995",
+                  "description": "Pet Shops, Pet Foods, and Supplies Stores",
+                  "priority": 1
+                },
+                {
+                  "code": "742",
+                  "description": "Veterinary Services",
+                  "priority": 2
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "Health & Wellbeing": {
+        "priority": 6,
+        "potCategory": "Flexible Essential",
+        "blue": [
+          {
+            "Ice Cream": {
+              "priority": 1
+            }
+          },
+          {
+            "Healthcare": {
+              "priority": 1,
+              "mccp": [
+                {
+                  "code": "4119",
+                  "description": "Ambulance Services",
+                  "priority": 1
+                },
+                {
+                  "code": "8041",
+                  "description": "Chiropractors",
+                  "priority": 2
+                },
+                {
+                  "code": "8021",
+                  "description": "Dentists and Orthodontists",
+                  "priority": 3
+                },
+                {
+                  "code": "8011",
+                  "description": "Doctors and Physicians",
+                  "priority": 4
+                },
+                {
+                  "code": "5912",
+                  "description": "Drug Stores and Pharmacies",
+                  "priority": 5
+                },
+                {
+                  "code": "8062",
+                  "description": "Hospitals",
+                  "priority": 6
+                },
+                {
+                  "code": "7297",
+                  "description": "Massage Parlors",
+                  "priority": 7
+                },
+                {
+                  "code": "5975",
+                  "description": "Hearing Aids",
+                  "priority": 8
+                },
+                {
+                  "code": "8043",
+                  "description": "Opticians, Opticians Goods and Eyeglasses",
+                  "priority": 9
+                },
+                {
+                  "code": "8042",
+                  "description": "Optometrists and Ophthalmologists",
+                  "priority": 10
+                },
+                {
+                  "code": "5976",
+                  "description": "Orthopedic Goods Prosthetic Devices",
+                  "priority": 11
+                },
+                {
+                  "code": "8031",
+                  "description": "Osteopaths",
+                  "priority": 12
+                },
+                {
+                  "code": "8049",
+                  "description": "Podiatrists and Chiropodists",
+                  "priority": 13
+                },
+                {
+                  "code": "5698",
+                  "description": "Wig and Toupee Stores",
+                  "priority": 14
+                }
+              ]
+            }
+          },
+          {
+            "Fitness": {
+              "priority": 2,
+              "mccp": [
+                {
+                  "code": "5941",
+                  "description": "Sporting Goods Stores",
+                  "priority": 1
+                },
+                {
+                  "code": "5655",
+                  "description": "Sports Apparel, Riding Apparel Stores",
+                  "priority": 2
+                }
+              ]
+            }
+          },
+          {
+            "Exercise": {
+              "priority": 3,
+              "mccp": [
+                {
+                  "code": "7992",
+                  "description": "Golf Courses",
+                  "priority": 1
+                },
+                {
+                  "code": "5941",
+                  "description": "Sporting Goods Stores",
+                  "priority": 2
+                },
+                {
+                  "code": "5655",
+                  "description": "Sports Apparel, Riding Apparel Stores",
+                  "priority": 3
+                },
+                {
+                  "code": "7997",
+                  "description": "Membership Clubs (Sports, Recreation, Athletic), Country Clubs, and Private Golf Courses",
+                  "priority": 4
+                }
+              ]
+            }
+          },
+          {
+            "Fitness & Exercise": {
+              "priority": 4,
+              "mccp": [
+                {
+                  "code": "5655",
+                  "description": "Sports Apparel, Riding Apparel Stores",
+                  "priority": 1
+                },
+                {
+                  "code": "7992",
+                  "description": "Golf Courses",
+                  "priority": 2
+                },
+                {
+                  "code": "7997",
+                  "description": "Membership Clubs (Sports, Recreation, Athletic), Country Clubs, and Private Golf Courses",
+                  "priority": 3
+                },
+                {
+                  "code": "5941",
+                  "description": "Sporting Goods Stores",
+                  "priority": 4
+                }
+              ]
+            }
+          },
+          {
+            "Beauty": {
+              "priority": 5,
+              "mccp": [
+                {
+                  "code": "5977",
+                  "description": "Cosmetic Stores",
+                  "priority": 1
+                },
+                {
+                  "code": "7230",
+                  "description": "Barber and Beauty Shops",
+                  "priority": 2
+                },
+                {
+                  "code": "5997",
+                  "description": "Electric Razor Stores and Sales and Service",
+                  "priority": 3
+                },
+                {
+                  "code": "7298",
+                  "description": "Health and Beauty Shops",
+                  "priority": 4
+                },
+                {
+                  "code": "5311",
+                  "description": "Department Stores",
+                  "priority": 14
+                }
+              ]
+            }
+          },
+          {
+            "Barber": {
+              "priority": 6,
+              "mccp": [
+                {
+                  "code": "7230",
+                  "description": "Barber and Beauty Shops",
+                  "priority": 1
+                },
+                {
+                  "code": "5997",
+                  "description": "Electric Razor Stores and Sales and Service",
+                  "priority": 2
+                }
+              ]
+            }
+          },
+          {
+            "Self-Care & Mental Health": {
+              "priority": 7,
+              "mccp": [
+                {
+                  "code": "7298",
+                  "description": "Health and Beauty Shops",
+                  "priority": 1
+                },
+                {
+                  "code": "5977",
+                  "description": "Cosmetic Stores",
+                  "priority": 2
+                },
+                {
+                  "code": "7230",
+                  "description": "Barber and Beauty Shops",
+                  "priority": 3
+                },
+                {
+                  "code": "8021",
+                  "description": "Dentists and Orthodontists",
+                  "priority": 4
+                },
+                {
+                  "code": "7297",
+                  "description": "Massage Parlors",
+                  "priority": 5
+                },
+                {
+                  "code": "5698",
+                  "description": "Wig and Toupee Stores",
+                  "priority": 6
+                },
+                {
+                  "code": "7277",
+                  "description": "Counseling Service, Marriage, Personal",
+                  "priority": 7
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "Home & Garden": {
+        "priority": 14,
+        "potCategory": "Flexible Other",
+        "blue": [
+          {
+            "Home Maintenance": {
+              "priority": 1,
+              "mccp": [
+                {
+                  "code": "7629",
+                  "description": "Electrical And Small Appliance Repair Shops",
+                  "priority": 1
+                },
+                {
+                  "code": "7342",
+                  "description": "Exterminating and Disinfecting Services",
+                  "priority": 2
+                },
+                {
+                  "code": "780",
+                  "description": "Horticultural Services, Landscaping Services",
+                  "priority": 3
+                },
+                {
+                  "code": "5996",
+                  "description": "Swimming Pool Sales & Service",
+                  "priority": 4
+                },
+                {
+                  "code": "1711",
+                  "description": "Air Conditioning Contractors, Sales and Installation, Heating Contractors, Sales, Service, Installation",
+                  "priority": 5
+                },
+                {
+                  "code": "5999",
+                  "description": "Miscellaneous and Specialty Retail Stores",
+                  "priority": 6
+                },
+                {
+                  "code": "9399",
+                  "description": "Government Services (Misc.)",
+                  "priority": 7
+                },
+                {
+                  "code": "5200",
+                  "description": "Home Supply Warehouse Stores",
+                  "priority": 8
+                },
+                {
+                  "code": "5310",
+                  "description": "Discount Stores",
+                  "priority": 9
+                },
+                {
+                  "code": "5331",
+                  "description": "Variety Stores",
+                  "priority": 10
+                },
+                {
+                  "code": "5399",
+                  "description": "Miscellaneous General Merchandise Stores",
+                  "priority": 11
+                },
+                {
+                  "code": "5969",
+                  "description": "E-commerce",
+                  "priority": 12
+                }
+              ]
+            }
+          },
+          {
+            "Garden": {
+              "priority": 2,
+              "mccp": [
+                {
+                  "code": "780",
+                  "description": "Horticultural Services, Landscaping Services",
+                  "priority": 1
+                }
+              ]
+            }
+          },
+          {
+            "Furnishings": {
+              "priority": 3,
+              "mccp": [
+                {
+                  "code": "5712",
+                  "description": "Furniture, Home Furnishings, and Equipment Stores, Except Appliances",
+                  "priority": 1
+                },
+                {
+                  "code": "5719",
+                  "description": "Miscellaneous Home Furnishing Specialty Stores",
+                  "priority": 2
+                },
+                {
+                  "code": "5931",
+                  "description": "Used Merchandise and Secondhand Stores",
+                  "priority": 3
+                },
+                {
+                  "code": "5932",
+                  "description": "Antique Shops",
+                  "priority": 4
+                },
+                {
+                  "code": "5200",
+                  "description": "Home Supply Warehouse Stores",
+                  "priority": 9
+                }
+              ]
+            }
+          },
+          {
+            "Security": {
+              "priority": 4
+            }
+          },
+          {
+            "Digital Equipment": {
+              "priority": 5,
+              "mccp": [
+                {
+                  "code": "5732",
+                  "description": "Electronics Sales",
+                  "priority": 1
+                },
+                {
+                  "code": "5045",
+                  "description": "Computers, Computer Peripheral Equipment, Software",
+                  "priority": 3
+                }
+              ]
+            }
+          },
+          {
+            "Cleaning": {
+              "priority": 6,
+              "mccp": [
+                {
+                  "code": "7216",
+                  "description": "Dry Cleaners",
+                  "priority": 1
+                },
+                {
+                  "code": "7210",
+                  "description": "Laundry, Cleaning, and Garment Services",
+                  "priority": 2
+                },
+                {
+                  "code": "5996",
+                  "description": "Swimming Pool Sales & Service",
+                  "priority": 3
+                },
+                {
+                  "code": "7211",
+                  "description": "Laundry Services–Family and Commercial",
+                  "priority": 4
+                }
+              ]
+            }
+          },
+          {
+            "Flowers": {
+              "priority": 7,
+              "mccp": [
+                {
+                  "code": "5992",
+                  "description": "Florists",
+                  "priority": 1
+                }
+              ]
+            }
+          },
+          {
+            "Fireplace": {
+              "priority": 8,
+              "mccp": [
+                {
+                  "code": "5983",
+                  "description": "Fuel, Fuel Oil, Wood, Coal, Liquefied Petroleum",
+                  "priority": 1
+                }
+              ]
+            }
+          },
+          {
+            "Antiques": {
+              "priority": 10,
+              "mccp": [
+                {
+                  "code": "5932",
+                  "description": "Antique Shops",
+                  "priority": 1
+                }
+              ]
+            }
+          },
+          {
+            "Household Appliances": {
+              "priority": 11,
+              "mccp": [
+                {
+                  "code": "5722",
+                  "description": "Household Appliance Stores",
+                  "priority": 1
+                },
+                {
+                  "code": "5732",
+                  "description": "Electronics Sales",
+                  "priority": 2
+                },
+                {
+                  "code": "5969",
+                  "description": "E-commerce",
+                  "priority": 3
+                },
+                {
+                  "code": "5311",
+                  "description": "Department Stores",
+                  "priority": 6
+                },
+                {
+                  "code": "5310",
+                  "description": "Discount Stores",
+                  "priority": 7
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "Financial Services": {
+        "priority": 10,
+        "potCategory": "Flexible Other",
+        "blue": [
+          {
+            "Credit Card Fees": {
+              "priority": 1,
+              "mccp": [
+                {
+                  "code": "6011",
+                  "description": "Financial Institutions",
+                  "priority": 2
+                }
+              ]
+            }
+          },
+          {
+            "Credit card interest": {
+              "priority": 2,
+              "mccp": [
+                {
+                  "code": "6011",
+                  "description": "Financial Institutions",
+                  "priority": 3
+                }
+              ]
+            }
+          },
+          {
+            "Banking Fees & Transaction Charges": {
+              "priority": 3,
+              "mccp": [
+                {
+                  "code": "6011",
+                  "description": "Financial Institutions",
+                  "priority": 1
+                },
+                {
+                  "code": "4829",
+                  "description": "Money Orders and Wire Transfer",
+                  "priority": 2
+                }
+              ]
+            }
+          },
+          {
+            "Future planning": {
+              "priority": 4
+            }
+          }
+        ]
+      }
+    },
+    {
+      "Luxury Lifestyle": {
+        "priority": 5,
+        "potCategory": "Flexible Other",
+        "blue": [
+          {
+            "Dining Out/Ordering in": {
+              "priority": 1,
+              "mccp": [
+                {
+                  "code": "5812",
+                  "description": "Eating places and Restaurants",
+                  "priority": 1
+                },
+                {
+                  "code": "5814",
+                  "description": "Fast Food Restaurants",
+                  "priority": 2
+                }
+              ]
+            }
+          },
+          {
+            "Ordering In": {
+              "priority": 2,
+              "mccp": [
+                {
+                  "code": "5814",
+                  "description": "Fast Food Restaurants",
+                  "priority": 3
+                },
+                {
+                  "code": "5812",
+                  "description": "Eating places and Restaurants",
+                  "priority": 4
+                }
+              ]
+            }
+          },
+          {
+            "Dining Out": {
+              "priority": 3,
+              "mccp": [
+                {
+                  "code": "5814",
+                  "description": "Fast Food Restaurants",
+                  "priority": 1
+                },
+                {
+                  "code": "5812",
+                  "description": "Eating places and Restaurants",
+                  "priority": 2
+                }
+              ]
+            }
+          },
+          {
+            "Luxury & High-End Purchases": {
+              "priority": 4,
+              "mccp": [
+                {
+                  "code": "5551",
+                  "description": "Boat Dealers",
+                  "priority": 1
+                },
+                {
+                  "code": "5948",
+                  "description": "Leather Goods Stores",
+                  "priority": 2
+                },
+                {
+                  "code": "4468",
+                  "description": "Marinas, Marine Service, and Supplies",
+                  "priority": 3
+                },
+                {
+                  "code": "5094",
+                  "description": "Precious Stones and Metals, Watches and Jewelry",
+                  "priority": 4
+                },
+                {
+                  "code": "5598",
+                  "description": "Snowmobile Dealers",
+                  "priority": 5
+                },
+                {
+                  "code": "5996",
+                  "description": "Swimming Pool Sales & Service",
+                  "priority": 6
+                },
+                {
+                  "code": "7631",
+                  "description": "Watch, Clock, and Jewelry Repair",
+                  "priority": 7
+                },
+                {
+                  "code": "5944",
+                  "description": "Watch, Clock, Jewelry, and Silverware Stores",
+                  "priority": 8
+                }
+              ]
+            }
+          },
+          {
+            "Booze & Cigarettes": {
+              "priority": 5,
+              "mccp": [
+                {
+                  "code": "5993",
+                  "description": "Cigar Stores and Stands",
+                  "priority": 1
+                },
+                {
+                  "code": "5813",
+                  "description": "Drinking Places (Alcoholic Beverages), Bars, Taverns, Cocktail lounges, Nightclubs and Discotheques",
+                  "priority": 2
+                },
+                {
+                  "code": "5921",
+                  "description": "Package Stores and Beer, Wine, and Liquor",
+                  "priority": 3
+                }
+              ]
+            }
+          },
+          {
+            "Lottery & Gambling": {
+              "priority": 6,
+              "mccp": [
+                {
+                  "code": "7995",
+                  "description": "Betting (including Lottery Tickets, Casino Gaming Chips, Off-track Betting and Wagers at Race Tracks)",
+                  "priority": 1
+                }
+              ]
+            }
+          },
+          {
+            "Art": {
+              "priority": 7,
+              "mccp": [
+                {
+                  "code": "5971",
+                  "description": "Art Dealers and Galleries",
+                  "priority": 1
+                },
+                {
+                  "code": "5932",
+                  "description": "Antique Shops",
+                  "priority": 2
+                },
+                {
+                  "code": "7333",
+                  "description": "Commercial Photography, Art and Graphics",
+                  "priority": 3
+                },
+                {
+                  "code": "7922",
+                  "description": "Theatrical Producers (Except Motion Pictures), Ticket Agencies",
+                  "priority": 16
+                }
+              ]
+            }
+          },
+          {
+            "Parties": {
+              "priority": 8,
+              "mccp": [
+                {
+                  "code": "7296",
+                  "description": "Clothing Rental, Costumes, Formal Wear, Uniforms",
+                  "priority": 1
+                },
+                {
+                  "code": "7273",
+                  "description": "Dating and Escort Services",
+                  "priority": 2
+                },
+                {
+                  "code": "5813",
+                  "description": "Drinking Places (Alcoholic Beverages), Bars, Taverns, Cocktail lounges, Nightclubs and Discotheques",
+                  "priority": 4
+                },
+                {
+                  "code": "5921",
+                  "description": "Package Stores and Beer, Wine, and Liquor",
+                  "priority": 5
+                }
+              ]
+            }
+          },
+          {
+            "Clubs": {
+              "priority": 7,
+              "mccp": [
+                {
+                  "code": "7997",
+                  "description": "Membership Clubs (Sports, Recreation, Athletic), Country Clubs, and Private Golf Courses",
+                  "priority": 1
+                },
+                {
+                  "code": "5813",
+                  "description": "Drinking Places (Alcoholic Beverages), Bars, Taverns, Cocktail lounges, Nightclubs and Discotheques",
+                  "priority": 5
+                }
+              ]
+            }
+          },
+          {
+            "Vices": {
+              "priority": 9,
+              "mccp": [
+                {
+                  "code": "7273",
+                  "description": "Dating and Escort Services",
+                  "priority": 1
+                },
+                {
+                  "code": "5921",
+                  "description": "Package Stores and Beer, Wine, and Liquor",
+                  "priority": 2
+                },
+                {
+                  "code": "5813",
+                  "description": "Drinking Places (Alcoholic Beverages), Bars, Taverns, Cocktail lounges, Nightclubs and Discotheques",
+                  "priority": 3
+                },
+                {
+                  "code": "7297",
+                  "description": "Massage Parlors",
+                  "priority": 7
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "Entertainment & Leisure": {
+        "priority": 4,
+        "potCategory": "Flexible Other",
+        "blue": [
+          {
+            "Paid Television": {
+              "priority": 9,
+              "mccp": [
+                {
+                  "code": "4899",
+                  "description": "Cable and other pay television (previously Cable Services)",
+                  "priority": 1
+                },
+                {
+                  "code": "5968",
+                  "description": "Digital Media",
+                  "priority": 5
+                }
+              ]
+            }
+          },
+          {
+            "Music": {
+              "priority": 12,
+              "mccp": [
+                {
+                  "code": "5735",
+                  "description": "Record Shops",
+                  "priority": 2
+                },
+                {
+                  "code": "5733",
+                  "description": "Music Stores, Musical Instruments, Piano Sheet Music",
+                  "priority": 1
+                },
+                {
+                  "code": "5968",
+                  "description": "Digital Media",
+                  "priority": 3
+                }
+              ]
+            }
+          },
+          {
+            "Streaming Services": {
+              "priority": 5,
+              "mccp": [
+                {
+                  "code": "5968",
+                  "description": "Digital Media",
+                  "priority": 1
+                }
+              ]
+            }
+          },
+          {
+            "Hobbies": {
+              "priority": 10,
+              "mccp": [
+                {
+                  "code": "5946",
+                  "description": "Camera and Photographic Supply Stores",
+                  "priority": 1
+                },
+                {
+                  "code": "5816",
+                  "description": "Digital Goods: Games",
+                  "priority": 2
+                },
+                {
+                  "code": "5968",
+                  "description": "Digital Media",
+                  "priority": 4
+                },
+                {
+                  "code": "5949",
+                  "description": "Sewing, Needle, Fabric, and Price Goods Stores",
+                  "priority": 5
+                },
+                {
+                  "code": "5972",
+                  "description": "Stamp and Coin Stores and Philatelic and Numismatic Supplies",
+                  "priority": 6
+                },
+                {
+                  "code": "5978",
+                  "description": "Typewriter Stores and Sales, Rental, Service",
+                  "priority": 7
+                },
+                {
+                  "code": "5970",
+                  "description": "Artist’s Supply and Craft Shops",
+                  "priority": 8
+                },
+                {
+                  "code": "7911",
+                  "description": "Dance Halls, Studios and Schools",
+                  "priority": 9
+                },
+                {
+                  "code": "5813",
+                  "description": "Drinking Places (Alcoholic Beverages), Bars, Taverns, Cocktail lounges, Nightclubs and Discotheques",
+                  "priority": 10
+                },
+                {
+                  "code": "5921",
+                  "description": "Package Stores and Beer, Wine, and Liquor",
+                  "priority": 11
+                },
+                {
+                  "code": "5998",
+                  "description": "Tent and Awning Shops",
+                  "priority": 12
+                },
+                {
+                  "code": "7922",
+                  "description": "Theatrical Producers (Except Motion Pictures), Ticket Agencies",
+                  "priority": 13
+                },
+                {
+                  "code": "5733",
+                  "description": "Music Stores, Musical Instruments, Piano Sheet Music",
+                  "priority": 3
+                }
+              ]
+            }
+          },
+          {
+            "Gaming": {
+              "priority": 2,
+              "mccp": [
+                {
+                  "code": "5816",
+                  "description": "Digital Goods: Games",
+                  "priority": 1
+                },
+                {
+                  "code": "7995",
+                  "description": "Betting (including Lottery Tickets, Casino Gaming Chips, Off-track Betting and Wagers at Race Tracks)",
+                  "priority": 2
+                },
+                {
+                  "code": "7993",
+                  "description": "Video Amusement Game Supplies",
+                  "priority": 3
+                },
+                {
+                  "code": "5968",
+                  "description": "Digital Media",
+                  "priority": 4
+                }
+              ]
+            }
+          },
+          {
+            "Concerts & Live Events": {
+              "priority": 5,
+              "mccp": [
+                {
+                  "code": "7929",
+                  "description": "Bands, Orchestras, and Miscellaneous Entertainers (Not Elsewhere Classified)",
+                  "priority": 1
+                },
+                {
+                  "code": "7922",
+                  "description": "Theatrical Producers (Except Motion Pictures), Ticket Agencies",
+                  "priority": 2
+                }
+              ]
+            }
+          },
+          {
+            "Visiting the Matches": {
+              "priority": 11,
+              "mccp": [
+                {
+                  "code": "7941",
+                  "description": "Commercial Sports, Athletic Fields, Professional Sport Clubs, and Sport Promoters",
+                  "priority": 1
+                }
+              ]
+            }
+          },
+          {
+            "Cinema": {
+              "priority": 6,
+              "mccp": [
+                {
+                  "code": "7832",
+                  "description": "Motion Picture Theaters",
+                  "priority": 1
+                }
+              ]
+            }
+          },
+          {
+            "Museums & Exhibitions": {
+              "priority": 12,
+              "mccp": [
+                {
+                  "code": "7991",
+                  "description": "Tourist Attractions and Exhibits",
+                  "priority": 1
+                }
+              ]
+            }
+          },
+          {
+            "Outdoor Activities": {
+              "priority": 7,
+              "mccp": [
+                {
+                  "code": "7996",
+                  "description": "Amusement Parks, Carnivals, Circuses, Fortune Tellers",
+                  "priority": 1
+                },
+                {
+                  "code": "7998",
+                  "description": "Aquariums, Sea-aquariums, Dolphinariums",
+                  "priority": 2
+                },
+                {
+                  "code": "7932",
+                  "description": "Billiard and Pool Establishments",
+                  "priority": 3
+                },
+                {
+                  "code": "4457",
+                  "description": "Boat Rentals and Leases",
+                  "priority": 4
+                },
+                {
+                  "code": "7933",
+                  "description": "Bowling Alleys",
+                  "priority": 5
+                },
+                {
+                  "code": "7296",
+                  "description": "Clothing Rental Costumes, Formal Wear, Uniforms",
+                  "priority": 6
+                },
+                {
+                  "code": "7941",
+                  "description": "Commercial Sports, Athletic Fields, Professional Sport Clubs, and Sport Promoters",
+                  "priority": 7
+                },
+                {
+                  "code": "7911",
+                  "description": "Dance Halls, Studios and Schools",
+                  "priority": 8
+                },
+                {
+                  "code": "5813",
+                  "description": "Drinking Places (Alcoholic Beverages), Bars, Taverns, Cocktail lounges, Nightclubs and Discotheques",
+                  "priority": 9
+                },
+                {
+                  "code": "5812",
+                  "description": "Eating places and Restaurants",
+                  "priority": 10
+                },
+                {
+                  "code": "7992",
+                  "description": "Golf Courses",
+                  "priority": 11
+                },
+                {
+                  "code": "7997",
+                  "description": "Membership Clubs (Sports, Recreation, Athletic), Country Clubs, and Private Golf Courses",
+                  "priority": 12
+                },
+                {
+                  "code": "7832",
+                  "description": "Motion Picture Theaters",
+                  "priority": 13
+                },
+                {
+                  "code": "7999",
+                  "description": "Recreation Services",
+                  "priority": 14
+                },
+                {
+                  "code": "7922",
+                  "description": "Theatrical Producers (Except Motion Pictures), Ticket Agencies",
+                  "priority": 15
+                },
+                {
+                  "code": "7991",
+                  "description": "Tourist Attractions and Exhibits",
+                  "priority": 16
+                },
+                {
+                  "code": "7994",
+                  "description": "Video Game Arcades/Establishments",
+                  "priority": 17
+                }
+              ]
+            }
+          },
+          {
+            "Books": {
+              "priority": 1,
+              "mccp": [
+                {
+                  "code": "5942",
+                  "description": "Book Stores",
+                  "priority": 1
+                },
+                {
+                  "code": "5192",
+                  "description": "Books, Periodicals, and Newspapers",
+                  "priority": 2
+                }
+              ]
+            }
+          },
+
+          {
+            "Newspapers & Magazines": {
+              "priority": 8,
+              "mccp": [
+                {
+                  "code": "5192",
+                  "description": "Books, Periodicals, and Newspapers",
+                  "priority": 1
+                },
+                {
+                  "code": "5994",
+                  "description": "News Dealers and Newsstands",
+                  "priority": 2
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "Housing": {
+        "priority": 1,
+        "potCategory": "Fixed Essential",
+        "blue": [
+          {
+            "Rent": {
+              "priority": 1,
+              "mccp": [
+                {
+                  "code": "7033",
+                  "description": "Trailer Parks and Camp Grounds",
+                  "priority": 9
+                }
+              ]
+            }
+          },
+          {
+            "Mortgage": {
+              "priority": 2
+            }
+          }
+        ]
+      }
+    },
+    {
+      "Utilities": {
+        "priority": 2,
+        "potCategory": "Fixed Essential",
+        "blue": [
+          {
+            "Mobile, TV & Internet": {
+              "priority": 1,
+              "mccp": [
+                {
+                  "code": "4812",
+                  "description": "Telecommunications Equipment including telephone sales",
+                  "priority": 2
+                },
+                {
+                  "code": "4814",
+                  "description": "Telecom",
+                  "priority": 3
+                }
+              ]
+            }
+          },
+          {
+            "Internet & TV": {
+              "priority": 2,
+              "mccp": [
+                {
+                  "code": "4814",
+                  "description": "Telecom",
+                  "priority": 1
+                },
+                {
+                  "code": "4812",
+                  "description": "Telecommunications Equipment including telephone sales",
+                  "priority": 3
+                }
+              ]
+            }
+          },
+          {
+            "Mobile": {
+              "priority": 3,
+              "mccp": [
+                {
+                  "code": "4812",
+                  "description": "Telecommunications Equipment including telephone sales",
+                  "priority": 1
+                },
+                {
+                  "code": "4814",
+                  "description": "Telecom",
+                  "priority": 2
+                }
+              ]
+            }
+          },
+          {
+            "Internet": {
+              "priority": 4,
+              "mccp": [
+                {
+                  "code": "4814",
+                  "description": "Telecom",
+                  "priority": 3
+                }
+              ]
+            }
+          },
+          {
+            "TV": {
+              "priority": 5,
+              "mccp": [
+                {
+                  "code": "4899",
+                  "description": "Cable and other pay television (previously Cable Services)",
+                  "priority": 2
+                },
+                {
+                  "code": "4814",
+                  "description": "Telecom",
+                  "priority": 4
+                }
+              ]
+            }
+          },
+          {
+            "Gas & Electricity": {
+              "priority": 6,
+              "mccp": [
+                {
+                  "code": "4900",
+                  "description": "Electric, Gas, Sanitary and Water Utilities",
+                  "priority": 2
+                }
+              ]
+            }
+          },
+          {
+            "Water": {
+              "priority": 7,
+              "mccp": [
+                {
+                  "code": "4900",
+                  "description": "Electric, Gas, Sanitary and Water Utilities",
+                  "priority": 3
+                }
+              ]
+            }
+          },
+          {
+            "Gas, Water & Electricity": {
+              "priority": 8,
+              "mccp": [
+                {
+                  "code": "4900",
+                  "description": "Electric, Gas, Sanitary and Water Utilities",
+                  "priority": 1
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "Groceries": {
+        "priority": 3,
+        "potCategory": "Flexible Essential",
+        "blue": []
+      }
+    }
+  ]
+}
