@@ -6,15 +6,13 @@ import {
   Injectable,
   InternalServerErrorException,
   NestInterceptor,
-} from '@nestjs/common';
-import { Observable, throwError } from 'rxjs';
-import { catchError } from 'rxjs/operators';
-import { QueryFailedError } from 'typeorm';
+} from "@nestjs/common";
+import { Observable, throwError } from "rxjs";
+import { catchError } from "rxjs/operators";
+import { QueryFailedError } from "typeorm";
 
 @Injectable()
 export class TypeORMErrorInterceptor implements NestInterceptor {
-  constructor() {}
-
   intercept(context: ExecutionContext, next: CallHandler): Observable<any> {
     return next.handle().pipe(
       catchError((error) => {
@@ -28,32 +26,32 @@ export class TypeORMErrorInterceptor implements NestInterceptor {
 
   private handleTypeORMError(error: QueryFailedError): Error {
     const driverError = error.driverError || error;
-    const errorCode = driverError['code'] || driverError['errno'];
+    const errorCode = driverError["code"] || driverError["errno"];
 
     switch (errorCode) {
-      case '23503':
+      case "23503":
         return this.handleForeignKeyViolation(driverError);
-      case '23505':
+      case "23505":
         return this.handleUniqueViolation(driverError);
-      case '23502':
+      case "23502":
         return this.handleNotNullViolation(driverError);
-      case '23514':
+      case "23514":
         return this.handleCheckViolation(driverError);
-      case '40001':
+      case "40001":
         return this.handleSerializationFailure();
-      case '22001':
+      case "22001":
         return this.handleStringTruncation(driverError);
-      case '22007':
-      case '22008':
+      case "22007":
+      case "22008":
         return this.handleInvalidDateTime();
-      case '22012':
+      case "22012":
         return this.handleDivisionByZero();
-      case '22003':
+      case "22003":
         return this.handleNumericRange();
 
       default:
         return new InternalServerErrorException(
-          'Database operation failed',
+          "Database operation failed",
           this.sanitizeErrorMessage(driverError.message),
         );
     }
@@ -72,7 +70,7 @@ export class TypeORMErrorInterceptor implements NestInterceptor {
       );
     }
     return new BadRequestException(
-      'Invalid reference: The referenced item does not exist',
+      "Invalid reference: The referenced item does not exist",
     );
   }
 
@@ -89,7 +87,7 @@ export class TypeORMErrorInterceptor implements NestInterceptor {
         `${this.formatColumnName(column, true)} '${value}' already exists`,
       );
     }
-    return new ConflictException('Duplicate entry: This record already exists');
+    return new ConflictException("Duplicate entry: This record already exists");
   }
 
   private handleNotNullViolation(error: any): BadRequestException {
@@ -103,7 +101,7 @@ export class TypeORMErrorInterceptor implements NestInterceptor {
         `${this.formatColumnName(column, true)} is required`,
       );
     }
-    return new BadRequestException('Required field is missing');
+    return new BadRequestException("Required field is missing");
   }
 
   private handleCheckViolation(error: any): BadRequestException {
@@ -124,12 +122,12 @@ export class TypeORMErrorInterceptor implements NestInterceptor {
         `Invalid value: ${valueMatch[1]} is not allowed`,
       );
     }
-    return new BadRequestException('Invalid data provided');
+    return new BadRequestException("Invalid data provided");
   }
 
   private handleSerializationFailure(): ConflictException {
     return new ConflictException(
-      'Database conflict occurred. Please try again',
+      "Database conflict occurred. Please try again",
     );
   }
 
@@ -144,25 +142,25 @@ export class TypeORMErrorInterceptor implements NestInterceptor {
         `Value exceeds maximum length of ${length} characters`,
       );
     }
-    return new BadRequestException('Value too long');
+    return new BadRequestException("Value too long");
   }
 
   private handleInvalidDateTime(): BadRequestException {
-    return new BadRequestException('Invalid date or time format');
+    return new BadRequestException("Invalid date or time format");
   }
 
   private handleDivisionByZero(): BadRequestException {
-    return new BadRequestException('Cannot divide by zero');
+    return new BadRequestException("Cannot divide by zero");
   }
 
   private handleNumericRange(): BadRequestException {
-    return new BadRequestException('Number is outside valid range');
+    return new BadRequestException("Number is outside valid range");
   }
 
   private formatColumnName(column: string, capitalize = false): string {
     let formatted = column
-      .replace(/_/g, ' ')
-      .replace(/([a-z])([A-Z])/g, '$1 $2');
+      .replace(/_/g, " ")
+      .replace(/([a-z])([A-Z])/g, "$1 $2");
 
     if (capitalize) {
       formatted = formatted.charAt(0).toUpperCase() + formatted.slice(1);
@@ -172,6 +170,6 @@ export class TypeORMErrorInterceptor implements NestInterceptor {
   }
 
   private sanitizeErrorMessage(message: string): string {
-    return message.split('\n')[0].replace(/^error: /i, '');
+    return message.split("\n")[0].replace(/^error: /i, "");
   }
 }

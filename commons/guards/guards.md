@@ -13,9 +13,6 @@ Guards are used to determine whether a request should be handled by the route ha
         - Attaches the decoded payload to `req.user`.
     - **Bypass**: Respects the `@Public()` decorator.
 
-### [supabase-auth.guard.ts]
-- **`SupabaseAuthGuard`**: Specifically configured to work with Supabase Auth providers.
-    - **Functionality**: Integrates with `jwks-rsa` to fetch public keys from Supabase's `.well-known/jwks.json` endpoint for secure token verification.
 
 ### [api-key.guard.ts]
 - **`ApiKeyGuard`**: Validates requests based on a static API key.
