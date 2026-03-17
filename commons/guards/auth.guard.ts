@@ -54,35 +54,12 @@ export class AuthGuard implements CanActivate {
   }
 
   async verifyToken(token: string): Promise<JwtPayload> {
-    await new Promise((resolve) => {
-      jwt.verify(
-        token,
-        this.configService.getOrThrow("JWT_ACCESS_SECRET"),
-        {
-          ignoreExpiration: true,
-        },
-        (error, decoded) => {
-          if (error) {
-            resolve(error);
-          } else {
-            resolve(decoded as JwtPayload);
-          }
-        },
-      );
-    });
     const payload = await new Promise((resolve) => {
       jwt.verify(
         token,
         this.configService.getOrThrow("JWT_ACCESS_SECRET"),
         (error, decoded: JwtPayload) => {
           if (error) {
-            if (error instanceof jwt.TokenExpiredError) {
-              const decodeTest = jwt.decode(token) as any;
-              // if (decodeTest?.email && TestEmails.includes(decodeTest?.email)) {
-              resolve(decodeTest);
-            }
-            // }
-
             resolve(error);
           } else {
             resolve(decoded);
@@ -91,9 +68,9 @@ export class AuthGuard implements CanActivate {
       );
     });
     if (payload instanceof Error) {
-      // if (payload instanceof jwt.TokenExpiredError) {
-      //   throw new ExpiredTokenException();
-      // }
+      if (payload instanceof jwt.TokenExpiredError) {
+        throw new ForbiddenException(APP_ERROR_MESSAGES.TOKEN_EXPIRED);
+      }
       throw new ForbiddenException(APP_ERROR_MESSAGES.INVALID_TOKEN);
     }
 

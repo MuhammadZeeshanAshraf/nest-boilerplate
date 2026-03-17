@@ -6,8 +6,6 @@ import { S3UploadService } from "../aws/aws-s3/aws-s3-multer-engine.service";
 
 @Controller()
 export class Controller {
-  constructor() {}
-
   @Post("")
   @UseInterceptors(
     S3FileInterceptor("file", S3UploadService.getMulterOptions()),

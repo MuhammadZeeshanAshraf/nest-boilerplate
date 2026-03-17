@@ -8,7 +8,6 @@ import { imageOnly } from "./dummy-multer-file-filter.decorator";
 configDotenv();
 @Injectable()
 export class S3UploadService {
-  constructor() {}
   /**
    * make sure this file can access env variables
    * @description Returns multer options for S3 upload
