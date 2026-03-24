@@ -6,6 +6,7 @@ import { IDummyService } from './interfaces/dummy.interface';
 import { DummyRepository } from './repositories/dummy.repository';
 import { IDummyRepository } from './repositories/interface/dummy.repository.interface';
 import { DummyService } from './dummy.service';
+import { DummyMappingProfile } from './mapping/dummy.mapping';
 
 const dummyEntities = [Dummy];
 const dummyRepositoryProvider = [
@@ -20,10 +21,13 @@ const dummyServiceProvider = [
     useClass: DummyService,
   },
 ];
+const mappings=[
+  DummyMappingProfile
+]
 @Module({
   imports: [TypeOrmModule.forFeature(dummyEntities)],
   controllers: [DummyController],
-  providers: [...dummyServiceProvider, ...dummyRepositoryProvider],
+  providers: [...dummyServiceProvider, ...dummyRepositoryProvider,...mappings],
   exports: [...dummyServiceProvider],
 })
 export class DummyModule {}
