@@ -4,7 +4,12 @@
   "description": "",
   "author": "",
   "private": true,
-  "license": "UNLICENSED",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20",
+    "pnpm": ">=9"
+  },
+  "packageManager": "pnpm@9.0.0",
   "scripts": {
     "build": "nest build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
@@ -21,7 +26,7 @@
     "prepare": "husky install"
   },
   "validate-branch-name": {
-    "pattern": "^(main|development|staging){1}$|^(feature|bug|hotfix|release|improvement)/.+$",
+    "pattern": "^(main|development|staging){1}$|^(feature|bug|hotfix|release|improvement|chore|docs|refactor)/.+$",
     "errorMsg": "Branch name validation failed. Your branch name does not conform to the standards. Please rename your current branch following the correct naming convention."
   },
   "dependencies": {

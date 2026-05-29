@@ -1,147 +1,125 @@
-# Nest Boilerplate 🚀
+# Nest Boilerplate
 
-This repository serves as a boilerplate setup for developing web applications using the Nest.js framework. It provides a solid foundation with a well-organized folder structure, pre-configured dependencies, and common configurations to kick-start your Nest.js projects. Save time and dive into development with confidence! 💪
+A reusable NestJS starter template. Clone, rename, and start building.
 
-## Technologies Used 🛠️
+> This boilerplate is being actively refreshed. See the Roadmap section at the bottom for what's landing across the upcoming releases.
 
-The backend of the Nest.js Boilerplate project is built using the following technologies:
+## Current Stack
 
-- **Nest.js**: A powerful and scalable Node.js framework used for building the backend code. 🦅🔧
-- **TypeScript**: A strongly typed superset of JavaScript used for writing the backend code. 🆎👨‍💻
-- **PostgreSQL**: An open-source relational database management system used for storing and retrieving data. 🐘🗄️
-- **TypeORM**: A TypeScript-based ORM (Object-Relational Mapping) used for database communication and management. 🗃️🔍
-- **Docker**: A containerization platform used for deploying the backend services. 🐳🚀
-- **Redis**: An in-memory data structure store used as a database, cache, and message broker. 🔄🗃️📦
-- **Cron**: A time-based job scheduler used for scheduling recurring jobs or tasks. ⏰📆
+- **NestJS 10** on the Express platform
+- **TypeScript 5**
+- **Swagger** (`/api`) with bearer-auth UI scaffolding
+- **Rate limiting** via `@nestjs/throttler` (env-configurable)
+- **Scheduling** via `@nestjs/schedule` with an example cron module
+- **Validation** via `class-validator` + `class-transformer` + a Joi env schema
+- **Husky + commitlint + validate-branch-name** for git hygiene
+- **GitHub Actions** for commit-message linting
 
-## Getting Started 🚀
+## Prerequisites
 
-Follow the instructions below to get started with the Nest Boilerplate.
+- **Node.js** `>= 20` (use the version pinned in `.nvmrc` — currently `22`)
+- **pnpm** `>= 9` (the only supported package manager)
 
-### Prerequisites 📋
-
-Make sure you have the following prerequisites installed on your machine:
-
-- Node.js (version 14 or higher)
-- npm (version 6 or higher)
-- Nest CLI (version 7 or higher)
-- PostgreSQL (version 10 or higher)
-- Docker (v20 or higher)
-
-### Installation ⚙️
-
-1. Clone the repository:
-
-   ```bash
-   git clone https://github.com/MuhammadZeeshanAshraf/nest-boilerplate.git
-   ```
-
-2. Install the dependencies:
-
-   ```bash
-   cd nest-boilerplate
-   npm install
-   ```
-
-### Environment Variables 🌍
-
-The Dastgyr Growth backend code requires certain environment variables to be set in order to run correctly. These variables are defined in a `.env` file, which should be located in the root of the project directory. 
-
-You can create a `.env` file by copying the `.env.example` file and updating the values as necessary:
+## Quick Start
 
 ```bash
+# 1. Clone
+git clone https://github.com/MuhammadZeeshanAshraf/nest-boilerplate.git my-project
+cd my-project
+
+# 2. Install dependencies
+pnpm install
+
+# 3. Configure env
 cp .env.example .env
+# then edit .env with your values
+
+# 4. Run in dev mode (hot reload)
+pnpm start:dev
 ```
 
-environment variables file should contain the following 
-```
-💻 #Environment
-NODE_ENV=
-PORT=
+The server listens on `PORT` from your `.env`. Swagger UI is available at `http://localhost:<PORT>/api`.
 
-💾 #Database
-DB_NAME=
-DB_USERNAME=
-DB_PASSWORD=
-DB_HOST=
-DB_PORT=
-DB_SCHEMA=
-DB_CONNECTION_NAME=
-```
+## Environment Variables
 
-Update the values in the `.env` file as needed for your environment.
-
-### Running the Server ▶️
-
-Run the application in development mode by running the following command in the project directory:
-
-```bash
-npm run start:dev
-```
-
-This will start the server in development mode, with hot reloading enabled for any changes you make to the code. Once the server is running, you can access it by navigating to `http://localhost:<port>` in your web browser.
-
-Alternatively, you can start the server in production mode using the following command:
-
-```bash
-npm run start:prod
-```
-
-This will start the server in production mode, which is optimized for performance.
-
-To add new environment variables, you can simply add them to the `.env` file in the project directory. You can then access these variables in your code using the `process.env` object.
-
-For example, if you add a new variable `MY_VARIABLE` to your `.env` file like so:
+Copy `.env.example` to `.env` and fill in:
 
 ```
-MY_VARIABLE=my_value
+NODE_ENV=development
+PORT=3000
+
+THROTTLE_TTL=60
+THROTTLE_LIMIT=10
 ```
 
-You can access this variable in your code like so:
+Database variables (`DB_*`) are listed in `.env.example` for future use — the database module itself ships in a later release of this boilerplate.
 
-```ts
-const myVariable = process.env.MY_VARIABLE;
+## Scripts
+
+| Command | Description |
+|---|---|
+| `pnpm start` | Start in production mode |
+| `pnpm start:dev` | Start with hot reload |
+| `pnpm start:debug` | Start with `--inspect` debugger |
+| `pnpm start:prod` | Run the compiled output from `dist/` |
+| `pnpm build` | Compile TypeScript to `dist/` |
+| `pnpm lint` | Lint and auto-fix `src/`, `test/` |
+| `pnpm format` | Format with Prettier |
+| `pnpm test` | Run unit tests |
+| `pnpm test:e2e` | Run e2e tests |
+| `pnpm test:cov` | Run tests with coverage report |
+
+## Folder Structure
+
+```
+src/
+├── main.ts                    # Bootstrap
+├── app.module.ts              # Root module
+├── app.controller.ts          # Health-check root route
+├── app.service.ts
+├── configuration/             # Env validation schema (Joi)
+├── common/
+│   ├── constants/             # PROJECT_NAME, page sizes, throttle defaults
+│   ├── dtos/                  # Shared request/response DTOs
+│   ├── interfaces/
+│   ├── types/                 # Custom error model hierarchy + PagedList
+│   └── web/                   # BaseController, ResponseFactory, exception filters
+├── crons/                     # Scheduled jobs (one example)
+├── middlewares/               # Express middlewares (logger)
+└── swagger/                   # Swagger doc builder
 ```
 
-Note that you will need to restart the application for the changes to take effect.
+## Git Conventions
 
-### Swagger UI 📚
+### Branch names
 
-With the project set up, you can check if the server is running properly by visiting the Swagger UI at the specified URL and port in your environment file.
+Branches must match one of:
+
+- `main`, `development`, `staging`
+- `feature/*`, `bug/*`, `hotfix/*`, `release/*`, `improvement/*`, `chore/*`, `docs/*`, `refactor/*`
+
+The pre-commit hook enforces this via `validate-branch-name`.
+
+### Commit messages
+
+Conventional Commits with a custom type list (enforced by commitlint):
 
 ```
-http://localhost:<port>/api#/
+ci | task | docs | feature | fix | refactor | revert | style | test | chore
 ```
 
-That's it! You should now be able to run the Trade Assurance backend project locally on your machine.
+Example: `feature: add user search endpoint`.
 
-## Contribution 🤝
+## Roadmap
 
-We welcome contributions to the Nest Boilerplate! Please follow the guidelines below when contributing.
+This boilerplate is being refreshed in five stages. Items already shipped are checked.
 
-### Branching Strategy 🌿
+- [x] Repo hygiene, pnpm consolidation, lock-file fix
+- [ ] Bug fixes (Joi schema wiring, e2e test, exception filters, typos, logger)
+- [ ] Modernize toolchain (Nest 11, TS strict, ESLint 9 flat, Prettier 3, path aliases, CI pipeline)
+- [ ] Production essentials (helmet, CORS, compression, API versioning, graceful shutdown, structured logging via Pino, global response interceptor, health endpoint)
+- [ ] Database wiring (TypeORM + Postgres), Docker support, project-rename script, GitHub PR/issue templates
 
-When contributing, create a new branch with a descriptive name that reflects the nature of your changes. For example:
+## License
 
-```bash
-git checkout -b feature/new-feature
-```
-
-Once you have completed your changes, submit a pull request to the `main` branch for review.
-
-### Git Best Practices ✨
-
-- Commit messages should be descriptive and follow best practices. See [here](https://www.freecodecamp.org/news/how-to-use-git-best-practices-for-beginners/#:~:text=To%20get%20the%20most%20out,pull%20requests%20for%20code%20reviews.) for Git commit message guidelines.
-- Make sure to update your local branch with the latest changes from the `main` branch before pushing your changes.
-- Always perform code reviews and address any comments or feedback promptly.
-
-## Roadmap 🗺️
-
-Here are some upcoming features and improvements planned for the Nest Boilerplate:
-
-- [ ] Swagger Integration
-- [ ] TypeORM Integration
-
-Feel free to contribute ideas or suggestions to the project roadmap. We look forward to collaborating with you!
-
-Happy coding! 💻✨
+MIT — see [LICENSE](LICENSE).
