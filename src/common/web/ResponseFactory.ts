@@ -35,11 +35,14 @@ export class ResponseFactory {
 
   private static getErrorHttpStatusCode(error: ErrorModel): number {
     if (error instanceof HandledErrorModel) return HttpStatus.OK;
-    if (error instanceof ValidationFailedErrorModel) return HttpStatus.BAD_REQUEST;
-    if (error instanceof ResourceNotFoundErrorModel) return HttpStatus.NOT_FOUND;
+    if (error instanceof ValidationFailedErrorModel)
+      return HttpStatus.BAD_REQUEST;
+    if (error instanceof ResourceNotFoundErrorModel)
+      return HttpStatus.NOT_FOUND;
     if (error instanceof UnAuthorizedErrorModel) return HttpStatus.UNAUTHORIZED;
     if (error instanceof ForbiddenErrorModel) return HttpStatus.FORBIDDEN;
-    if (error instanceof ResourceAlreadyExistsErrorModel) return HttpStatus.CONFLICT;
+    if (error instanceof ResourceAlreadyExistsErrorModel)
+      return HttpStatus.CONFLICT;
     return HttpStatus.INTERNAL_SERVER_ERROR;
   }
 
@@ -76,7 +79,7 @@ export class ResponseFactory {
   ): SuccessResponseModel {
     return {
       status: true,
-      message: successMessage,
+      message: successMessage ?? 'Success',
       code,
       data: result,
       error: null,

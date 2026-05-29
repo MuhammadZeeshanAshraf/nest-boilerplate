@@ -84,9 +84,7 @@ export class AllExceptionsFilter implements ExceptionFilter {
 
     if (Array.isArray(message)) {
       const joined = message.join(', ');
-      return message.length === 1
-        ? message[0]
-        : this.titleCase(joined);
+      return message.length === 1 ? message[0] : this.titleCase(joined);
     }
 
     if (typeof message === 'string') {

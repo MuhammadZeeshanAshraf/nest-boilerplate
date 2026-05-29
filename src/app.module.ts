@@ -25,8 +25,12 @@ import { LoggerMiddleware } from './middlewares/logger.middleware';
       imports: [ConfigModule],
       inject: [ConfigService],
       useFactory: (config: ConfigService) => ({
-        ttl: config.get<number>('THROTTLE_TTL'),
-        limit: config.get<number>('THROTTLE_LIMIT'),
+        throttlers: [
+          {
+            ttl: config.get<number>('THROTTLE_TTL') ?? 60,
+            limit: config.get<number>('THROTTLE_LIMIT') ?? 10,
+          },
+        ],
       }),
     }),
     ServerMonitorCronModule,

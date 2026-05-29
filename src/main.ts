@@ -20,7 +20,7 @@ async function bootstrap() {
   );
 
   await getSwaggerConfiguration(app);
-  await app.listen(configService.get<number>('PORT'));
+  await app.listen(configService.getOrThrow<number>('PORT'));
 }
 
 bootstrap();

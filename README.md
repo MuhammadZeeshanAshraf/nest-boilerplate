@@ -6,14 +6,16 @@ A reusable NestJS starter template. Clone, rename, and start building.
 
 ## Current Stack
 
-- **NestJS 10** on the Express platform
-- **TypeScript 5**
+- **NestJS 11** on the Express 5 platform
+- **TypeScript 5.6** with `strict: true`
 - **Swagger** (`/api`) with bearer-auth UI scaffolding
-- **Rate limiting** via `@nestjs/throttler` (env-configurable)
+- **Rate limiting** via `@nestjs/throttler` v6 (env-configurable)
 - **Scheduling** via `@nestjs/schedule` with an example cron module
-- **Validation** via `class-validator` + `class-transformer` + a Joi env schema
-- **Husky + commitlint + validate-branch-name** for git hygiene
-- **GitHub Actions** for commit-message linting
+- **Validation** via `class-validator` + `class-transformer` + a Joi env schema (wired into `ConfigModule`)
+- **Global exception filter** mapped to a typed `ResponseFactory`
+- **ESLint 9** (flat config) + **Prettier 3** + **lint-staged**
+- **Husky 9 + commitlint 19 + validate-branch-name** for git hygiene
+- **GitHub Actions** running lint, typecheck, test, e2e, and build on every PR
 
 ## Prerequisites
 
@@ -116,7 +118,7 @@ This boilerplate is being refreshed in five stages. Items already shipped are ch
 
 - [x] Repo hygiene, pnpm consolidation, lock-file fix
 - [x] Bug fixes (Joi schema wiring, e2e test, exception filters, typos, logger)
-- [ ] Modernize toolchain (Nest 11, TS strict, ESLint 9 flat, Prettier 3, path aliases, CI pipeline)
+- [x] Modernize toolchain (Nest 11, TS strict, ESLint 9 flat, Prettier 3, path aliases, CI pipeline)
 - [ ] Production essentials (helmet, CORS, compression, API versioning, graceful shutdown, structured logging via Pino, global response interceptor, health endpoint)
 - [ ] Database wiring (TypeORM + Postgres), Docker support, project-rename script, GitHub PR/issue templates
 
