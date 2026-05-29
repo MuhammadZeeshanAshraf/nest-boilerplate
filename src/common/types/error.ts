@@ -1,7 +1,7 @@
-import { ErrorInterface } from "../interfaces/error.interface";
+import { ErrorInterface } from '../interfaces/error.interface';
 
 export class CustomError extends Error {
-  public code: number;
+  public code?: number;
 
   constructor(message: string, code?: number) {
     super(message);
@@ -13,7 +13,7 @@ export class ErrorModel implements ErrorInterface {
   status: boolean;
   message: string;
   error?: Error;
-  name?: string;
+  name: string;
 
   constructor(status: boolean, message: string, error?: Error) {
     this.status = status;
@@ -66,8 +66,8 @@ export class InternalServerErrorModel extends ErrorModel {
 }
 
 export class HandledErrorModel extends ErrorModel {
-  constructor(status: boolean, message: string, error: Error) {
+  constructor(message: string, error?: Error) {
     super(false, message, error);
-    this.name = 'Handle Error';
+    this.name = 'Handled Error';
   }
 }

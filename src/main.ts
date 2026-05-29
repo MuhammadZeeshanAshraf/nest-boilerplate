@@ -1,25 +1,46 @@
+import { ValidationPipe, VersioningType } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import { NestFactory } from '@nestjs/core';
 import { NestExpressApplication } from '@nestjs/platform-express';
+import compression from 'compression';
+import helmet from 'helmet';
+import { Logger } from 'nestjs-pino';
 import { AppModule } from './app.module';
 import { getSwaggerConfiguration } from './swagger';
-import { ValidationPipe } from '@nestjs/common';
-import { exceptionFilters } from './common/web/filters/index.filter';
 
 async function bootstrap() {
   const app = await NestFactory.create<NestExpressApplication>(AppModule, {
-    logger: ['log', 'error', 'warn', 'debug'],
+    bufferLogs: true,
   });
 
-  const configService: ConfigService = app.get(ConfigService);
+  app.useLogger(app.get(Logger));
+
+  const configService = app.get(ConfigService);
+
+  app.use(helmet());
+  app.use(compression());
+
+  const corsOrigin = configService.get<string>('CORS_ORIGIN') ?? '*';
+  app.enableCors({
+    origin:
+      corsOrigin === '*'
+        ? true
+        : corsOrigin.split(',').map((origin) => origin.trim()),
+    credentials: true,
+  });
+
+  app.enableVersioning({ type: VersioningType.URI });
+  app.enableShutdownHooks();
+
   app.useGlobalPipes(
     new ValidationPipe({
       whitelist: true,
       transform: true,
     }),
   );
-  app.useGlobalFilters(...exceptionFilters);
+
   await getSwaggerConfiguration(app);
-  await app.listen(configService.get<number>('PORT'));
+  await app.listen(configService.getOrThrow<number>('PORT'));
 }
+
 bootstrap();
