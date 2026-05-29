@@ -1,8 +1,10 @@
 import * as Joi from 'joi';
-import { THROTTLE } from 'src/common/constants';
+import { THROTTLE } from '../../common/constants';
 
 export const configValidationSchema = Joi.object({
-  NODE_ENV: Joi.string().valid('development', 'production').required(),
+  NODE_ENV: Joi.string()
+    .valid('development', 'production', 'test')
+    .required(),
   PORT: Joi.number().port().required(),
   THROTTLE_TTL: Joi.number()
     .min(THROTTLE.TTL.MIN)

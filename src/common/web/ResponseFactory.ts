@@ -1,6 +1,6 @@
 import { HttpStatus } from '@nestjs/common';
 import { NODE_ENV } from '../constants';
-import { ErrorResponseModel, SucessResponseModel } from '../dtos/response';
+import { ErrorResponseModel, SuccessResponseModel } from '../dtos/response';
 import {
   ErrorModel,
   ForbiddenErrorModel,
@@ -8,65 +8,49 @@ import {
   ResourceAlreadyExistsErrorModel,
   ResourceNotFoundErrorModel,
   UnAuthorizedErrorModel,
-  ValidationFailedErrorModel
+  ValidationFailedErrorModel,
 } from '../types/error';
 
-
 export class ResponseFactory {
-  public static createResponse<T>(
-    result: any,
+  public static createResponse(
+    result: unknown,
     successMessage?: string,
-    environment?: any
+    environment?: string,
   ) {
     if (result instanceof ErrorModel) {
-      const stack = result.error && result.error.stack;
+      const stack = result.error?.stack;
       const errorCode = this.getErrorHttpStatusCode(result);
 
-      const response = this.getErrorResponse(
+      return this.getErrorResponse(
         result.name,
         result.message,
         errorCode,
-        stack
+        stack,
+        environment,
       );
-
-      return response;
-    } else {
-      const response = this.getSuccessResponse(
-        successMessage,
-        HttpStatus.OK,
-        result
-      );
-
-      return response;
     }
+
+    return this.getSuccessResponse(successMessage, HttpStatus.OK, result);
   }
 
-  private static getErrorHttpStatusCode(error: ErrorModel) {
-    if (error instanceof HandledErrorModel) {
-      return HttpStatus.OK;
-    } else if (error instanceof ValidationFailedErrorModel) {
-      return HttpStatus.BAD_REQUEST;
-    } else if (error instanceof ResourceNotFoundErrorModel) {
-      return HttpStatus.NOT_FOUND;
-    } else if (error instanceof UnAuthorizedErrorModel) {
-      return HttpStatus.UNAUTHORIZED;
-    } else if (error instanceof ForbiddenErrorModel) {
-      return HttpStatus.FORBIDDEN;
-    } else if (error instanceof ResourceAlreadyExistsErrorModel) {
-      return HttpStatus.CONFLICT;
-    } else {
-      return HttpStatus.INTERNAL_SERVER_ERROR;
-    }
+  private static getErrorHttpStatusCode(error: ErrorModel): number {
+    if (error instanceof HandledErrorModel) return HttpStatus.OK;
+    if (error instanceof ValidationFailedErrorModel) return HttpStatus.BAD_REQUEST;
+    if (error instanceof ResourceNotFoundErrorModel) return HttpStatus.NOT_FOUND;
+    if (error instanceof UnAuthorizedErrorModel) return HttpStatus.UNAUTHORIZED;
+    if (error instanceof ForbiddenErrorModel) return HttpStatus.FORBIDDEN;
+    if (error instanceof ResourceAlreadyExistsErrorModel) return HttpStatus.CONFLICT;
+    return HttpStatus.INTERNAL_SERVER_ERROR;
   }
 
   private static getErrorResponse(
     errorName: string,
     errorMessage: string,
     errorCode: number,
-    stack?: any,
-    environment?: any
+    stack: string | undefined,
+    environment: string | undefined,
   ): ErrorResponseModel {
-    const errorResponse = {
+    const errorResponse: ErrorResponseModel = {
       status: false,
       message: errorMessage,
       code: errorCode,
@@ -74,9 +58,8 @@ export class ResponseFactory {
         name: errorName,
         message: errorMessage,
         code: errorCode,
-        stack: stack,
+        stack,
       },
-      data: null,
     };
 
     if (environment !== NODE_ENV.DEVELOPMENT) {
@@ -87,17 +70,16 @@ export class ResponseFactory {
   }
 
   private static getSuccessResponse(
-    successMessage: string,
+    successMessage: string | undefined,
     code: number,
-    result: any
-  ) {
-    let response : SucessResponseModel = {
+    result: unknown,
+  ): SuccessResponseModel {
+    return {
       status: true,
       message: successMessage,
       code,
       data: result,
-      error: null
+      error: null,
     };
-    return response;
   }
 }

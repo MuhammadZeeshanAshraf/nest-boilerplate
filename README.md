@@ -115,7 +115,7 @@ Example: `feature: add user search endpoint`.
 This boilerplate is being refreshed in five stages. Items already shipped are checked.
 
 - [x] Repo hygiene, pnpm consolidation, lock-file fix
-- [ ] Bug fixes (Joi schema wiring, e2e test, exception filters, typos, logger)
+- [x] Bug fixes (Joi schema wiring, e2e test, exception filters, typos, logger)
 - [ ] Modernize toolchain (Nest 11, TS strict, ESLint 9 flat, Prettier 3, path aliases, CI pipeline)
 - [ ] Production essentials (helmet, CORS, compression, API versioning, graceful shutdown, structured logging via Pino, global response interceptor, health endpoint)
 - [ ] Database wiring (TypeORM + Postgres), Docker support, project-rename script, GitHub PR/issue templates
