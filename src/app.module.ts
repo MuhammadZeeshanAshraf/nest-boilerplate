@@ -11,6 +11,7 @@ import { ResponseInterceptor } from './common/interceptors/response.interceptor'
 import { AllExceptionsFilter } from './common/web/filters/all-exceptions.filter';
 import { configValidationSchema } from './configuration/validation/env.validation';
 import { ServerMonitorCronModule } from './crons/server-monitor/server-monitor-cron.module';
+import { DatabaseModule } from './database/database.module';
 import { HealthModule } from './health/health.module';
 
 @Module({
@@ -58,6 +59,7 @@ import { HealthModule } from './health/health.module';
         ],
       }),
     }),
+    DatabaseModule,
     HealthModule,
     ServerMonitorCronModule,
   ],
