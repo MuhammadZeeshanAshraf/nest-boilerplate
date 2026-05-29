@@ -12,7 +12,13 @@ A reusable NestJS starter template. Clone, rename, and start building.
 - **Rate limiting** via `@nestjs/throttler` v6 (env-configurable)
 - **Scheduling** via `@nestjs/schedule` with an example cron module
 - **Validation** via `class-validator` + `class-transformer` + a Joi env schema (wired into `ConfigModule`)
-- **Global exception filter** mapped to a typed `ResponseFactory`
+- **Structured logging** via `nestjs-pino` (JSON in prod, pretty in dev) with automatic request-id propagation
+- **Global response interceptor** wrapping all successes in a typed envelope; opt-out via `@SkipResponseWrap()`
+- **Global exception filter** mapped to the same envelope shape
+- **Health endpoint** at `/health` powered by `@nestjs/terminus`
+- **Security** middleware: `helmet`, `compression`, configurable CORS
+- **URI versioning** enabled (`@Controller({ version: '1' })` style)
+- **Graceful shutdown hooks**
 - **ESLint 9** (flat config) + **Prettier 3** + **lint-staged**
 - **Husky 9 + commitlint 19 + validate-branch-name** for git hygiene
 - **GitHub Actions** running lint, typecheck, test, e2e, and build on every PR
@@ -50,6 +56,9 @@ Copy `.env.example` to `.env` and fill in:
 NODE_ENV=development
 PORT=3000
 
+LOG_LEVEL=info
+CORS_ORIGIN=*
+
 THROTTLE_TTL=60
 THROTTLE_LIMIT=10
 ```
@@ -75,19 +84,21 @@ Database variables (`DB_*`) are listed in `.env.example` for future use — the 
 
 ```
 src/
-├── main.ts                    # Bootstrap
+├── main.ts                    # Bootstrap (helmet, compression, CORS, versioning, shutdown, Pino)
 ├── app.module.ts              # Root module
-├── app.controller.ts          # Health-check root route
+├── app.controller.ts          # Liveness ping at `/`
 ├── app.service.ts
 ├── configuration/             # Env validation schema (Joi)
 ├── common/
 │   ├── constants/             # PROJECT_NAME, page sizes, throttle defaults
+│   ├── decorators/            # @SkipResponseWrap()
 │   ├── dtos/                  # Shared request/response DTOs
+│   ├── interceptors/          # ResponseInterceptor (success envelope)
 │   ├── interfaces/
 │   ├── types/                 # Custom error model hierarchy + PagedList
-│   └── web/                   # BaseController, ResponseFactory, exception filters
+│   └── web/                   # BaseController, ResponseFactory, global exception filter
 ├── crons/                     # Scheduled jobs (one example)
-├── middlewares/               # Express middlewares (logger)
+├── health/                    # /health endpoint (Terminus)
 └── swagger/                   # Swagger doc builder
 ```
 
@@ -119,7 +130,7 @@ This boilerplate is being refreshed in five stages. Items already shipped are ch
 - [x] Repo hygiene, pnpm consolidation, lock-file fix
 - [x] Bug fixes (Joi schema wiring, e2e test, exception filters, typos, logger)
 - [x] Modernize toolchain (Nest 11, TS strict, ESLint 9 flat, Prettier 3, path aliases, CI pipeline)
-- [ ] Production essentials (helmet, CORS, compression, API versioning, graceful shutdown, structured logging via Pino, global response interceptor, health endpoint)
+- [x] Production essentials (helmet, CORS, compression, API versioning, graceful shutdown, structured logging via Pino, global response interceptor, health endpoint)
 - [ ] Database wiring (TypeORM + Postgres), Docker support, project-rename script, GitHub PR/issue templates
 
 ## License
