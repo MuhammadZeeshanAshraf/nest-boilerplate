@@ -37,8 +37,6 @@ Thumbs.db
 !.vscode/extensions.json
 
 # Environment files (committed: .env.example)
-.env
-.env.local
 .env.*.local
 
 # Secrets
@@ -48,3 +46,4 @@ Thumbs.db
 # Misc
 .turbo
 .cache
+config.bat
