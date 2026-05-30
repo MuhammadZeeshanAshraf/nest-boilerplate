@@ -9,7 +9,18 @@ export const configValidationSchema = Joi.object({
   LOG_LEVEL: Joi.string()
     .valid('trace', 'debug', 'info', 'warn', 'error', 'fatal', 'silent')
     .default('info'),
-  CORS_ORIGIN: Joi.string().default('*'),
+  CORS_ORIGIN: Joi.string()
+    .default('*')
+    .when('NODE_ENV', {
+      is: 'production',
+      then: Joi.string()
+        .invalid('*')
+        .required()
+        .messages({
+          'any.invalid':
+            'CORS_ORIGIN must not be "*" when NODE_ENV=production. Set a comma-separated allowlist of trusted origins.',
+        }),
+    }),
 
   DB_HOST: Joi.string().required(),
   DB_PORT: Joi.number().port().required(),

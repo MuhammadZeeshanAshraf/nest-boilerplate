@@ -1,11 +1,12 @@
 import { ValidationPipe, VersioningType } from '@nestjs/common';
-import { ConfigService } from '@nestjs/config';
+import { ConfigType } from '@nestjs/config';
 import { NestFactory } from '@nestjs/core';
 import { NestExpressApplication } from '@nestjs/platform-express';
 import compression from 'compression';
 import helmet from 'helmet';
 import { Logger } from 'nestjs-pino';
 import { AppModule } from './app.module';
+import { appConfig } from './configuration/app.config';
 import { getSwaggerConfiguration } from './swagger';
 
 async function bootstrap() {
@@ -15,17 +16,16 @@ async function bootstrap() {
 
   app.useLogger(app.get(Logger));
 
-  const configService = app.get(ConfigService);
+  const cfg = app.get<ConfigType<typeof appConfig>>(appConfig.KEY);
 
   app.use(helmet());
   app.use(compression());
 
-  const corsOrigin = configService.get<string>('CORS_ORIGIN') ?? '*';
   app.enableCors({
     origin:
-      corsOrigin === '*'
+      cfg.corsOrigin === '*'
         ? true
-        : corsOrigin.split(',').map((origin) => origin.trim()),
+        : cfg.corsOrigin.split(',').map((origin) => origin.trim()),
     credentials: true,
   });
 
@@ -40,7 +40,7 @@ async function bootstrap() {
   );
 
   await getSwaggerConfiguration(app);
-  await app.listen(configService.getOrThrow<number>('PORT'));
+  await app.listen(cfg.port);
 }
 
 bootstrap();

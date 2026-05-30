@@ -1,5 +1,5 @@
 import { Module } from '@nestjs/common';
-import { ConfigModule, ConfigService } from '@nestjs/config';
+import { ConfigModule, ConfigType } from '@nestjs/config';
 import { APP_FILTER, APP_GUARD, APP_INTERCEPTOR } from '@nestjs/core';
 import { ScheduleModule } from '@nestjs/schedule';
 import { ThrottlerGuard, ThrottlerModule } from '@nestjs/throttler';
@@ -9,6 +9,9 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { ResponseInterceptor } from './common/interceptors/response.interceptor';
 import { AllExceptionsFilter } from './common/web/filters/all-exceptions.filter';
+import { appConfig } from './configuration/app.config';
+import { databaseConfig } from './configuration/database.config';
+import { throttleConfig } from './configuration/throttle.config';
 import { configValidationSchema } from './configuration/validation/env.validation';
 import { ServerMonitorCronModule } from './crons/server-monitor/server-monitor-cron.module';
 import { DatabaseModule } from './database/database.module';
@@ -18,6 +21,7 @@ import { HealthModule } from './health/health.module';
   imports: [
     ConfigModule.forRoot({
       isGlobal: true,
+      load: [appConfig, databaseConfig, throttleConfig],
       validationSchema: configValidationSchema,
       validationOptions: {
         abortEarly: false,
@@ -25,11 +29,10 @@ import { HealthModule } from './health/health.module';
       },
     }),
     LoggerModule.forRootAsync({
-      imports: [ConfigModule],
-      inject: [ConfigService],
-      useFactory: (config: ConfigService) => ({
+      inject: [appConfig.KEY],
+      useFactory: (cfg: ConfigType<typeof appConfig>) => ({
         pinoHttp: {
-          level: config.get<string>('LOG_LEVEL') ?? 'info',
+          level: cfg.logLevel,
           genReqId: (req) => {
             const existing =
               req.headers['x-request-id'] ?? req.headers['x-correlation-id'];
@@ -37,7 +40,7 @@ import { HealthModule } from './health/health.module';
           },
           customProps: () => ({ context: 'HTTP' }),
           transport:
-            config.get<string>('NODE_ENV') === 'production'
+            cfg.nodeEnv === 'production'
               ? undefined
               : {
                   target: 'pino-pretty',
@@ -48,15 +51,9 @@ import { HealthModule } from './health/health.module';
     }),
     ScheduleModule.forRoot(),
     ThrottlerModule.forRootAsync({
-      imports: [ConfigModule],
-      inject: [ConfigService],
-      useFactory: (config: ConfigService) => ({
-        throttlers: [
-          {
-            ttl: config.get<number>('THROTTLE_TTL') ?? 60,
-            limit: config.get<number>('THROTTLE_LIMIT') ?? 10,
-          },
-        ],
+      inject: [throttleConfig.KEY],
+      useFactory: (cfg: ConfigType<typeof throttleConfig>) => ({
+        throttlers: [{ ttl: cfg.ttl, limit: cfg.limit }],
       }),
     }),
     // DatabaseModule,
