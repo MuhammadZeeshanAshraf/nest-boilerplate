@@ -118,9 +118,28 @@
       "^@/(.*)$": "<rootDir>/$1"
     },
     "collectCoverageFrom": [
-      "**/*.(t|j)s"
+      "**/*.{ts,js}",
+      "!**/*.module.ts",
+      "!**/*.dto.ts",
+      "!**/*.entity.ts",
+      "!**/*.interface.ts",
+      "!**/*.type.ts",
+      "!**/*.constants.ts",
+      "!**/*.config.ts",
+      "!**/main.ts",
+      "!**/swagger/index.ts",
+      "!**/migrations/**",
+      "!**/index.ts"
     ],
     "coverageDirectory": "../coverage",
+    "coverageThreshold": {
+      "global": {
+        "branches": 8,
+        "functions": 8,
+        "lines": 8,
+        "statements": 8
+      }
+    },
     "testEnvironment": "node",
     "passWithNoTests": true
   }
