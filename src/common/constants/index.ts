@@ -1,5 +1,4 @@
 export const PROJECT_NAME = 'Nest Boilerplate';
-export const JWT = 'JWT';
 export const PAGE_SIZE = 10;
 export const DEFAULT_PAGE = 1;
 

@@ -1,14 +1,5 @@
 import { ErrorInterface } from '../interfaces/error.interface';
 
-export class CustomError extends Error {
-  public code?: number;
-
-  constructor(message: string, code?: number) {
-    super(message);
-    this.code = code;
-  }
-}
-
 export class ErrorModel implements ErrorInterface {
   status: boolean;
   message: string;
