@@ -59,7 +59,7 @@ import { HealthModule } from './health/health.module';
         ],
       }),
     }),
-    DatabaseModule,
+    // DatabaseModule,
     HealthModule,
     ServerMonitorCronModule,
   ],
