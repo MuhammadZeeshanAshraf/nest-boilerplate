@@ -6,6 +6,7 @@ import {
   EMAIL_PROVIDER_LIST,
   EmailProviderName,
 } from './constants/email.constants';
+import { EmailController } from './email.controller';
 import { EmailService } from './email.service';
 import { EmailProvider } from './interfaces/email-provider.interface';
 import { MailgunEmailProvider } from './providers/mailgun-email.provider';
@@ -14,6 +15,7 @@ import { SesEmailProvider } from './providers/ses-email.provider';
 
 @Module({
   imports: [ConfigModule],
+  controllers: [EmailController],
   providers: [
     SesEmailProvider,
     MailgunEmailProvider,
