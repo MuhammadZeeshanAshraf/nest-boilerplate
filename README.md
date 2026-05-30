@@ -138,7 +138,7 @@ All variables in `.env.example` are validated by the Joi schema in `src/configur
 │   │   └── web/               # BaseController, ResponseFactory, global exception filter
 │   ├── crons/                 # Scheduled jobs (one example)
 │   ├── database/              # TypeORM DataSource + DatabaseModule + migrations/
-│   ├── email/                 # Provider-agnostic EmailModule (SES/Mailgun/Resend)
+│   ├── email/                 # Provider-agnostic EmailModule (SES/Mailgun/Resend) + test controller
 │   ├── health/                # /health endpoint (Terminus + Postgres ping)
 │   └── swagger/               # Swagger doc builder
 └── test/
@@ -213,6 +213,16 @@ The `EmailModule` lives at [src/email/](src/email/). It exposes a single provide
 2. Set `EMAIL_PROVIDER` in `.env` to `ses`, `mailgun`, or `resend`, then fill in the matching credentials. Leave the other providers' vars empty — they only get read when their provider is active.
 
 3. Restart. The Joi schema validates that the credentials matching your chosen provider are present at boot.
+
+Once `EmailModule` is wired in, three endpoints become available under `/email` in Swagger (`/api`):
+
+| Method | Path | Purpose |
+|---|---|---|
+| `GET` | `/email/provider` | Returns the active provider — useful for verifying env wiring before sending real mail |
+| `POST` | `/email/send` | Send a one-off email with subject + text/html (and optional attachments) |
+| `POST` | `/email/send-template` | Send via a provider-managed template (SES/Mailgun only — Resend throws) |
+
+> ⚠️ These endpoints are unauthenticated. They're intended for testing each provider end-to-end. Protect them with a guard or remove [src/email/email.controller.ts](src/email/email.controller.ts) before production deploys.
 
 ### Switching providers
 
