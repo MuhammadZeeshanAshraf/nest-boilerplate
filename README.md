@@ -21,6 +21,7 @@ A production-ready NestJS starter template. Clone, rename, configure env, and sh
 - **Husky 9 + commitlint 19 + validate-branch-name** for git hygiene
 - **GitHub Actions**: lint, typecheck, test, e2e, build on every PR
 - **Docker**: multi-stage `Dockerfile`, `docker-compose.yml` (app + Postgres)
+- **Email** (opt-in): provider-agnostic `EmailModule` with AWS SES, Mailgun, and Resend implementations selected via `EMAIL_PROVIDER`
 
 ## Prerequisites
 
@@ -78,6 +79,16 @@ All variables in `.env.example` are validated by the Joi schema in `src/configur
 | `DB_CONNECTION_NAME` | no | Named connection (only needed for multi-DB setups) |
 | `THROTTLE_TTL` | yes | Throttle window (seconds) |
 | `THROTTLE_LIMIT` | yes | Max requests per window |
+| `EMAIL_PROVIDER` | no | `ses` \| `mailgun` \| `resend`. Leave empty to disable email. |
+| `EMAIL_FROM` | when provider set | Default sender address |
+| `EMAIL_REPLY_TO` | no | Default reply-to address |
+| `AWS_SES_REGION` | when `EMAIL_PROVIDER=ses` | e.g. `us-east-1` |
+| `AWS_SES_ACCESS_KEY_ID` | no | Leave empty to use the default AWS credential chain (IAM role, etc.) |
+| `AWS_SES_SECRET_ACCESS_KEY` | no | See above |
+| `MAILGUN_API_KEY` | when `EMAIL_PROVIDER=mailgun` | Mailgun API key |
+| `MAILGUN_DOMAIN` | when `EMAIL_PROVIDER=mailgun` | Your verified Mailgun domain |
+| `MAILGUN_REGION` | no | `us` (default) or `eu` |
+| `RESEND_API_KEY` | when `EMAIL_PROVIDER=resend` | Resend API key |
 
 ## Scripts
 
@@ -121,6 +132,7 @@ All variables in `.env.example` are validated by the Joi schema in `src/configur
 │   │   ├── constants/         # PROJECT_NAME, page sizes, throttle defaults
 │   │   ├── decorators/        # @SkipResponseWrap()
 │   │   ├── dtos/              # Shared request/response DTOs (envelope models)
+│   │   ├── email/             # Provider-agnostic EmailModule (SES/Mailgun/Resend)
 │   │   ├── interceptors/      # ResponseInterceptor (success envelope)
 │   │   ├── interfaces/
 │   │   ├── types/             # Error model hierarchy + PagedList
@@ -180,6 +192,107 @@ pnpm db:migrate:revert
 ```
 
 The CLI data source lives at [src/database/data-source.ts](src/database/data-source.ts). It loads `.env` directly (independent of NestJS) so it works from plain `pnpm typeorm ...` commands.
+
+## Email
+
+The `EmailModule` lives at [src/common/email/](src/common/email/). It exposes a single provider-agnostic `EmailService` and ships three provider implementations: AWS SES, Mailgun, and Resend.
+
+### Enabling email in a new project
+
+1. Open `src/app.module.ts` and add `EmailModule` to `imports`:
+
+   ```ts
+   import { EmailModule } from './common/email/email.module';
+
+   @Module({
+     imports: [/* ...existing modules,*/ EmailModule],
+   })
+   export class AppModule {}
+   ```
+
+2. Set `EMAIL_PROVIDER` in `.env` to `ses`, `mailgun`, or `resend`, then fill in the matching credentials. Leave the other providers' vars empty — they only get read when their provider is active.
+
+3. Restart. The Joi schema validates that the credentials matching your chosen provider are present at boot.
+
+### Switching providers
+
+Edit one line in `.env`:
+
+```bash
+EMAIL_PROVIDER=ses         # AWS SES
+EMAIL_PROVIDER=mailgun     # Mailgun
+EMAIL_PROVIDER=resend      # Resend
+```
+
+No code change required. The `EmailModule` factory wires the chosen provider behind the `EMAIL_PROVIDER_TOKEN` injection token; `EmailService` always talks to that abstraction.
+
+### Usage example
+
+```ts
+import { Injectable } from '@nestjs/common';
+import { EmailService } from '../common/email/email.service';
+
+@Injectable()
+export class WelcomeService {
+  constructor(private readonly email: EmailService) {}
+
+  async sendWelcome(to: string) {
+    await this.email.sendEmail({
+      to,
+      subject: 'Welcome aboard',
+      html: '<p>Thanks for signing up.</p>',
+      text: 'Thanks for signing up.',
+    });
+  }
+
+  async sendVerification(to: string, code: string) {
+    // Templates are server-side artefacts in SES and Mailgun.
+    // Resend does not support server-side templates — render HTML
+    // yourself and use sendEmail() instead.
+    await this.email.sendTemplateEmail({
+      to,
+      template: 'verification',
+      variables: { code },
+    });
+  }
+}
+```
+
+### Multi-provider use
+
+When you need to use more than one provider in the same app (e.g. transactional vs marketing), inject a specific provider directly instead of `EmailService`:
+
+```ts
+import { Injectable } from '@nestjs/common';
+import { ResendEmailProvider } from '../common/email/providers/resend-email.provider';
+import { SesEmailProvider } from '../common/email/providers/ses-email.provider';
+
+@Injectable()
+export class NotificationService {
+  constructor(
+    private readonly ses: SesEmailProvider,
+    private readonly resend: ResendEmailProvider,
+  ) {}
+}
+```
+
+`EmailModule` exports all three provider classes alongside `EmailService` — they instantiate their SDK clients lazily on first send, so unused providers cost nothing at boot.
+
+### Provider support matrix
+
+| Feature | SES | Mailgun | Resend |
+|---|---|---|---|
+| `sendEmail` (text/html) | ✅ | ✅ | ✅ |
+| `sendTemplateEmail` (server-side template) | ✅ | ✅ | ❌ (throws — render client-side) |
+| Attachments | ❌ (throws — needs `SendRawEmailCommand`) | ✅ | ✅ |
+
+### Adding a new provider (e.g. SendGrid, Postmark)
+
+1. Add the SDK as a dependency.
+2. Create `src/common/email/providers/sendgrid-email.provider.ts` implementing `EmailProvider`.
+3. Add `'sendgrid'` to `EMAIL_PROVIDERS` in [src/common/email/constants/email.constants.ts](src/common/email/constants/email.constants.ts).
+4. Register it in `EmailModule` providers and the factory switch.
+5. Extend the Joi schema in [src/configuration/validation/env.validation.ts](src/configuration/validation/env.validation.ts) with the new credential vars under a `when('EMAIL_PROVIDER', { is: 'sendgrid', ... })` block.
 
 ## Git Conventions
 
