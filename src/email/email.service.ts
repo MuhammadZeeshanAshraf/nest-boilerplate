@@ -1,7 +1,6 @@
 import { Inject, Injectable, Logger } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import { EMAIL_CONFIG_KEYS } from './config/email.config';
-import { EMAIL_PROVIDER_TOKEN } from './constants/email.constants';
 import { EmailProvider } from './interfaces/email-provider.interface';
 import {
   EmailSendResult,
@@ -15,7 +14,7 @@ export class EmailService {
   private readonly logger = new Logger(EmailService.name);
 
   constructor(
-    @Inject(EMAIL_PROVIDER_TOKEN) private readonly provider: EmailProvider,
+    @Inject(EmailProvider) private readonly provider: EmailProvider,
     private readonly config: ConfigService,
   ) {}
 

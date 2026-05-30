@@ -132,13 +132,13 @@ All variables in `.env.example` are validated by the Joi schema in `src/configur
 │   │   ├── constants/         # PROJECT_NAME, page sizes, throttle defaults
 │   │   ├── decorators/        # @SkipResponseWrap()
 │   │   ├── dtos/              # Shared request/response DTOs (envelope models)
-│   │   ├── email/             # Provider-agnostic EmailModule (SES/Mailgun/Resend)
 │   │   ├── interceptors/      # ResponseInterceptor (success envelope)
 │   │   ├── interfaces/
 │   │   ├── types/             # Error model hierarchy + PagedList
 │   │   └── web/               # BaseController, ResponseFactory, global exception filter
 │   ├── crons/                 # Scheduled jobs (one example)
 │   ├── database/              # TypeORM DataSource + DatabaseModule + migrations/
+│   ├── email/                 # Provider-agnostic EmailModule (SES/Mailgun/Resend)
 │   ├── health/                # /health endpoint (Terminus + Postgres ping)
 │   └── swagger/               # Swagger doc builder
 └── test/
@@ -195,14 +195,14 @@ The CLI data source lives at [src/database/data-source.ts](src/database/data-sou
 
 ## Email
 
-The `EmailModule` lives at [src/common/email/](src/common/email/). It exposes a single provider-agnostic `EmailService` and ships three provider implementations: AWS SES, Mailgun, and Resend.
+The `EmailModule` lives at [src/email/](src/email/). It exposes a single provider-agnostic `EmailService` and ships three provider implementations: AWS SES, Mailgun, and Resend.
 
 ### Enabling email in a new project
 
 1. Open `src/app.module.ts` and add `EmailModule` to `imports`:
 
    ```ts
-   import { EmailModule } from './common/email/email.module';
+   import { EmailModule } from './email/email.module';
 
    @Module({
      imports: [/* ...existing modules,*/ EmailModule],
@@ -230,7 +230,7 @@ No code change required. The `EmailModule` factory wires the chosen provider beh
 
 ```ts
 import { Injectable } from '@nestjs/common';
-import { EmailService } from '../common/email/email.service';
+import { EmailService } from '../email/email.service';
 
 @Injectable()
 export class WelcomeService {
@@ -264,8 +264,8 @@ When you need to use more than one provider in the same app (e.g. transactional 
 
 ```ts
 import { Injectable } from '@nestjs/common';
-import { ResendEmailProvider } from '../common/email/providers/resend-email.provider';
-import { SesEmailProvider } from '../common/email/providers/ses-email.provider';
+import { ResendEmailProvider } from '../email/providers/resend-email.provider';
+import { SesEmailProvider } from '../email/providers/ses-email.provider';
 
 @Injectable()
 export class NotificationService {
@@ -289,8 +289,8 @@ export class NotificationService {
 ### Adding a new provider (e.g. SendGrid, Postmark)
 
 1. Add the SDK as a dependency.
-2. Create `src/common/email/providers/sendgrid-email.provider.ts` implementing `EmailProvider`.
-3. Add `'sendgrid'` to `EMAIL_PROVIDERS` in [src/common/email/constants/email.constants.ts](src/common/email/constants/email.constants.ts).
+2. Create `src/email/providers/sendgrid-email.provider.ts` implementing `EmailProvider`.
+3. Add `'sendgrid'` to `EMAIL_PROVIDERS` in [src/email/constants/email.constants.ts](src/email/constants/email.constants.ts).
 4. Register it in `EmailModule` providers and the factory switch.
 5. Extend the Joi schema in [src/configuration/validation/env.validation.ts](src/configuration/validation/env.validation.ts) with the new credential vars under a `when('EMAIL_PROVIDER', { is: 'sendgrid', ... })` block.
 

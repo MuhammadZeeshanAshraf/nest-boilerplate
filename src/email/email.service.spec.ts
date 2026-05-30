@@ -1,7 +1,6 @@
 import { ConfigService } from '@nestjs/config';
 import { Test, TestingModule } from '@nestjs/testing';
 import { EMAIL_CONFIG_KEYS } from './config/email.config';
-import { EMAIL_PROVIDER_TOKEN } from './constants/email.constants';
 import { EmailService } from './email.service';
 import { EmailProvider } from './interfaces/email-provider.interface';
 import { EmailSendResult } from './types/send-email-payload.type';
@@ -31,7 +30,7 @@ describe('EmailService', () => {
     const module: TestingModule = await Test.createTestingModule({
       providers: [
         EmailService,
-        { provide: EMAIL_PROVIDER_TOKEN, useValue: provider },
+        { provide: EmailProvider, useValue: provider },
         { provide: ConfigService, useValue: config },
       ],
     }).compile();

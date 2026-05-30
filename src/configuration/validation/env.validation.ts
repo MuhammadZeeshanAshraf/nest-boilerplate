@@ -1,6 +1,6 @@
 import * as Joi from 'joi';
 import { THROTTLE } from '../../common/constants';
-import { EMAIL_PROVIDER_LIST } from '../../common/email/constants/email.constants';
+import { EMAIL_PROVIDER_LIST } from '../../email/constants/email.constants';
 
 export const configValidationSchema = Joi.object({
   NODE_ENV: Joi.string().valid('development', 'production', 'test').required(),

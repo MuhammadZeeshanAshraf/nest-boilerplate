@@ -4,7 +4,6 @@ import { EMAIL_CONFIG_KEYS } from './config/email.config';
 import {
   EMAIL_PROVIDERS,
   EMAIL_PROVIDER_LIST,
-  EMAIL_PROVIDER_TOKEN,
   EmailProviderName,
 } from './constants/email.constants';
 import { EmailService } from './email.service';
@@ -20,7 +19,7 @@ import { SesEmailProvider } from './providers/ses-email.provider';
     MailgunEmailProvider,
     ResendEmailProvider,
     {
-      provide: EMAIL_PROVIDER_TOKEN,
+      provide: EmailProvider,
       inject: [
         ConfigService,
         SesEmailProvider,
@@ -60,7 +59,7 @@ import { SesEmailProvider } from './providers/ses-email.provider';
   ],
   exports: [
     EmailService,
-    EMAIL_PROVIDER_TOKEN,
+    EmailProvider,
     SesEmailProvider,
     MailgunEmailProvider,
     ResendEmailProvider,

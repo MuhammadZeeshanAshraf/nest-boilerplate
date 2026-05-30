@@ -1,5 +1,3 @@
-export const EMAIL_PROVIDER_TOKEN = Symbol('EMAIL_PROVIDER');
-
 export const EMAIL_PROVIDERS = {
   SES: 'ses',
   MAILGUN: 'mailgun',
