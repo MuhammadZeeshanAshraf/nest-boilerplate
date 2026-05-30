@@ -127,23 +127,42 @@ All variables in `.env.example` are validated by the Joi schema in `src/configur
 │   ├── app.module.ts          # Root module
 │   ├── app.controller.ts      # Liveness ping at `/`
 │   ├── app.service.ts
-│   ├── configuration/         # Joi env validation schema
+│   ├── configuration/         # Joi env validation + typed config namespaces (app/database/throttle)
 │   ├── common/
 │   │   ├── constants/         # PROJECT_NAME, page sizes, throttle defaults
 │   │   ├── decorators/        # @SkipResponseWrap()
-│   │   ├── dtos/              # Shared request/response DTOs (envelope models)
+│   │   ├── dtos/              # Shared request/response DTOs (envelope models, pagination)
 │   │   ├── interceptors/      # ResponseInterceptor (success envelope)
 │   │   ├── interfaces/
 │   │   ├── types/             # Error model hierarchy + PagedList
-│   │   └── web/               # BaseController, ResponseFactory, global exception filter
-│   ├── crons/                 # Scheduled jobs (one example)
+│   │   └── web/               # ResponseFactory + global exception filter
+│   ├── crons/                 # Scheduled jobs (runtime metrics example)
 │   ├── database/              # TypeORM DataSource + DatabaseModule + migrations/
 │   ├── email/                 # Provider-agnostic EmailModule (SES/Mailgun/Resend) + test controller
+│   ├── examples/              # Reference CRUD resource (delete when starting a real project)
 │   ├── health/                # /health endpoint (Terminus + Postgres ping)
 │   └── swagger/               # Swagger doc builder
 └── test/
-    └── app.e2e-spec.ts
+    ├── app.e2e-spec.ts        # Liveness ping (no DB)
+    └── examples.e2e-spec.ts   # Full CRUD against a real Postgres
 ```
+
+## Example resource
+
+A reference `examples` CRUD module lives at [src/examples/](src/examples/) showing every pattern in concert: entity, DTOs with `class-validator` + Swagger decorators, service, controller, migration, unit test, and a DB-backed e2e test. Copy the directory and rename when you start a real resource (`cp -r src/examples src/users`), or delete it outright if you'd rather start from a blank slate.
+
+## Running e2e tests
+
+The `examples` e2e suite hits a real Postgres. Locally:
+
+```bash
+docker compose up -d db
+cp .env.test.example .env
+pnpm db:migrate
+pnpm test:e2e
+```
+
+CI does the same — see [.github/workflows/ci.yml](.github/workflows/ci.yml), which spins up a Postgres service container and copies `.env.test.example` to `.env` before running migrations.
 
 ## Response shape
 

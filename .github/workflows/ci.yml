@@ -8,6 +8,22 @@ on:
 jobs:
   ci:
     runs-on: ubuntu-latest
+
+    services:
+      postgres:
+        image: postgres:16-alpine
+        env:
+          POSTGRES_DB: nest_boilerplate_test
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U postgres"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+
     steps:
       - uses: actions/checkout@v4
 
@@ -22,14 +38,20 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
+      - name: Setup test env
+        run: cp .env.test.example .env
+
       - name: Lint
         run: pnpm lint:check
 
       - name: Typecheck
         run: pnpm typecheck
 
-      - name: Test
+      - name: Test (unit)
         run: pnpm test
+
+      - name: Run migrations
+        run: pnpm db:migrate
 
       - name: Test (e2e)
         run: pnpm test:e2e

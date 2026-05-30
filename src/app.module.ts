@@ -15,6 +15,7 @@ import { throttleConfig } from './configuration/throttle.config';
 import { configValidationSchema } from './configuration/validation/env.validation';
 import { ServerMonitorCronModule } from './crons/server-monitor/server-monitor-cron.module';
 import { DatabaseModule } from './database/database.module';
+import { ExamplesModule } from './examples/examples.module';
 import { HealthModule } from './health/health.module';
 
 @Module({
@@ -56,7 +57,8 @@ import { HealthModule } from './health/health.module';
         throttlers: [{ ttl: cfg.ttl, limit: cfg.limit }],
       }),
     }),
-    // DatabaseModule,
+    DatabaseModule,
+    ExamplesModule,
     HealthModule,
     ServerMonitorCronModule,
   ],
